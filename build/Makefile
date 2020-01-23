@@ -14,15 +14,14 @@
 # target
 ######################################
 TARGET = nucleo207
-OPT = og
-export MAKEFLAGS="-j 'nproc'"
+
 ######################################
 # building variables
 ######################################
 # debug build?
 DEBUG = 1
 # optimization
-OPT += -Os
+OPT = -Og
  
 GNU_ARM_TOOLS_VER_1 := 7
 GNU_ARM_TOOLS_VER_2 := 2017-q4-major
@@ -31,13 +30,13 @@ GNU_ARM_TOOLS_VER_2 := 2017-q4-major
 # paths
 #######################################
 GIT_ROOT_DIR    := $(shell git rev-parse --show-toplevel)
-ST_DIR = $(GIT_ROOT_DIR)/stm/ThirdParty/$(TARGET) #DONE
+ST_DIR = $(GIT_ROOT_DIR)/ThirdParty/$(TARGET)
 ST_FAMILY_LC = stm32f2xx
 ST_FAMILY_UC = STM32F2XX
  
 LINT_PATH := /usr/local/FlexeLint
 BUILD_DIR = $(GIT_ROOT_DIR)/build/obj_$(TARGET)
-APP_SRC_DIR = $(GIT_ROOT_DIR)/app/src #may need to be stm dir - DONE
+APP_SRC_DIR = $(GIT_ROOT_DIR)/app/src
 APP_INC_DIR = $(GIT_ROOT_DIR)/app/inc
  
 #######################################
@@ -57,18 +56,33 @@ RELEASE_OBJECT_NAME := $(PROJECT)-$(VERSION_STR)
 ######################################
 # source
 ######################################
-# C sources #TODO - Daniel - comment out sources that are not currently generated, add missing sources
 C_SOURCES =
-C_SOURCES += $(ST_DIR)/Src/main.c
-C_SOURCES += $(ST_DIR)/Src/$(ST_FAMILY_LC)_it.c
-C_SOURCES += $(ST_DIR)/Src/$(ST_FAMILY_LC)_hal_msp.c
-C_SOURCES += $(ST_DIR)/Src/system_$(ST_FAMILY_LC).c
-C_SOURCES += $(ST_DIR)/Drivers/$(ST_FAMILY_UC)_HAL_Driver/Src
+# C sources
+C_SOURCES =  \
+$(ST_DIR)/Src/main.c \
+$(ST_DIR)Src/stm32f2xx_it.c \
+$(ST_DIR)/Src/stm32f2xx_hal_msp.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim_ex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc_ex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_cortex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr_ex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma_ex.c \
+$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_exti.c \
+$(ST_DIR)/Src/system_stm32f2xx.c
 
  
 # ASM sources
 ASM_SOURCES =  
- 
+ASM_SOURCES += $(ST_DIR)/Drivers/CMSIS/Device/ST/STM32F2xx/Source/Templates/gcc/startup_stm32f207xx.s
+
 #######################################
 # binaries
 #######################################
@@ -107,7 +121,7 @@ BIN = $(CP) -O binary -S
 # CFLAGS
 #######################################
 # cpu
-CPU = -mcpu=cortex-m0plus
+CPU = -mcpu=cortex-m3
  
 # fpu
 # NONE for Cortex-M0/M0+/M3
@@ -121,31 +135,23 @@ MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 AS_DEFS = 
  
 # C defines
-C_DEFS  =
-C_DEFS += -DUSE_HAL_DRIVER
+# C defines
+C_DEFS =  \
+-DUSE_HAL_DRIVER \
+-DSTM32F207xx
  
 # AS includes
 AS_INCLUDES  =
-AS_INCLUDES += -I\Inc
+//AS_INCLUDES += -I\Inc
  
-# C includes #TODO - Daniel - comment out sources that are not currently generated, add missing sources
-C_INCLUDES =
-C_INCLUDES += -I$(ST_DIR)/Inc
-C_INCLUDES += -I$(ST_DIR)/Drivers/$(ST_FAMILY_UC)_HAL_Driver/Inc
-C_INCLUDES += -I$(ST_DIR)/Drivers/$(ST_FAMILY_UC)_HAL_Driver/Inc/Legacy
-C_INCLUDES += -I$(ST_DIR)/Drivers/CMSIS/Device/ST/$(ST_FAMILY_UC)/Include
-C_INCLUDES += -I$(ST_DIR)/Drivers/CMSIS/Include
- 
-#######################################
-# Configure target specific
-#######################################
-ifeq ($(TARGET), nucleoF207)
-LDSCRIPT = $(ST_DIR)/STM32F207ZGx_FLASH.ld #TODO - Daniel - check if this works
-C_DEFS += -DSTM32F207xx
-ASM_SOURCES +=  $(ST_DIR)/startup_stm32f207xx.s
-C_DEFS += -DNUCLEOF207
-endif
- 
+C_INCLUDES =  \
+-I$(ST_DIR)Inc \
+-I$(ST_DIR)Drivers/STM32F2xx_HAL_Driver/Inc \
+-I$(ST_DIR)Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
+-I$(ST_DIR)Drivers/CMSIS/Device/ST/STM32F2xx/Include \
+-I$(ST_DIR)Drivers/CMSIS/Include \
+-I$(ST_DIR)Drivers/CMSIS/Include
+
  
 # Add application sources and include path
 APPSOURCES =
@@ -157,70 +163,34 @@ C_INCLUDES += -I$(APP_INC_DIR)
  
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
-CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -Werror -fdata-sections -ffunction-sections -std=gnu11
- 
+
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
 endif
- 
- 
+
+
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
- 
- 
+
+
 #######################################
 # LDFLAGS
 #######################################
+# link script
+LDSCRIPT = STM32F207ZGTx_FLASH.ld
+
 # libraries
 LIBS = -lc -lm -lnosys 
 LIBDIR = 
 LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections,--print-memory-usage -gdwarf-2
  
-#######################################
-# targets
-#######################################
- 
+
 # default action: build all
-all: pre-build $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
- 
-pre-build: version.h
-	@mkdir -p $(GIT_ROOT_DIR)/$(TEST_RESULTS_DIR)
-	@rm -f $(BUILD_DIR)/$(TARGET)_files.lnt
-	@$(CC) --version
- 
-VERSION_H = $(APP_INC_DIR)/version.h	
-version.h:
-	@echo "Generating FW version information"
-	@echo "#ifndef _VERSION_H_" > $(VERSION_H)
-	@echo "#define _VERSION_H_" >> $(VERSION_H)
-	@echo " " >> $(VERSION_H)
-#	@echo "// Git SHA hash, short version." >> $(VERSION_H)
-#	@echo "// '*' at end indicates changed files in repository." >> $(VERSION_H)
-#	@echo "#define GIT_SHA \"$(SHA)\"" >> $(VERSION_H)
-#	@echo " " >> $(VERSION_H)
-	@echo "// Git URL" >> $(VERSION_H)
-	@echo "#define GIT_URL \"$(URL)\"" >> $(VERSION_H)
-	@echo " " >> $(VERSION_H)
-	@echo "// Git Branch" >> $(VERSION_H)
-	@echo "#define GIT_BRANCH \"$(BRANCH)\"" >> $(VERSION_H)
-	@echo " " >> $(VERSION_H)
-#	@echo "// Git tag" >> $(VERSION_H)
-#	@echo "#define GIT_TAG \"$(TAG)\"" >> $(VERSION_H)
-#	@echo " " >> $(VERSION_H)
-	@echo "// Simplexity Version" >> $(VERSION_H)
-	@echo "#define VERSION \"$(SHORT_VERSION_STR)"\" >> $(VERSION_H)
-	@echo " " >> $(VERSION_H)
-	@echo "#endif // _VERSION_H_" >> $(VERSION_H)
- 
-# Generate list of files in component and product dirs
-#  that are also used when builing this project.  Resulting 
-#  files.lnt is used as an input to FlexeLint.
-# Usage: make -f snap_mtr_ctrl_rev_4.mf lint
-lint:
-	$(MAKE) clean
-	$(MAKE) all
-	$(LINT_PATH)/flint -i $(LINT_PATH)/$(TARGET) loptions.lnt $(TARGET).lnt $(BUILD_DIR)/$(TARGET)_files.lnt | tee lint.out
- 
+all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+
+
 #######################################
 # build the application
 #######################################
@@ -230,41 +200,32 @@ vpath %.c $(sort $(dir $(C_SOURCES)))
 # list of ASM program objects
 OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
 vpath %.s $(sort $(dir $(ASM_SOURCES)))
- 
-$(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR) 
-	@echo "Building $@"
-	@echo "$<" >> $(BUILD_DIR)/$(TARGET)_files.lnt
-	@$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
- 
+
+$(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR)
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
 $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
-	@echo "Building $@"
-	@$(AS) -c $(CFLAGS) $< -o $@
- 
+	$(AS) -c $(CFLAGS) $< -o $@
+
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
-	@echo "Building $@"
-	@$(CC) $(OBJECTS) $(LDFLAGS) -o $@ 2>&1 | tee build.log
- 
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	$(SZ) $@
+
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
-	@echo "Building $@"
-	@$(HEX) $< $@
- 
+	$(HEX) $< $@
+	
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
-	@echo "Building $@"
-	@$(BIN) $< $@
- 
+	$(BIN) $< $@	
+	
 $(BUILD_DIR):
-	@echo "Building $@"
-	mkdir $@
- 
+	mkdir $@		
+
 #######################################
 # clean up
 #######################################
 clean:
 	-rm -fR $(BUILD_DIR)
-	@rm -f  $(VERSION_H)
-	@rm -fR release-*
-	@rm -f  release_fw_files
- 
+
 help:
 	@echo "C_SOURCES= $(C_SOURCES)"
 	@echo "C_INCLUDES = $(C_INCLUDES)"
@@ -276,60 +237,5 @@ help:
 # dependencies
 #######################################
 -include $(wildcard $(BUILD_DIR)/*.d)
- 
- 
-#######################################
-# FW Release
-#######################################
- 
-# FW Release
-VERSION_TAG := release-$(RELEASE_OBJECT_NAME)
-MAKE_DIR := $(GIT_ROOT_DIR)/build
-RELEASE_DIR := $(MAKE_DIR)/$(VERSION_TAG)
-RELEASE_YAML := $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME)_release.yaml
-RELEASE_XHTML := $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME)_release.html
-RELEASE_XHTML_TEMPLATE := $(MAKE_DIR)/standard_release_page_template.xhtml
-RELEASE_URL :=  https://simplexity.atlassian.net/wiki/spaces/GANACHE/pages/651954890/Firmware+Releases
- 
-release_tag:
-	git tag $(VERSION_TAG)
- 
-# Setups of directories and YAML release config.
-release_data_capture: all
-	@-rm -rf $(RELEASE_DIR)
-	@mkdir $(RELEASE_DIR)
-	@echo -n "" > release_fw_files
-	@cp -f $(RELEASE_XHTML_TEMPLATE) $(RELEASE_XHTML)
-	@echo "- title: '$(PROJECT) FW Release - Version: $(VERSION_STR)'" > $(RELEASE_YAML)
-	@echo "- url: $(RELEASE_URL)" >>  $(RELEASE_YAML)
-	@echo "- body: $(RELEASE_XHTML)" >>  $(RELEASE_YAML)
-	@$(MAKE_DIR)/release_notes.py $(PROJECT) > $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME)-commit-comments.html
-	@$(SED) -e '/.*COMMENTS.*/{r $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME)-commit-comments.html' -e ' d}' < $(RELEASE_XHTML_TEMPLATE) > $(RELEASE_XHTML)
- 
-# Moves files around and posts to wiki
-release: release_tag release_data_capture
-	@cp $(BUILD_DIR)/$(PROJECT).elf $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).elf
-	@echo -n "$(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).elf " >> release_fw_files
-	@echo "- attachment:" >> $(RELEASE_YAML)
-	@echo "    location: $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).elf" >>  $(RELEASE_YAML)
-	@echo "    comment: $(VERSION_STR)" >>  $(RELEASE_YAML)
-	@cp $(BUILD_DIR)/$(PROJECT).hex $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).hex
-	@echo -n "$(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).hex " >> release_fw_files
-	@echo "- attachment:" >> $(RELEASE_YAML)
-	@echo "    location: $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).hex" >>  $(RELEASE_YAML)
-	@echo "    comment: $(VERSION_STR)" >>  $(RELEASE_YAML)
-	@cp $(BUILD_DIR)/$(PROJECT).map $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).map
-	@echo -n "$(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).map " >> release_fw_files
-	@echo "- attachment:" >> $(RELEASE_YAML)
-	@echo "    location: $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).map" >>  $(RELEASE_YAML)
-	@echo "    comment: $(VERSION_STR)" >>  $(RELEASE_YAML)
-#	@cp $(BUILD_DIR)/$(PROJECT).lst $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).lst
-#	@echo -n "$(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).lst " >> release_fw_files#
-#	@echo "- attachment:" >> $(RELEASE_YAML)
-#	@echo "    location: $(RELEASE_DIR)/$(RELEASE_OBJECT_NAME).lst" >>  $(RELEASE_YAML)
-#	@echo "    comment: $(VERSION_STR)" >>  $(RELEASE_YAML)
-	@echo "$(RELEASE_DIR)/$(RELEASE_OBJECT_NAME)-commit-comments.html " >> release_fw_files
-	@$(PYTHON) $(MAKE_DIR)/confluence_post.py -f $(RELEASE_YAML) -u $(CONFLUENCE_USER) -p $(CONFLUENCE_PASS)
-	@git push origin $(VERSION_TAG)
- 
+
 # *** EOF ***
