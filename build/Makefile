@@ -56,6 +56,7 @@ RELEASE_OBJECT_NAME := $(PROJECT)-$(VERSION_STR)
 ######################################
 # source
 ######################################
+# C sources #TODO - Daniel - comment out sources that are not currently generated, add missing sources
 C_SOURCES =
 # C sources
 C_SOURCES =  \
@@ -144,13 +145,14 @@ C_DEFS =  \
 AS_INCLUDES  =
 //AS_INCLUDES += -I\Inc
  
+# C includes #TODO - Daniel - comment out sources that are not currently generated, add missing sources
 C_INCLUDES =  \
--I$(ST_DIR)Inc \
--I$(ST_DIR)Drivers/STM32F2xx_HAL_Driver/Inc \
--I$(ST_DIR)Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
--I$(ST_DIR)Drivers/CMSIS/Device/ST/STM32F2xx/Include \
--I$(ST_DIR)Drivers/CMSIS/Include \
--I$(ST_DIR)Drivers/CMSIS/Include
+-I$(ST_DIR)/Inc \
+-I$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Inc \
+-I$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
+-I$(ST_DIR)/Drivers/CMSIS/Device/ST/STM32F2xx/Include \
+-I$(ST_DIR)/Drivers/CMSIS/Include \
+-I$(ST_DIR)/Drivers/CMSIS/Include
 
  
 # Add application sources and include path
@@ -179,7 +181,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32F207ZGTx_FLASH.ld
+LDSCRIPT = $(ST_DIR)/STM32F207ZGTx_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
