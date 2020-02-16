@@ -15,6 +15,11 @@ typedef enum {
     longPress
 } buttonState_t;
 
+typedef enum {
+    invalidButton = -1,
+    button0,
+} buttonNames_t;
+
 
 typedef struct button {
     uint16_t pin; //GPIO Pin
@@ -25,13 +30,13 @@ typedef struct button {
     int debounceThreshold; //debounce trigger
     int holdCount; //number of held cycles
     int holdThreshold; //button held trigger
-    void (* unpressedCb)(); //callback for unpressed state
+    void (*pressedCb)(); //callback for unpressed state
     void (*longPressCb)(); //callback for long press state
 } Button_t;
 
 
 static  Button_t buttonArray[NUM_BUTTONS] = {
-    [0] = 
+    [button0] = 
     {
         .pin = pushButton_Pin,
         .port = pushButton_GPIO_Port,
@@ -41,7 +46,7 @@ static  Button_t buttonArray[NUM_BUTTONS] = {
         .debounceThreshold = DEBOUNCE_THRESHOLD,
         .holdCount = 0,
         .holdThreshold = HOLD_THRESHOLD,
-        .unpressedCb = &led_activateRedLed,
+        .pressedCb = &led_activateGreenLed,
         .longPressCb = &led_activateBlueLed
     }
 };
@@ -53,16 +58,21 @@ void button_updateButton(void)
     for(i = 0; i < sizeof(buttonArray); i++)
     {
         //if dbc < threshold and pin set
-        if (buttonArray[i].debounceCount < DEBOUNCE_THRESHOLD && 
-        HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
+        if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
         {
-            buttonArray[i].debounceCount++;
+            if (buttonArray[i].debounceCount < DEBOUNCE_THRESHOLD)
+            {
+                buttonArray[i].debounceCount++;
+            }
         }
         //if dbc > 0 and pin is not set
         else
         {
-            buttonArray[i].debounceCount--;
-            buttonArray[i].holdCount = 0;
+            if (buttonArray[i].debounceCount > 0)
+            {
+                buttonArray[i].debounceCount--;
+                buttonArray[i].holdCount = 0;
+            }
         }
 
         //change states
@@ -74,7 +84,7 @@ void button_updateButton(void)
         else if (buttonArray[i].debounceCount == buttonArray[i].debounceThreshold)
         {
             //change to long press state
-            if (buttonArray[i].holdCount = buttonArray[i].holdThreshold)
+            if (buttonArray[i].holdCount == buttonArray[i].holdThreshold)
             {
                 buttonArray[i].currButtonState = longPress;
             }
@@ -104,7 +114,7 @@ void button_updateButton(void)
             else if (buttonArray[i].prevButtonState == pressed &&
                     buttonArray[i].currButtonState == unpressed)
                 {
-                    buttonArray[i].unpressedCb();
+                    buttonArray[i].pressedCb();
                 }
         }
 

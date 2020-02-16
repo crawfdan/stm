@@ -36,7 +36,7 @@ ST_FAMILY_UC = STM32F2XX
  
 LINT_PATH := /usr/local/FlexeLint
 BUILD_DIR = $(GIT_ROOT_DIR)/build/obj_$(TARGET)
-APP_SRC_DIR = $(GIT_ROOT_DIR)/app/src
+APP_SRC_DIR = $(GIT_ROOT_DIR)/app/Src
 APP_INC_DIR = $(GIT_ROOT_DIR)/app/inc
  
 #######################################
@@ -156,9 +156,9 @@ C_INCLUDES =  \
 
  
 # Add application sources and include path
-APPSOURCES =
-
- 
+APPSOURCES =  \
+$(APP_SRC_DIR)/button.c \
+$(APP_SRC_DIR)/led.c \
  
 C_SOURCES += $(APPSOURCES)
 C_INCLUDES += -I$(APP_INC_DIR)

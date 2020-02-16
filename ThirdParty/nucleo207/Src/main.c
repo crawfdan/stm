@@ -132,15 +132,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    if(HAL_GPIO_ReadPin(GPIOC, pushButton_Pin) == GPIO_PIN_SET)
-    {
-        HAL_GPIO_TogglePin(GPIOB, ledB_Pin);
-    }
-    else
-    {
-      HAL_GPIO_WritePin(GPIOB, ledB_Pin, GPIO_PIN_RESET);
-    }
-    
+
   }
   /* USER CODE END 3 */
 }
@@ -259,7 +251,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
   if (htim->Instance == TIM1) {
-    
+    button_updateButton();
   }
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM1) {

@@ -10,7 +10,12 @@ typedef struct led {
     GPIO_TypeDef *port; //GPIO port of led
 } Led_t;
 
-
+typedef enum {
+    invalidColor = -1,
+    green,
+    red,
+    blue
+} ledColor_t;
 
 static  Led_t ledArray[NUM_LEDS] = {
     [green] = 
@@ -36,6 +41,24 @@ void led_activateLed(ledColor_t color)
 {
     led_resetLeds();
     HAL_GPIO_WritePin(ledArray[color].port, ledArray[color].pin, GPIO_PIN_SET);
+    return;
+}
+
+void led_activateRedLed()
+{
+    led_activateLed(red);
+    return;
+}
+
+void led_activateBlueLed()
+{
+    led_activateLed(blue);
+    return;
+}
+
+void led_activateGreenLed()
+{
+    led_activateLed(green);
     return;
 }
 
