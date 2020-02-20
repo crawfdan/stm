@@ -56,8 +56,6 @@ RELEASE_OBJECT_NAME := $(PROJECT)-$(VERSION_STR)
 ######################################
 # source
 ######################################
-# C sources #TODO - Daniel - comment out sources that are not currently generated, add missing sources
-C_SOURCES =
 # C sources
 C_SOURCES =  \
 $(ST_DIR)/Src/main.c \
@@ -77,7 +75,9 @@ $(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c \
 $(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma.c \
 $(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma_ex.c \
 $(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_exti.c \
-$(ST_DIR)/Src/system_stm32f2xx.c
+$(ST_DIR)/Src/system_stm32f2xx.c \
+$(ST_DIR)/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+
 
  
 # ASM sources
@@ -152,13 +152,18 @@ C_INCLUDES =  \
 -I$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
 -I$(ST_DIR)/Drivers/CMSIS/Device/ST/STM32F2xx/Include \
 -I$(ST_DIR)/Drivers/CMSIS/Include \
--I$(ST_DIR)/Drivers/CMSIS/Include
+-I$(ST_DIR)/Drivers/CMSIS/Include \
+-I$(ST_DIR)/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
+-I$(ST_DIR)/Middlewares/Third_Party/FreeRTOS/Source/include \
+-I$(ST_DIR)/Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3
+
+
 
  
 # Add application sources and include path
 APPSOURCES =  \
 $(APP_SRC_DIR)/button.c \
-$(APP_SRC_DIR)/led.c \
+$(APP_SRC_DIR)/led.c
  
 C_SOURCES += $(APPSOURCES)
 C_INCLUDES += -I$(APP_INC_DIR)
