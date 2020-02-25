@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsZwjIT.s 			page 1
+ARM GAS  /tmp/ccfjAE52.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
   31:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   *
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   ******************************************************************************
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   */
-ARM GAS  /tmp/ccsZwjIT.s 			page 2
+ARM GAS  /tmp/ccfjAE52.s 			page 2
 
 
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
   88:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** __IO uint32_t uwTick;
   89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** uint32_t uwTickPrio   = (1UL << __NVIC_PRIO_BITS); /* Invalid PRIO */
   90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** HAL_TickFreqTypeDef uwTickFreq = HAL_TICK_FREQ_DEFAULT;  /* 1KHz */
-ARM GAS  /tmp/ccsZwjIT.s 			page 3
+ARM GAS  /tmp/ccfjAE52.s 			page 3
 
 
   91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  145:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   *            
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   * @note   SysTick is used as time base for the HAL_Delay() function, the application
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   *         need to ensure that the SysTick time base is always set to 1 millisecond
-ARM GAS  /tmp/ccsZwjIT.s 			page 4
+ARM GAS  /tmp/ccfjAE52.s 			page 4
 
 
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   *         to have correct HAL operation.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  202:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   /* De-Init the low level hardware */
  203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   HAL_MspDeInit();
  204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****     
-ARM GAS  /tmp/ccsZwjIT.s 			page 5
+ARM GAS  /tmp/ccfjAE52.s 			page 5
 
 
  205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   /* Return function status */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
   58              		.global	HAL_DeInit
   59              		.syntax unified
   60              		.thumb
-ARM GAS  /tmp/ccsZwjIT.s 			page 6
+ARM GAS  /tmp/ccfjAE52.s 			page 6
 
 
   61              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  103 0024 10BD     		pop	{r4, pc}
  104              	.L6:
  105 0026 00BF     		.align	2
-ARM GAS  /tmp/ccsZwjIT.s 			page 7
+ARM GAS  /tmp/ccfjAE52.s 			page 7
 
 
  106              	.L5:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  141 0018 FFF7FEFF 		bl	HAL_SYSTICK_Config
  142              	.LVL3:
  143 001c 68B9     		cbnz	r0, .L9
-ARM GAS  /tmp/ccsZwjIT.s 			page 8
+ARM GAS  /tmp/ccfjAE52.s 			page 8
 
 
  251:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   {
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  177              	.LFE76:
  179              		.section	.text.HAL_Init,"ax",%progbits
  180              		.align	1
-ARM GAS  /tmp/ccsZwjIT.s 			page 9
+ARM GAS  /tmp/ccfjAE52.s 			page 9
 
 
  181              		.global	HAL_Init
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  228 0030 003C0240 		.word	1073888256
  229              		.cfi_endproc
  230              	.LFE72:
-ARM GAS  /tmp/ccsZwjIT.s 			page 10
+ARM GAS  /tmp/ccfjAE52.s 			page 10
 
 
  232              		.section	.text.HAL_IncTick,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  247              		.loc 1 308 0
  248 0000 034A     		ldr	r2, .L20
  249 0002 1168     		ldr	r1, [r2]
-ARM GAS  /tmp/ccsZwjIT.s 			page 11
+ARM GAS  /tmp/ccfjAE52.s 			page 11
 
 
  250 0004 034B     		ldr	r3, .L20+4
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  295              		.thumb
  296              		.thumb_func
  297              		.fpu softvfp
-ARM GAS  /tmp/ccsZwjIT.s 			page 12
+ARM GAS  /tmp/ccfjAE52.s 			page 12
 
 
  299              	HAL_GetTickPrio:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  335 0004 8342     		cmp	r3, r0
  336 0006 0BD0     		beq	.L30
  336:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   HAL_StatusTypeDef status  = HAL_OK;
-ARM GAS  /tmp/ccsZwjIT.s 			page 13
+ARM GAS  /tmp/ccfjAE52.s 			page 13
 
 
  337              		.loc 1 336 0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  379              		.cfi_endproc
  380              	.LFE80:
  382              		.section	.text.HAL_GetTickFreq,"ax",%progbits
-ARM GAS  /tmp/ccsZwjIT.s 			page 14
+ARM GAS  /tmp/ccfjAE52.s 			page 14
 
 
  383              		.align	1
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  374:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** {
  418              		.loc 1 374 0
  419              		.cfi_startproc
-ARM GAS  /tmp/ccsZwjIT.s 			page 15
+ARM GAS  /tmp/ccfjAE52.s 			page 15
 
 
  420              		@ args = 0, pretend = 0, frame = 8
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  461 0026 30BD     		pop	{r4, r5, pc}
  462              	.LVL22:
  463              	.L45:
-ARM GAS  /tmp/ccsZwjIT.s 			page 16
+ARM GAS  /tmp/ccfjAE52.s 			page 16
 
 
  464              		.align	2
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  505              		.fpu softvfp
  507              	HAL_ResumeTick:
  508              	.LFB84:
-ARM GAS  /tmp/ccsZwjIT.s 			page 17
+ARM GAS  /tmp/ccfjAE52.s 			page 17
 
 
  404:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  542              		@ link register save eliminated.
  427:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****  return __STM32F2xx_HAL_VERSION;
  428:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** }
-ARM GAS  /tmp/ccsZwjIT.s 			page 18
+ARM GAS  /tmp/ccfjAE52.s 			page 18
 
 
  543              		.loc 1 428 0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  439:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** /**
  440:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   * @brief  Returns the device identifier.
  441:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   * @retval Device identifier
-ARM GAS  /tmp/ccsZwjIT.s 			page 19
+ARM GAS  /tmp/ccfjAE52.s 			page 19
 
 
  442:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c ****   */
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  633              	.L62:
  634 000c 002004E0 		.word	-536600576
  635              		.cfi_endproc
-ARM GAS  /tmp/ccsZwjIT.s 			page 20
+ARM GAS  /tmp/ccfjAE52.s 			page 20
 
 
  636              	.LFE88:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  678              		.cfi_startproc
  679              		@ args = 0, pretend = 0, frame = 0
  680              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccsZwjIT.s 			page 21
+ARM GAS  /tmp/ccfjAE52.s 			page 21
 
 
  681              		@ link register save eliminated.
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  727              		.global	HAL_DBGMCU_EnableDBGStandbyMode
  728              		.syntax unified
  729              		.thumb
-ARM GAS  /tmp/ccsZwjIT.s 			page 22
+ARM GAS  /tmp/ccfjAE52.s 			page 22
 
 
  730              		.thumb_func
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  770 0000 024A     		ldr	r2, .L77
  771 0002 5368     		ldr	r3, [r2, #4]
  772 0004 23F00403 		bic	r3, r3, #4
-ARM GAS  /tmp/ccsZwjIT.s 			page 23
+ARM GAS  /tmp/ccfjAE52.s 			page 23
 
 
  773 0008 5360     		str	r3, [r2, #4]
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
   18:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
   19:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
   20:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-ARM GAS  /tmp/ccsZwjIT.s 			page 24
+ARM GAS  /tmp/ccfjAE52.s 			page 24
 
 
   21:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
   75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
   76:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
   77:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccsZwjIT.s 			page 25
+ARM GAS  /tmp/ccfjAE52.s 			page 25
 
 
   78:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  132:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  133:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  134:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccsZwjIT.s 			page 26
+ARM GAS  /tmp/ccfjAE52.s 			page 26
 
 
  135:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  189:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
  190:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
  191:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
-ARM GAS  /tmp/ccsZwjIT.s 			page 27
+ARM GAS  /tmp/ccfjAE52.s 			page 27
 
 
  192:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  246:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  247:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
  248:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccsZwjIT.s 			page 28
+ARM GAS  /tmp/ccfjAE52.s 			page 28
 
 
  249:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  303:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  304:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  305:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
-ARM GAS  /tmp/ccsZwjIT.s 			page 29
+ARM GAS  /tmp/ccfjAE52.s 			page 29
 
 
  306:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  360:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
  361:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  362:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccsZwjIT.s 			page 30
+ARM GAS  /tmp/ccfjAE52.s 			page 30
 
 
  363:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  417:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  418:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  419:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/ccsZwjIT.s 			page 31
+ARM GAS  /tmp/ccfjAE52.s 			page 31
 
 
  420:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask (non-secure)
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  474:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
  475:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  476:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_BASEPRI_NS(void)
-ARM GAS  /tmp/ccsZwjIT.s 			page 32
+ARM GAS  /tmp/ccfjAE52.s 			page 32
 
 
  477:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  531:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
  532:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  533:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccsZwjIT.s 			page 33
+ARM GAS  /tmp/ccfjAE52.s 			page 33
 
 
  534:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  588:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   
  589:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer Limit (PSPLIM).
  590:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSPLIM Register value
-ARM GAS  /tmp/ccsZwjIT.s 			page 34
+ARM GAS  /tmp/ccfjAE52.s 			page 34
 
 
  591:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  645:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  646:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  647:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccsZwjIT.s 			page 35
+ARM GAS  /tmp/ccfjAE52.s 			page 35
 
 
  648:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  702:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSPLIM_NS(void)
  703:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  704:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
-ARM GAS  /tmp/ccsZwjIT.s 			page 36
+ARM GAS  /tmp/ccfjAE52.s 			page 36
 
 
  705:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  759:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  760:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  761:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/ccsZwjIT.s 			page 37
+ARM GAS  /tmp/ccfjAE52.s 			page 37
 
 
  762:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get FPSCR
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  816:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
  817:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** */
  818:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccsZwjIT.s 			page 38
+ARM GAS  /tmp/ccfjAE52.s 			page 38
 
 
  819:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /* Define macros for porting to both thumb1 and thumb2.
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  873:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Synchronization Barrier
  874:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Acts as a special kind of Data Memory Barrier.
  875:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****            It completes when all explicit memory accesses before this instruction complete.
-ARM GAS  /tmp/ccsZwjIT.s 			page 39
+ARM GAS  /tmp/ccfjAE52.s 			page 39
 
 
  876:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  930:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in a 16-bit value and returns the signed 16-bit result. For exam
  931:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
  932:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
-ARM GAS  /tmp/ccsZwjIT.s 			page 40
+ARM GAS  /tmp/ccfjAE52.s 			page 40
 
 
  933:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  987:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    )
  988:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("rbit %0, %1" : "=r" (result) : "r" (value) );
  802              		.loc 2 988 0
-ARM GAS  /tmp/ccsZwjIT.s 			page 41
+ARM GAS  /tmp/ccfjAE52.s 			page 41
 
 
  803 0000 0121     		movs	r1, #1
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  848              		.syntax unified
  849              	@ 988 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h" 1
  850 0002 92FAA2F2 		rbit r2, r2
-ARM GAS  /tmp/ccsZwjIT.s 			page 42
+ARM GAS  /tmp/ccfjAE52.s 			page 42
 
 
  851              	@ 0 "" 2
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  896              		.cfi_endproc
  897              	.LFE96:
  899              		.section	.text.HAL_GetUIDw1,"ax",%progbits
-ARM GAS  /tmp/ccsZwjIT.s 			page 43
+ARM GAS  /tmp/ccfjAE52.s 			page 43
 
 
  900              		.align	1
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  549:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c **** }
  940              		.loc 1 549 0
  941 0000 014B     		ldr	r3, .L92
-ARM GAS  /tmp/ccsZwjIT.s 			page 44
+ARM GAS  /tmp/ccfjAE52.s 			page 44
 
 
  942 0002 1868     		ldr	r0, [r3]
@@ -2612,97 +2612,97 @@ ARM GAS  /tmp/ccsZwjIT.s 			page 1
  975              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
  976              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
  977              		.file 11 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
-ARM GAS  /tmp/ccsZwjIT.s 			page 45
+ARM GAS  /tmp/ccfjAE52.s 			page 45
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f2xx_hal.c
-     /tmp/ccsZwjIT.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/ccsZwjIT.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/ccsZwjIT.s:37     .text.HAL_MspDeInit:0000000000000000 $t
-     /tmp/ccsZwjIT.s:44     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
-     /tmp/ccsZwjIT.s:57     .text.HAL_DeInit:0000000000000000 $t
-     /tmp/ccsZwjIT.s:64     .text.HAL_DeInit:0000000000000000 HAL_DeInit
-     /tmp/ccsZwjIT.s:107    .text.HAL_DeInit:0000000000000028 $d
-     /tmp/ccsZwjIT.s:112    .text.HAL_InitTick:0000000000000000 $t
-     /tmp/ccsZwjIT.s:119    .text.HAL_InitTick:0000000000000000 HAL_InitTick
-     /tmp/ccsZwjIT.s:173    .text.HAL_InitTick:0000000000000040 $d
-     /tmp/ccsZwjIT.s:180    .text.HAL_Init:0000000000000000 $t
-     /tmp/ccsZwjIT.s:187    .text.HAL_Init:0000000000000000 HAL_Init
-     /tmp/ccsZwjIT.s:228    .text.HAL_Init:0000000000000030 $d
-     /tmp/ccsZwjIT.s:233    .text.HAL_IncTick:0000000000000000 $t
-     /tmp/ccsZwjIT.s:240    .text.HAL_IncTick:0000000000000000 HAL_IncTick
-     /tmp/ccsZwjIT.s:259    .text.HAL_IncTick:0000000000000010 $d
+     /tmp/ccfjAE52.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccfjAE52.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccfjAE52.s:37     .text.HAL_MspDeInit:0000000000000000 $t
+     /tmp/ccfjAE52.s:44     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
+     /tmp/ccfjAE52.s:57     .text.HAL_DeInit:0000000000000000 $t
+     /tmp/ccfjAE52.s:64     .text.HAL_DeInit:0000000000000000 HAL_DeInit
+     /tmp/ccfjAE52.s:107    .text.HAL_DeInit:0000000000000028 $d
+     /tmp/ccfjAE52.s:112    .text.HAL_InitTick:0000000000000000 $t
+     /tmp/ccfjAE52.s:119    .text.HAL_InitTick:0000000000000000 HAL_InitTick
+     /tmp/ccfjAE52.s:173    .text.HAL_InitTick:0000000000000040 $d
+     /tmp/ccfjAE52.s:180    .text.HAL_Init:0000000000000000 $t
+     /tmp/ccfjAE52.s:187    .text.HAL_Init:0000000000000000 HAL_Init
+     /tmp/ccfjAE52.s:228    .text.HAL_Init:0000000000000030 $d
+     /tmp/ccfjAE52.s:233    .text.HAL_IncTick:0000000000000000 $t
+     /tmp/ccfjAE52.s:240    .text.HAL_IncTick:0000000000000000 HAL_IncTick
+     /tmp/ccfjAE52.s:259    .text.HAL_IncTick:0000000000000010 $d
                             *COM*:0000000000000004 uwTick
-     /tmp/ccsZwjIT.s:265    .text.HAL_GetTick:0000000000000000 $t
-     /tmp/ccsZwjIT.s:272    .text.HAL_GetTick:0000000000000000 HAL_GetTick
-     /tmp/ccsZwjIT.s:287    .text.HAL_GetTick:0000000000000008 $d
-     /tmp/ccsZwjIT.s:292    .text.HAL_GetTickPrio:0000000000000000 $t
-     /tmp/ccsZwjIT.s:299    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
-     /tmp/ccsZwjIT.s:313    .text.HAL_GetTickPrio:0000000000000008 $d
-     /tmp/ccsZwjIT.s:318    .text.HAL_SetTickFreq:0000000000000000 $t
-     /tmp/ccsZwjIT.s:325    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
-     /tmp/ccsZwjIT.s:377    .text.HAL_SetTickFreq:0000000000000028 $d
-     /tmp/ccsZwjIT.s:383    .text.HAL_GetTickFreq:0000000000000000 $t
-     /tmp/ccsZwjIT.s:390    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
-     /tmp/ccsZwjIT.s:404    .text.HAL_GetTickFreq:0000000000000008 $d
-     /tmp/ccsZwjIT.s:409    .text.HAL_Delay:0000000000000000 $t
-     /tmp/ccsZwjIT.s:416    .text.HAL_Delay:0000000000000000 HAL_Delay
-     /tmp/ccsZwjIT.s:466    .text.HAL_Delay:0000000000000028 $d
-     /tmp/ccsZwjIT.s:471    .text.HAL_SuspendTick:0000000000000000 $t
-     /tmp/ccsZwjIT.s:478    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
-     /tmp/ccsZwjIT.s:495    .text.HAL_SuspendTick:000000000000000c $d
-     /tmp/ccsZwjIT.s:500    .text.HAL_ResumeTick:0000000000000000 $t
-     /tmp/ccsZwjIT.s:507    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
-     /tmp/ccsZwjIT.s:524    .text.HAL_ResumeTick:000000000000000c $d
-     /tmp/ccsZwjIT.s:529    .text.HAL_GetHalVersion:0000000000000000 $t
-     /tmp/ccsZwjIT.s:536    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
-     /tmp/ccsZwjIT.s:549    .text.HAL_GetHalVersion:0000000000000004 $d
-     /tmp/ccsZwjIT.s:554    .text.HAL_GetREVID:0000000000000000 $t
-     /tmp/ccsZwjIT.s:561    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
-     /tmp/ccsZwjIT.s:577    .text.HAL_GetREVID:0000000000000008 $d
-     /tmp/ccsZwjIT.s:582    .text.HAL_GetDEVID:0000000000000000 $t
-     /tmp/ccsZwjIT.s:589    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
-     /tmp/ccsZwjIT.s:605    .text.HAL_GetDEVID:000000000000000c $d
-     /tmp/ccsZwjIT.s:610    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:617    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
-     /tmp/ccsZwjIT.s:634    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:639    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:646    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
-     /tmp/ccsZwjIT.s:663    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:668    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:675    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
-ARM GAS  /tmp/ccsZwjIT.s 			page 46
+     /tmp/ccfjAE52.s:265    .text.HAL_GetTick:0000000000000000 $t
+     /tmp/ccfjAE52.s:272    .text.HAL_GetTick:0000000000000000 HAL_GetTick
+     /tmp/ccfjAE52.s:287    .text.HAL_GetTick:0000000000000008 $d
+     /tmp/ccfjAE52.s:292    .text.HAL_GetTickPrio:0000000000000000 $t
+     /tmp/ccfjAE52.s:299    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
+     /tmp/ccfjAE52.s:313    .text.HAL_GetTickPrio:0000000000000008 $d
+     /tmp/ccfjAE52.s:318    .text.HAL_SetTickFreq:0000000000000000 $t
+     /tmp/ccfjAE52.s:325    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
+     /tmp/ccfjAE52.s:377    .text.HAL_SetTickFreq:0000000000000028 $d
+     /tmp/ccfjAE52.s:383    .text.HAL_GetTickFreq:0000000000000000 $t
+     /tmp/ccfjAE52.s:390    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
+     /tmp/ccfjAE52.s:404    .text.HAL_GetTickFreq:0000000000000008 $d
+     /tmp/ccfjAE52.s:409    .text.HAL_Delay:0000000000000000 $t
+     /tmp/ccfjAE52.s:416    .text.HAL_Delay:0000000000000000 HAL_Delay
+     /tmp/ccfjAE52.s:466    .text.HAL_Delay:0000000000000028 $d
+     /tmp/ccfjAE52.s:471    .text.HAL_SuspendTick:0000000000000000 $t
+     /tmp/ccfjAE52.s:478    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+     /tmp/ccfjAE52.s:495    .text.HAL_SuspendTick:000000000000000c $d
+     /tmp/ccfjAE52.s:500    .text.HAL_ResumeTick:0000000000000000 $t
+     /tmp/ccfjAE52.s:507    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+     /tmp/ccfjAE52.s:524    .text.HAL_ResumeTick:000000000000000c $d
+     /tmp/ccfjAE52.s:529    .text.HAL_GetHalVersion:0000000000000000 $t
+     /tmp/ccfjAE52.s:536    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
+     /tmp/ccfjAE52.s:549    .text.HAL_GetHalVersion:0000000000000004 $d
+     /tmp/ccfjAE52.s:554    .text.HAL_GetREVID:0000000000000000 $t
+     /tmp/ccfjAE52.s:561    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
+     /tmp/ccfjAE52.s:577    .text.HAL_GetREVID:0000000000000008 $d
+     /tmp/ccfjAE52.s:582    .text.HAL_GetDEVID:0000000000000000 $t
+     /tmp/ccfjAE52.s:589    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
+     /tmp/ccfjAE52.s:605    .text.HAL_GetDEVID:000000000000000c $d
+     /tmp/ccfjAE52.s:610    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:617    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
+     /tmp/ccfjAE52.s:634    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
+     /tmp/ccfjAE52.s:639    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:646    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
+     /tmp/ccfjAE52.s:663    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
+     /tmp/ccfjAE52.s:668    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:675    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
+ARM GAS  /tmp/ccfjAE52.s 			page 46
 
 
-     /tmp/ccsZwjIT.s:692    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:697    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:704    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
-     /tmp/ccsZwjIT.s:721    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:726    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:733    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
-     /tmp/ccsZwjIT.s:750    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:755    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
-     /tmp/ccsZwjIT.s:762    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
-     /tmp/ccsZwjIT.s:779    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
-     /tmp/ccsZwjIT.s:784    .text.HAL_EnableCompensationCell:0000000000000000 $t
-     /tmp/ccsZwjIT.s:791    .text.HAL_EnableCompensationCell:0000000000000000 HAL_EnableCompensationCell
-     /tmp/ccsZwjIT.s:824    .text.HAL_EnableCompensationCell:0000000000000014 $d
-     /tmp/ccsZwjIT.s:829    .text.HAL_DisableCompensationCell:0000000000000000 $t
-     /tmp/ccsZwjIT.s:836    .text.HAL_DisableCompensationCell:0000000000000000 HAL_DisableCompensationCell
-     /tmp/ccsZwjIT.s:869    .text.HAL_DisableCompensationCell:0000000000000018 $d
-     /tmp/ccsZwjIT.s:874    .text.HAL_GetUIDw0:0000000000000000 $t
-     /tmp/ccsZwjIT.s:881    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
-     /tmp/ccsZwjIT.s:895    .text.HAL_GetUIDw0:0000000000000008 $d
-     /tmp/ccsZwjIT.s:900    .text.HAL_GetUIDw1:0000000000000000 $t
-     /tmp/ccsZwjIT.s:907    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
-     /tmp/ccsZwjIT.s:921    .text.HAL_GetUIDw1:0000000000000008 $d
-     /tmp/ccsZwjIT.s:926    .text.HAL_GetUIDw2:0000000000000000 $t
-     /tmp/ccsZwjIT.s:933    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
-     /tmp/ccsZwjIT.s:947    .text.HAL_GetUIDw2:0000000000000008 $d
-     /tmp/ccsZwjIT.s:958    .data.uwTickFreq:0000000000000000 uwTickFreq
-     /tmp/ccsZwjIT.s:965    .data.uwTickPrio:0000000000000000 uwTickPrio
-     /tmp/ccsZwjIT.s:961    .data.uwTickPrio:0000000000000000 $d
+     /tmp/ccfjAE52.s:692    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
+     /tmp/ccfjAE52.s:697    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:704    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
+     /tmp/ccfjAE52.s:721    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
+     /tmp/ccfjAE52.s:726    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:733    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
+     /tmp/ccfjAE52.s:750    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
+     /tmp/ccfjAE52.s:755    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccfjAE52.s:762    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
+     /tmp/ccfjAE52.s:779    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
+     /tmp/ccfjAE52.s:784    .text.HAL_EnableCompensationCell:0000000000000000 $t
+     /tmp/ccfjAE52.s:791    .text.HAL_EnableCompensationCell:0000000000000000 HAL_EnableCompensationCell
+     /tmp/ccfjAE52.s:824    .text.HAL_EnableCompensationCell:0000000000000014 $d
+     /tmp/ccfjAE52.s:829    .text.HAL_DisableCompensationCell:0000000000000000 $t
+     /tmp/ccfjAE52.s:836    .text.HAL_DisableCompensationCell:0000000000000000 HAL_DisableCompensationCell
+     /tmp/ccfjAE52.s:869    .text.HAL_DisableCompensationCell:0000000000000018 $d
+     /tmp/ccfjAE52.s:874    .text.HAL_GetUIDw0:0000000000000000 $t
+     /tmp/ccfjAE52.s:881    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
+     /tmp/ccfjAE52.s:895    .text.HAL_GetUIDw0:0000000000000008 $d
+     /tmp/ccfjAE52.s:900    .text.HAL_GetUIDw1:0000000000000000 $t
+     /tmp/ccfjAE52.s:907    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
+     /tmp/ccfjAE52.s:921    .text.HAL_GetUIDw1:0000000000000008 $d
+     /tmp/ccfjAE52.s:926    .text.HAL_GetUIDw2:0000000000000000 $t
+     /tmp/ccfjAE52.s:933    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
+     /tmp/ccfjAE52.s:947    .text.HAL_GetUIDw2:0000000000000008 $d
+     /tmp/ccfjAE52.s:958    .data.uwTickFreq:0000000000000000 uwTickFreq
+     /tmp/ccfjAE52.s:965    .data.uwTickPrio:0000000000000000 uwTickPrio
+     /tmp/ccfjAE52.s:961    .data.uwTickPrio:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SYSTICK_Config

@@ -60,8 +60,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define pushButton_Pin GPIO_PIN_13
 #define pushButton_GPIO_Port GPIOC
-#define ledG_Pin GPIO_PIN_5
-#define ledG_GPIO_Port GPIOA
+#define ledG_Pin GPIO_PIN_0
+#define ledG_GPIO_Port GPIOB
 #define ledR_Pin GPIO_PIN_14
 #define ledR_GPIO_Port GPIOB
 #define ledB_Pin GPIO_PIN_7

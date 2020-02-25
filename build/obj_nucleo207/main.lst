@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9fD2MM.s 			page 1
+ARM GAS  /tmp/ccToV3WZ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9fD2MM.s 			page 1
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE BEGIN PTD */
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE END PTD */
-ARM GAS  /tmp/cc9fD2MM.s 			page 2
+ARM GAS  /tmp/ccToV3WZ.s 			page 2
 
 
   35:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9fD2MM.s 			page 1
   89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN SysInit */
   90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
   91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END SysInit */
-ARM GAS  /tmp/cc9fD2MM.s 			page 3
+ARM GAS  /tmp/ccToV3WZ.s 			page 3
 
 
   92:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9fD2MM.s 			page 1
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-ARM GAS  /tmp/cc9fD2MM.s 			page 4
+ARM GAS  /tmp/ccToV3WZ.s 			page 4
 
 
  149:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
@@ -218,557 +218,508 @@ ARM GAS  /tmp/cc9fD2MM.s 			page 1
   26              		.cfi_startproc
   27              		@ args = 0, pretend = 0, frame = 32
   28              		@ frame_needed = 0, uses_anonymous_args = 0
-  29 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  29 0000 30B5     		push	{r4, r5, lr}
   30              	.LCFI0:
-  31              		.cfi_def_cfa_offset 20
-  32              		.cfi_offset 4, -20
-  33              		.cfi_offset 5, -16
-  34              		.cfi_offset 6, -12
-  35              		.cfi_offset 7, -8
-  36              		.cfi_offset 14, -4
-  37 0002 89B0     		sub	sp, sp, #36
-  38              	.LCFI1:
-  39              		.cfi_def_cfa_offset 56
+  31              		.cfi_def_cfa_offset 12
+  32              		.cfi_offset 4, -12
+  33              		.cfi_offset 5, -8
+  34              		.cfi_offset 14, -4
+  35 0002 89B0     		sub	sp, sp, #36
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 48
  182:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  40              		.loc 1 182 0
-  41 0004 0024     		movs	r4, #0
-  42 0006 0394     		str	r4, [sp, #12]
-  43 0008 0494     		str	r4, [sp, #16]
-  44 000a 0594     		str	r4, [sp, #20]
-  45 000c 0694     		str	r4, [sp, #24]
-  46 000e 0794     		str	r4, [sp, #28]
-  47              	.LBB2:
-ARM GAS  /tmp/cc9fD2MM.s 			page 5
-
-
+  38              		.loc 1 182 0
+  39 0004 0024     		movs	r4, #0
+  40 0006 0394     		str	r4, [sp, #12]
+  41 0008 0494     		str	r4, [sp, #16]
+  42 000a 0594     		str	r4, [sp, #20]
+  43 000c 0694     		str	r4, [sp, #24]
+  44 000e 0794     		str	r4, [sp, #28]
+  45              	.LBB2:
  183:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
  184:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* GPIO Ports Clock Enable */
+ARM GAS  /tmp/ccToV3WZ.s 			page 5
+
+
  185:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
-  48              		.loc 1 185 0
-  49 0010 0094     		str	r4, [sp]
-  50 0012 254B     		ldr	r3, .L3
-  51 0014 1A6B     		ldr	r2, [r3, #48]
-  52 0016 42F00402 		orr	r2, r2, #4
-  53 001a 1A63     		str	r2, [r3, #48]
-  54 001c 1A6B     		ldr	r2, [r3, #48]
-  55 001e 02F00402 		and	r2, r2, #4
-  56 0022 0092     		str	r2, [sp]
-  57 0024 009A     		ldr	r2, [sp]
-  58              	.LBE2:
-  59              	.LBB3:
- 186:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
-  60              		.loc 1 186 0
-  61 0026 0194     		str	r4, [sp, #4]
-  62 0028 1A6B     		ldr	r2, [r3, #48]
-  63 002a 42F00102 		orr	r2, r2, #1
-  64 002e 1A63     		str	r2, [r3, #48]
-  65 0030 1A6B     		ldr	r2, [r3, #48]
-  66 0032 02F00102 		and	r2, r2, #1
-  67 0036 0192     		str	r2, [sp, #4]
-  68 0038 019A     		ldr	r2, [sp, #4]
-  69              	.LBE3:
-  70              	.LBB4:
- 187:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
-  71              		.loc 1 187 0
-  72 003a 0294     		str	r4, [sp, #8]
-  73 003c 1A6B     		ldr	r2, [r3, #48]
-  74 003e 42F00202 		orr	r2, r2, #2
-  75 0042 1A63     		str	r2, [r3, #48]
-  76 0044 1B6B     		ldr	r3, [r3, #48]
-  77 0046 03F00203 		and	r3, r3, #2
-  78 004a 0293     		str	r3, [sp, #8]
-  79 004c 029B     		ldr	r3, [sp, #8]
-  80              	.LBE4:
- 188:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 189:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin Output Level */
- 190:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_WritePin(ledG_GPIO_Port, ledG_Pin, GPIO_PIN_RESET);
-  81              		.loc 1 190 0
-  82 004e 174F     		ldr	r7, .L3+4
-  83 0050 2246     		mov	r2, r4
-  84 0052 2021     		movs	r1, #32
-  85 0054 3846     		mov	r0, r7
-  86 0056 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  87              	.LVL0:
- 191:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 192:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin Output Level */
- 193:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_WritePin(GPIOB, ledR_Pin|ledB_Pin, GPIO_PIN_RESET);
-  88              		.loc 1 193 0
-  89 005a 154D     		ldr	r5, .L3+8
-  90 005c 2246     		mov	r2, r4
-  91 005e 4FF48141 		mov	r1, #16512
-  92 0062 2846     		mov	r0, r5
-  93 0064 FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  /tmp/cc9fD2MM.s 			page 6
+  46              		.loc 1 185 0
+  47 0010 0194     		str	r4, [sp, #4]
+  48 0012 184B     		ldr	r3, .L3
+  49 0014 1A6B     		ldr	r2, [r3, #48]
+  50 0016 42F00402 		orr	r2, r2, #4
+  51 001a 1A63     		str	r2, [r3, #48]
+  52 001c 1A6B     		ldr	r2, [r3, #48]
+  53 001e 02F00402 		and	r2, r2, #4
+  54 0022 0192     		str	r2, [sp, #4]
+  55 0024 019A     		ldr	r2, [sp, #4]
+  56              	.LBE2:
+  57              	.LBB3:
+ 186:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  58              		.loc 1 186 0
+  59 0026 0294     		str	r4, [sp, #8]
+  60 0028 1A6B     		ldr	r2, [r3, #48]
+  61 002a 42F00202 		orr	r2, r2, #2
+  62 002e 1A63     		str	r2, [r3, #48]
+  63 0030 1B6B     		ldr	r3, [r3, #48]
+  64 0032 03F00203 		and	r3, r3, #2
+  65 0036 0293     		str	r3, [sp, #8]
+  66 0038 029B     		ldr	r3, [sp, #8]
+  67              	.LBE3:
+ 187:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 188:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin Output Level */
+ 189:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_WritePin(GPIOB, ledG_Pin|ledR_Pin|ledB_Pin, GPIO_PIN_RESET);
+  68              		.loc 1 189 0
+  69 003a 0F4D     		ldr	r5, .L3+4
+  70 003c 2246     		mov	r2, r4
+  71 003e 44F28101 		movw	r1, #16513
+  72 0042 2846     		mov	r0, r5
+  73 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  74              	.LVL0:
+ 190:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 191:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin : pushButton_Pin */
+ 192:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pin = pushButton_Pin;
+  75              		.loc 1 192 0
+  76 0048 4FF40053 		mov	r3, #8192
+  77 004c 0393     		str	r3, [sp, #12]
+ 193:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  78              		.loc 1 193 0
+  79 004e 0494     		str	r4, [sp, #16]
+ 194:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  80              		.loc 1 194 0
+  81 0050 0594     		str	r4, [sp, #20]
+ 195:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_Init(pushButton_GPIO_Port, &GPIO_InitStruct);
+  82              		.loc 1 195 0
+  83 0052 03A9     		add	r1, sp, #12
+  84 0054 0948     		ldr	r0, .L3+8
+  85 0056 FFF7FEFF 		bl	HAL_GPIO_Init
+  86              	.LVL1:
+ 196:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 197:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pins : ledG_Pin ledR_Pin ledB_Pin */
+ 198:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pin = ledG_Pin|ledR_Pin|ledB_Pin;
+  87              		.loc 1 198 0
+  88 005a 44F28103 		movw	r3, #16513
+ARM GAS  /tmp/ccToV3WZ.s 			page 6
 
 
-  94              	.LVL1:
- 194:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 195:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin : pushButton_Pin */
- 196:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pin = pushButton_Pin;
-  95              		.loc 1 196 0
-  96 0068 4FF40053 		mov	r3, #8192
-  97 006c 0393     		str	r3, [sp, #12]
- 197:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  98              		.loc 1 197 0
-  99 006e 0494     		str	r4, [sp, #16]
- 198:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 100              		.loc 1 198 0
- 101 0070 0594     		str	r4, [sp, #20]
- 199:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_Init(pushButton_GPIO_Port, &GPIO_InitStruct);
- 102              		.loc 1 199 0
- 103 0072 03A9     		add	r1, sp, #12
- 104 0074 0F48     		ldr	r0, .L3+12
- 105 0076 FFF7FEFF 		bl	HAL_GPIO_Init
- 106              	.LVL2:
- 200:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 201:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pin : ledG_Pin */
- 202:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pin = ledG_Pin;
- 107              		.loc 1 202 0
- 108 007a 2023     		movs	r3, #32
- 109 007c 0393     		str	r3, [sp, #12]
- 203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 110              		.loc 1 203 0
- 111 007e 0126     		movs	r6, #1
- 112 0080 0496     		str	r6, [sp, #16]
- 204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 113              		.loc 1 204 0
- 114 0082 0594     		str	r4, [sp, #20]
- 205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 115              		.loc 1 205 0
- 116 0084 0694     		str	r4, [sp, #24]
- 206:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_Init(ledG_GPIO_Port, &GPIO_InitStruct);
- 117              		.loc 1 206 0
- 118 0086 03A9     		add	r1, sp, #12
- 119 0088 3846     		mov	r0, r7
- 120 008a FFF7FEFF 		bl	HAL_GPIO_Init
- 121              	.LVL3:
+  89 005e 0393     		str	r3, [sp, #12]
+ 199:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  90              		.loc 1 199 0
+  91 0060 0123     		movs	r3, #1
+  92 0062 0493     		str	r3, [sp, #16]
+ 200:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  93              		.loc 1 200 0
+  94 0064 0594     		str	r4, [sp, #20]
+ 201:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  95              		.loc 1 201 0
+  96 0066 0694     		str	r4, [sp, #24]
+ 202:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  97              		.loc 1 202 0
+  98 0068 03A9     		add	r1, sp, #12
+  99 006a 2846     		mov	r0, r5
+ 100 006c FFF7FEFF 		bl	HAL_GPIO_Init
+ 101              	.LVL2:
+ 203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
+ 102              		.loc 1 204 0
+ 103 0070 09B0     		add	sp, sp, #36
+ 104              	.LCFI2:
+ 105              		.cfi_def_cfa_offset 12
+ 106              		@ sp needed
+ 107 0072 30BD     		pop	{r4, r5, pc}
+ 108              	.L4:
+ 109              		.align	2
+ 110              	.L3:
+ 111 0074 00380240 		.word	1073887232
+ 112 0078 00040240 		.word	1073873920
+ 113 007c 00080240 		.word	1073874944
+ 114              		.cfi_endproc
+ 115              	.LFE79:
+ 117              		.section	.text.StartDefaultTask,"ax",%progbits
+ 118              		.align	1
+ 119              		.global	StartDefaultTask
+ 120              		.syntax unified
+ 121              		.thumb
+ 122              		.thumb_func
+ 123              		.fpu softvfp
+ 125              	StartDefaultTask:
+ 126              	.LFB80:
+ 205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 206:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE BEGIN 4 */
  207:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 208:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /*Configure GPIO pins : ledR_Pin ledB_Pin */
- 209:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pin = ledR_Pin|ledB_Pin;
- 122              		.loc 1 209 0
- 123 008e 4FF48143 		mov	r3, #16512
- 124 0092 0393     		str	r3, [sp, #12]
- 210:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 125              		.loc 1 210 0
- 126 0094 0496     		str	r6, [sp, #16]
- 211:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
- 127              		.loc 1 211 0
- 128 0096 0594     		str	r4, [sp, #20]
- 212:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 129              		.loc 1 212 0
- 130 0098 0694     		str	r4, [sp, #24]
- 213:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-ARM GAS  /tmp/cc9fD2MM.s 			page 7
+ 208:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE END 4 */
+ 209:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 210:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE BEGIN Header_StartDefaultTask */
+ 211:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
+ 212:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  Function implementing the defaultTask thread.
+ 213:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @param  argument: Not used 
+ 214:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
+ 215:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
+ 216:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE END Header_StartDefaultTask */
+ 217:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void StartDefaultTask(void const * argument)
+ 218:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
+ 127              		.loc 1 218 0
+ARM GAS  /tmp/ccToV3WZ.s 			page 7
 
 
- 131              		.loc 1 213 0
- 132 009a 03A9     		add	r1, sp, #12
- 133 009c 2846     		mov	r0, r5
- 134 009e FFF7FEFF 		bl	HAL_GPIO_Init
- 135              	.LVL4:
- 214:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 215:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
- 136              		.loc 1 215 0
- 137 00a2 09B0     		add	sp, sp, #36
- 138              	.LCFI2:
- 139              		.cfi_def_cfa_offset 20
- 140              		@ sp needed
- 141 00a4 F0BD     		pop	{r4, r5, r6, r7, pc}
- 142              	.L4:
- 143 00a6 00BF     		.align	2
- 144              	.L3:
- 145 00a8 00380240 		.word	1073887232
- 146 00ac 00000240 		.word	1073872896
- 147 00b0 00040240 		.word	1073873920
- 148 00b4 00080240 		.word	1073874944
- 149              		.cfi_endproc
- 150              	.LFE79:
- 152              		.section	.text.StartDefaultTask,"ax",%progbits
- 153              		.align	1
- 154              		.global	StartDefaultTask
- 155              		.syntax unified
- 156              		.thumb
- 157              		.thumb_func
- 158              		.fpu softvfp
- 160              	StartDefaultTask:
- 161              	.LFB80:
- 216:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 217:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE BEGIN 4 */
- 218:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 219:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE END 4 */
- 220:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 221:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE BEGIN Header_StartDefaultTask */
- 222:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
- 223:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  Function implementing the defaultTask thread.
- 224:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @param  argument: Not used 
- 225:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
- 226:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
- 227:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /* USER CODE END Header_StartDefaultTask */
- 228:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void StartDefaultTask(void const * argument)
- 229:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
- 162              		.loc 1 229 0
- 163              		.cfi_startproc
- 164              		@ Volatile: function does not return.
- 165              		@ args = 0, pretend = 0, frame = 0
- 166              		@ frame_needed = 0, uses_anonymous_args = 0
- 167              	.LVL5:
- 168 0000 08B5     		push	{r3, lr}
- 169              	.LCFI3:
- 170              		.cfi_def_cfa_offset 8
- 171              		.cfi_offset 3, -8
- 172              		.cfi_offset 14, -4
- 173              	.LVL6:
-ARM GAS  /tmp/cc9fD2MM.s 			page 8
-
-
- 174              	.L6:
- 230:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
- 231:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
- 232:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
- 233:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 234:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN 5 */
- 235:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* Infinite loop */
- 236:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   for(;;)
- 237:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   {
- 238:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     osDelay(1);
- 175              		.loc 1 238 0 discriminator 1
- 176 0002 0120     		movs	r0, #1
- 177 0004 FFF7FEFF 		bl	osDelay
- 178              	.LVL7:
- 179 0008 FBE7     		b	.L6
- 180              		.cfi_endproc
- 181              	.LFE80:
- 183              		.section	.text.SystemClock_Config,"ax",%progbits
- 184              		.align	1
- 185              		.global	SystemClock_Config
- 186              		.syntax unified
- 187              		.thumb
- 188              		.thumb_func
- 189              		.fpu softvfp
- 191              	SystemClock_Config:
- 192              	.LFB78:
+ 128              		.cfi_startproc
+ 129              		@ Volatile: function does not return.
+ 130              		@ args = 0, pretend = 0, frame = 0
+ 131              		@ frame_needed = 0, uses_anonymous_args = 0
+ 132              	.LVL3:
+ 133 0000 08B5     		push	{r3, lr}
+ 134              	.LCFI3:
+ 135              		.cfi_def_cfa_offset 8
+ 136              		.cfi_offset 3, -8
+ 137              		.cfi_offset 14, -4
+ 138              	.LVL4:
+ 139              	.L6:
+ 219:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
+ 220:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
+ 221:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     
+ 222:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 223:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN 5 */
+ 224:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* Infinite loop */
+ 225:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   for(;;)
+ 226:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   {
+ 227:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     osDelay(1);
+ 140              		.loc 1 227 0 discriminator 1
+ 141 0002 0120     		movs	r0, #1
+ 142 0004 FFF7FEFF 		bl	osDelay
+ 143              	.LVL5:
+ 144 0008 FBE7     		b	.L6
+ 145              		.cfi_endproc
+ 146              	.LFE80:
+ 148              		.section	.text.SystemClock_Config,"ax",%progbits
+ 149              		.align	1
+ 150              		.global	SystemClock_Config
+ 151              		.syntax unified
+ 152              		.thumb
+ 153              		.thumb_func
+ 154              		.fpu softvfp
+ 156              	SystemClock_Config:
+ 157              	.LFB78:
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 193              		.loc 1 146 0
- 194              		.cfi_startproc
- 195              		@ args = 0, pretend = 0, frame = 72
- 196              		@ frame_needed = 0, uses_anonymous_args = 0
- 197 0000 10B5     		push	{r4, lr}
- 198              	.LCFI4:
- 199              		.cfi_def_cfa_offset 8
- 200              		.cfi_offset 4, -8
- 201              		.cfi_offset 14, -4
- 202 0002 92B0     		sub	sp, sp, #72
- 203              	.LCFI5:
- 204              		.cfi_def_cfa_offset 80
+ 158              		.loc 1 146 0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 72
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162 0000 10B5     		push	{r4, lr}
+ 163              	.LCFI4:
+ 164              		.cfi_def_cfa_offset 8
+ 165              		.cfi_offset 4, -8
+ 166              		.cfi_offset 14, -4
+ 167 0002 92B0     		sub	sp, sp, #72
+ 168              	.LCFI5:
+ 169              		.cfi_def_cfa_offset 80
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 205              		.loc 1 147 0
- 206 0004 2C22     		movs	r2, #44
- 207 0006 0021     		movs	r1, #0
- 208 0008 07A8     		add	r0, sp, #28
- 209 000a FFF7FEFF 		bl	memset
- 210              	.LVL8:
+ 170              		.loc 1 147 0
+ 171 0004 2C22     		movs	r2, #44
+ 172 0006 0021     		movs	r1, #0
+ 173 0008 07A8     		add	r0, sp, #28
+ 174 000a FFF7FEFF 		bl	memset
+ 175              	.LVL6:
+ARM GAS  /tmp/ccToV3WZ.s 			page 8
+
+
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 211              		.loc 1 148 0
- 212 000e 0024     		movs	r4, #0
- 213 0010 0194     		str	r4, [sp, #4]
- 214 0012 0294     		str	r4, [sp, #8]
- 215 0014 0394     		str	r4, [sp, #12]
- 216 0016 0494     		str	r4, [sp, #16]
- 217 0018 0594     		str	r4, [sp, #20]
+ 176              		.loc 1 148 0
+ 177 000e 0024     		movs	r4, #0
+ 178 0010 0194     		str	r4, [sp, #4]
+ 179 0012 0294     		str	r4, [sp, #8]
+ 180 0014 0394     		str	r4, [sp, #12]
+ 181 0016 0494     		str	r4, [sp, #16]
+ 182 0018 0594     		str	r4, [sp, #20]
  152:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 218              		.loc 1 152 0
- 219 001a 0223     		movs	r3, #2
-ARM GAS  /tmp/cc9fD2MM.s 			page 9
-
-
- 220 001c 0693     		str	r3, [sp, #24]
+ 183              		.loc 1 152 0
+ 184 001a 0223     		movs	r3, #2
+ 185 001c 0693     		str	r3, [sp, #24]
  153:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
- 221              		.loc 1 153 0
- 222 001e 0123     		movs	r3, #1
- 223 0020 0993     		str	r3, [sp, #36]
+ 186              		.loc 1 153 0
+ 187 001e 0123     		movs	r3, #1
+ 188 0020 0993     		str	r3, [sp, #36]
  154:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 224              		.loc 1 154 0
- 225 0022 1023     		movs	r3, #16
- 226 0024 0A93     		str	r3, [sp, #40]
+ 189              		.loc 1 154 0
+ 190 0022 1023     		movs	r3, #16
+ 191 0024 0A93     		str	r3, [sp, #40]
  156:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   {
- 227              		.loc 1 156 0
- 228 0026 06A8     		add	r0, sp, #24
- 229 0028 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 230              	.LVL9:
+ 192              		.loc 1 156 0
+ 193 0026 06A8     		add	r0, sp, #24
+ 194 0028 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 195              	.LVL7:
  162:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 231              		.loc 1 162 0
- 232 002c 0F23     		movs	r3, #15
- 233 002e 0193     		str	r3, [sp, #4]
+ 196              		.loc 1 162 0
+ 197 002c 0F23     		movs	r3, #15
+ 198 002e 0193     		str	r3, [sp, #4]
  164:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 234              		.loc 1 164 0
- 235 0030 0294     		str	r4, [sp, #8]
+ 199              		.loc 1 164 0
+ 200 0030 0294     		str	r4, [sp, #8]
  165:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 236              		.loc 1 165 0
- 237 0032 0394     		str	r4, [sp, #12]
+ 201              		.loc 1 165 0
+ 202 0032 0394     		str	r4, [sp, #12]
  166:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 238              		.loc 1 166 0
- 239 0034 0494     		str	r4, [sp, #16]
+ 203              		.loc 1 166 0
+ 204 0034 0494     		str	r4, [sp, #16]
  167:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 240              		.loc 1 167 0
- 241 0036 0594     		str	r4, [sp, #20]
+ 205              		.loc 1 167 0
+ 206 0036 0594     		str	r4, [sp, #20]
  169:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   {
- 242              		.loc 1 169 0
- 243 0038 2146     		mov	r1, r4
- 244 003a 01A8     		add	r0, sp, #4
- 245 003c FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 246              	.LVL10:
+ 207              		.loc 1 169 0
+ 208 0038 2146     		mov	r1, r4
+ 209 003a 01A8     		add	r0, sp, #4
+ 210 003c FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 211              	.LVL8:
  173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 247              		.loc 1 173 0
- 248 0040 12B0     		add	sp, sp, #72
- 249              	.LCFI6:
- 250              		.cfi_def_cfa_offset 8
- 251              		@ sp needed
- 252 0042 10BD     		pop	{r4, pc}
- 253              		.cfi_endproc
- 254              	.LFE78:
- 256              		.section	.text.main,"ax",%progbits
- 257              		.align	1
- 258              		.global	main
- 259              		.syntax unified
- 260              		.thumb
- 261              		.thumb_func
- 262              		.fpu softvfp
- 264              	main:
- 265              	.LFB77:
+ 212              		.loc 1 173 0
+ 213 0040 12B0     		add	sp, sp, #72
+ 214              	.LCFI6:
+ 215              		.cfi_def_cfa_offset 8
+ 216              		@ sp needed
+ 217 0042 10BD     		pop	{r4, pc}
+ 218              		.cfi_endproc
+ 219              	.LFE78:
+ 221              		.section	.text.main,"ax",%progbits
+ARM GAS  /tmp/ccToV3WZ.s 			page 9
+
+
+ 222              		.align	1
+ 223              		.global	main
+ 224              		.syntax unified
+ 225              		.thumb
+ 226              		.thumb_func
+ 227              		.fpu softvfp
+ 229              	main:
+ 230              	.LFB77:
   71:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN 1 */
- 266              		.loc 1 71 0
- 267              		.cfi_startproc
-ARM GAS  /tmp/cc9fD2MM.s 			page 10
-
-
- 268              		@ Volatile: function does not return.
- 269              		@ args = 0, pretend = 0, frame = 24
- 270              		@ frame_needed = 0, uses_anonymous_args = 0
- 271 0000 00B5     		push	{lr}
- 272              	.LCFI7:
- 273              		.cfi_def_cfa_offset 4
- 274              		.cfi_offset 14, -4
- 275 0002 87B0     		sub	sp, sp, #28
- 276              	.LCFI8:
- 277              		.cfi_def_cfa_offset 32
+ 231              		.loc 1 71 0
+ 232              		.cfi_startproc
+ 233              		@ Volatile: function does not return.
+ 234              		@ args = 0, pretend = 0, frame = 24
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236 0000 00B5     		push	{lr}
+ 237              	.LCFI7:
+ 238              		.cfi_def_cfa_offset 4
+ 239              		.cfi_offset 14, -4
+ 240 0002 87B0     		sub	sp, sp, #28
+ 241              	.LCFI8:
+ 242              		.cfi_def_cfa_offset 32
   80:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 278              		.loc 1 80 0
- 279 0004 FFF7FEFF 		bl	HAL_Init
- 280              	.LVL11:
+ 243              		.loc 1 80 0
+ 244 0004 FFF7FEFF 		bl	HAL_Init
+ 245              	.LVL9:
   87:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 281              		.loc 1 87 0
- 282 0008 FFF7FEFF 		bl	SystemClock_Config
- 283              	.LVL12:
+ 246              		.loc 1 87 0
+ 247 0008 FFF7FEFF 		bl	SystemClock_Config
+ 248              	.LVL10:
   94:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN 2 */
- 284              		.loc 1 94 0
- 285 000c FFF7FEFF 		bl	MX_GPIO_Init
- 286              	.LVL13:
+ 249              		.loc 1 94 0
+ 250 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 251              	.LVL11:
  117:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
- 287              		.loc 1 117 0
- 288 0010 01AC     		add	r4, sp, #4
- 289 0012 074D     		ldr	r5, .L13
- 290 0014 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
- 291 0016 0FC4     		stmia	r4!, {r0, r1, r2, r3}
- 292 0018 2B68     		ldr	r3, [r5]
- 293 001a 2360     		str	r3, [r4]
+ 252              		.loc 1 117 0
+ 253 0010 01AC     		add	r4, sp, #4
+ 254 0012 074D     		ldr	r5, .L13
+ 255 0014 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 256 0016 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 257 0018 2B68     		ldr	r3, [r5]
+ 258 001a 2360     		str	r3, [r4]
  118:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 294              		.loc 1 118 0
- 295 001c 0021     		movs	r1, #0
- 296 001e 01A8     		add	r0, sp, #4
- 297 0020 FFF7FEFF 		bl	osThreadCreate
- 298              	.LVL14:
- 299 0024 034B     		ldr	r3, .L13+4
- 300 0026 1860     		str	r0, [r3]
+ 259              		.loc 1 118 0
+ 260 001c 0021     		movs	r1, #0
+ 261 001e 01A8     		add	r0, sp, #4
+ 262 0020 FFF7FEFF 		bl	osThreadCreate
+ 263              	.LVL12:
+ 264 0024 034B     		ldr	r3, .L13+4
+ 265 0026 1860     		str	r0, [r3]
  125:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   
- 301              		.loc 1 125 0
- 302 0028 FFF7FEFF 		bl	osKernelStart
- 303              	.LVL15:
- 304              	.L11:
- 305 002c FEE7     		b	.L11
- 306              	.L14:
- 307 002e 00BF     		.align	2
- 308              	.L13:
- 309 0030 00000000 		.word	.LANCHOR0
- 310 0034 00000000 		.word	defaultTaskHandle
- 311              		.cfi_endproc
- 312              	.LFE77:
- 314              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
- 315              		.align	1
- 316              		.global	HAL_TIM_PeriodElapsedCallback
- 317              		.syntax unified
- 318              		.thumb
- 319              		.thumb_func
-ARM GAS  /tmp/cc9fD2MM.s 			page 11
+ 266              		.loc 1 125 0
+ 267 0028 FFF7FEFF 		bl	osKernelStart
+ 268              	.LVL13:
+ 269              	.L11:
+ 270 002c FEE7     		b	.L11
+ 271              	.L14:
+ 272 002e 00BF     		.align	2
+ARM GAS  /tmp/ccToV3WZ.s 			page 10
 
 
- 320              		.fpu softvfp
- 322              	HAL_TIM_PeriodElapsedCallback:
- 323              	.LFB81:
- 239:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
- 240:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END 5 */ 
- 241:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
- 242:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 243:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
- 244:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  Period elapsed callback in non blocking mode
- 245:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @note   This function is called  when TIM1 interrupt took place, inside
- 246:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
- 247:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * a global variable "uwTick" used as application time base.
- 248:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @param  htim : TIM handle
- 249:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
- 250:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
- 251:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
- 252:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
- 324              		.loc 1 252 0
- 325              		.cfi_startproc
- 326              		@ args = 0, pretend = 0, frame = 0
- 327              		@ frame_needed = 0, uses_anonymous_args = 0
- 328              	.LVL16:
- 329 0000 10B5     		push	{r4, lr}
- 330              	.LCFI9:
- 331              		.cfi_def_cfa_offset 8
- 332              		.cfi_offset 4, -8
- 333              		.cfi_offset 14, -4
- 334 0002 0446     		mov	r4, r0
- 253:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Callback 0 */
- 254:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   if (htim->Instance == TIM1) {
- 335              		.loc 1 254 0
- 336 0004 0268     		ldr	r2, [r0]
- 337 0006 074B     		ldr	r3, .L21
- 338 0008 9A42     		cmp	r2, r3
- 339 000a 04D0     		beq	.L19
- 340              	.LVL17:
- 341              	.L16:
- 255:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     button_updateButton();
- 256:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
- 257:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Callback 0 */
- 258:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   if (htim->Instance == TIM1) {
- 342              		.loc 1 258 0
- 343 000c 2268     		ldr	r2, [r4]
- 344 000e 054B     		ldr	r3, .L21
- 345 0010 9A42     		cmp	r2, r3
- 346 0012 03D0     		beq	.L20
- 347              	.L15:
- 259:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     HAL_IncTick();
- 260:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
- 261:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Callback 1 */
- 262:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 263:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Callback 1 */
- 264:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
- 348              		.loc 1 264 0
- 349 0014 10BD     		pop	{r4, pc}
- 350              	.LVL18:
- 351              	.L19:
-ARM GAS  /tmp/cc9fD2MM.s 			page 12
+ 273              	.L13:
+ 274 0030 00000000 		.word	.LANCHOR0
+ 275 0034 00000000 		.word	defaultTaskHandle
+ 276              		.cfi_endproc
+ 277              	.LFE77:
+ 279              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+ 280              		.align	1
+ 281              		.global	HAL_TIM_PeriodElapsedCallback
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 285              		.fpu softvfp
+ 287              	HAL_TIM_PeriodElapsedCallback:
+ 288              	.LFB81:
+ 228:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
+ 229:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END 5 */ 
+ 230:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
+ 231:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 232:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
+ 233:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  Period elapsed callback in non blocking mode
+ 234:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @note   This function is called  when TIM1 interrupt took place, inside
+ 235:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ 236:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * a global variable "uwTick" used as application time base.
+ 237:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @param  htim : TIM handle
+ 238:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
+ 239:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
+ 240:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+ 241:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
+ 289              		.loc 1 241 0
+ 290              		.cfi_startproc
+ 291              		@ args = 0, pretend = 0, frame = 0
+ 292              		@ frame_needed = 0, uses_anonymous_args = 0
+ 293              	.LVL14:
+ 294 0000 10B5     		push	{r4, lr}
+ 295              	.LCFI9:
+ 296              		.cfi_def_cfa_offset 8
+ 297              		.cfi_offset 4, -8
+ 298              		.cfi_offset 14, -4
+ 299 0002 0446     		mov	r4, r0
+ 242:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Callback 0 */
+ 243:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   if (htim->Instance == TIM1) {
+ 300              		.loc 1 243 0
+ 301 0004 0268     		ldr	r2, [r0]
+ 302 0006 074B     		ldr	r3, .L21
+ 303 0008 9A42     		cmp	r2, r3
+ 304 000a 04D0     		beq	.L19
+ 305              	.LVL15:
+ 306              	.L16:
+ 244:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     button_updateButton();
+ 245:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
+ 246:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Callback 0 */
+ 247:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   if (htim->Instance == TIM1) {
+ 307              		.loc 1 247 0
+ 308 000c 2268     		ldr	r2, [r4]
+ 309 000e 054B     		ldr	r3, .L21
+ 310 0010 9A42     		cmp	r2, r3
+ 311 0012 03D0     		beq	.L20
+ARM GAS  /tmp/ccToV3WZ.s 			page 11
 
 
- 255:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     button_updateButton();
- 352              		.loc 1 255 0
- 353 0016 FFF7FEFF 		bl	button_updateButton
- 354              	.LVL19:
- 355 001a F7E7     		b	.L16
- 356              	.L20:
- 259:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     HAL_IncTick();
- 357              		.loc 1 259 0
- 358 001c FFF7FEFF 		bl	HAL_IncTick
- 359              	.LVL20:
- 360              		.loc 1 264 0
- 361 0020 F8E7     		b	.L15
- 362              	.L22:
- 363 0022 00BF     		.align	2
- 364              	.L21:
- 365 0024 00000140 		.word	1073807360
- 366              		.cfi_endproc
- 367              	.LFE81:
- 369              		.section	.text.Error_Handler,"ax",%progbits
- 370              		.align	1
- 371              		.global	Error_Handler
- 372              		.syntax unified
- 373              		.thumb
- 374              		.thumb_func
- 375              		.fpu softvfp
- 377              	Error_Handler:
- 378              	.LFB82:
- 265:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 266:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
- 267:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
- 268:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
- 269:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
- 270:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void Error_Handler(void)
- 271:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
- 379              		.loc 1 271 0
- 380              		.cfi_startproc
- 381              		@ args = 0, pretend = 0, frame = 0
- 382              		@ frame_needed = 0, uses_anonymous_args = 0
- 383              		@ link register save eliminated.
- 272:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
- 273:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
- 274:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
- 275:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Error_Handler_Debug */
- 276:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
- 384              		.loc 1 276 0
- 385 0000 7047     		bx	lr
- 386              		.cfi_endproc
- 387              	.LFE82:
- 389              		.comm	defaultTaskHandle,4,4
- 390              		.section	.rodata
- 391              		.align	2
- 392              		.set	.LANCHOR0,. + 0
- 393              	.LC2:
- 394 0000 00000000 		.word	.LC0
- 395 0004 00000000 		.word	StartDefaultTask
- 396 0008 0000     		.short	0
- 397 000a 0000     		.space	2
-ARM GAS  /tmp/cc9fD2MM.s 			page 13
+ 312              	.L15:
+ 248:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     HAL_IncTick();
+ 249:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   }
+ 250:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Callback 1 */
+ 251:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 252:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Callback 1 */
+ 253:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
+ 313              		.loc 1 253 0
+ 314 0014 10BD     		pop	{r4, pc}
+ 315              	.LVL16:
+ 316              	.L19:
+ 244:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     button_updateButton();
+ 317              		.loc 1 244 0
+ 318 0016 FFF7FEFF 		bl	button_updateButton
+ 319              	.LVL17:
+ 320 001a F7E7     		b	.L16
+ 321              	.L20:
+ 248:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****     HAL_IncTick();
+ 322              		.loc 1 248 0
+ 323 001c FFF7FEFF 		bl	HAL_IncTick
+ 324              	.LVL18:
+ 325              		.loc 1 253 0
+ 326 0020 F8E7     		b	.L15
+ 327              	.L22:
+ 328 0022 00BF     		.align	2
+ 329              	.L21:
+ 330 0024 00000140 		.word	1073807360
+ 331              		.cfi_endproc
+ 332              	.LFE81:
+ 334              		.section	.text.Error_Handler,"ax",%progbits
+ 335              		.align	1
+ 336              		.global	Error_Handler
+ 337              		.syntax unified
+ 338              		.thumb
+ 339              		.thumb_func
+ 340              		.fpu softvfp
+ 342              	Error_Handler:
+ 343              	.LFB82:
+ 254:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 255:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** /**
+ 256:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 257:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   * @retval None
+ 258:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   */
+ 259:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** void Error_Handler(void)
+ 260:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** {
+ 344              		.loc 1 260 0
+ 345              		.cfi_startproc
+ 346              		@ args = 0, pretend = 0, frame = 0
+ 347              		@ frame_needed = 0, uses_anonymous_args = 0
+ 348              		@ link register save eliminated.
+ 261:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 262:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 263:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** 
+ 264:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c ****   /* USER CODE END Error_Handler_Debug */
+ 265:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/main.c **** }
+ 349              		.loc 1 265 0
+ 350 0000 7047     		bx	lr
+ARM GAS  /tmp/ccToV3WZ.s 			page 12
 
 
- 398 000c 00000000 		.word	0
- 399 0010 80000000 		.word	128
- 400              		.section	.rodata.str1.4,"aMS",%progbits,1
- 401              		.align	2
- 402              	.LC0:
- 403 0000 64656661 		.ascii	"defaultTask\000"
- 403      756C7454 
- 403      61736B00 
- 404              		.text
- 405              	.Letext0:
- 406              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
- 407              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
- 408              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
- 409              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
- 410              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
- 411              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
- 412              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
- 413              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
- 414              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
- 415              		.file 11 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
- 416              		.file 12 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
- 417              		.file 13 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
- 418              		.file 14 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
- 419              		.file 15 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/button.h"
- 420              		.file 16 "<built-in>"
-ARM GAS  /tmp/cc9fD2MM.s 			page 14
+ 351              		.cfi_endproc
+ 352              	.LFE82:
+ 354              		.comm	defaultTaskHandle,4,4
+ 355              		.section	.rodata
+ 356              		.align	2
+ 357              		.set	.LANCHOR0,. + 0
+ 358              	.LC2:
+ 359 0000 00000000 		.word	.LC0
+ 360 0004 00000000 		.word	StartDefaultTask
+ 361 0008 0000     		.short	0
+ 362 000a 0000     		.space	2
+ 363 000c 00000000 		.word	0
+ 364 0010 80000000 		.word	128
+ 365              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 366              		.align	2
+ 367              	.LC0:
+ 368 0000 64656661 		.ascii	"defaultTask\000"
+ 368      756C7454 
+ 368      61736B00 
+ 369              		.text
+ 370              	.Letext0:
+ 371              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+ 372              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+ 373              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+ 374              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 375              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 376              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 377              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 378              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 379              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
+ 380              		.file 11 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
+ 381              		.file 12 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
+ 382              		.file 13 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
+ 383              		.file 14 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
+ 384              		.file 15 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/button.h"
+ 385              		.file 16 "<built-in>"
+ARM GAS  /tmp/ccToV3WZ.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/cc9fD2MM.s:16     .text.MX_GPIO_Init:0000000000000000 $t
-     /tmp/cc9fD2MM.s:22     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-     /tmp/cc9fD2MM.s:145    .text.MX_GPIO_Init:00000000000000a8 $d
-     /tmp/cc9fD2MM.s:153    .text.StartDefaultTask:0000000000000000 $t
-     /tmp/cc9fD2MM.s:160    .text.StartDefaultTask:0000000000000000 StartDefaultTask
-     /tmp/cc9fD2MM.s:184    .text.SystemClock_Config:0000000000000000 $t
-     /tmp/cc9fD2MM.s:191    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-     /tmp/cc9fD2MM.s:257    .text.main:0000000000000000 $t
-     /tmp/cc9fD2MM.s:264    .text.main:0000000000000000 main
-     /tmp/cc9fD2MM.s:309    .text.main:0000000000000030 $d
+     /tmp/ccToV3WZ.s:16     .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccToV3WZ.s:22     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccToV3WZ.s:111    .text.MX_GPIO_Init:0000000000000074 $d
+     /tmp/ccToV3WZ.s:118    .text.StartDefaultTask:0000000000000000 $t
+     /tmp/ccToV3WZ.s:125    .text.StartDefaultTask:0000000000000000 StartDefaultTask
+     /tmp/ccToV3WZ.s:149    .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccToV3WZ.s:156    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccToV3WZ.s:222    .text.main:0000000000000000 $t
+     /tmp/ccToV3WZ.s:229    .text.main:0000000000000000 main
+     /tmp/ccToV3WZ.s:274    .text.main:0000000000000030 $d
                             *COM*:0000000000000004 defaultTaskHandle
-     /tmp/cc9fD2MM.s:315    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
-     /tmp/cc9fD2MM.s:322    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
-     /tmp/cc9fD2MM.s:365    .text.HAL_TIM_PeriodElapsedCallback:0000000000000024 $d
-     /tmp/cc9fD2MM.s:370    .text.Error_Handler:0000000000000000 $t
-     /tmp/cc9fD2MM.s:377    .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/cc9fD2MM.s:391    .rodata:0000000000000000 $d
-     /tmp/cc9fD2MM.s:401    .rodata.str1.4:0000000000000000 $d
+     /tmp/ccToV3WZ.s:280    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+     /tmp/ccToV3WZ.s:287    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+     /tmp/ccToV3WZ.s:330    .text.HAL_TIM_PeriodElapsedCallback:0000000000000024 $d
+     /tmp/ccToV3WZ.s:335    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccToV3WZ.s:342    .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccToV3WZ.s:356    .rodata:0000000000000000 $d
+     /tmp/ccToV3WZ.s:366    .rodata.str1.4:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

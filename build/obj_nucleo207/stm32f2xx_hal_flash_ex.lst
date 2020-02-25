@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccccninX.s 			page 1
+ARM GAS  /tmp/ccqrQiWb.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   @endverbatim
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   ******************************************************************************
-ARM GAS  /tmp/ccccninX.s 			page 2
+ARM GAS  /tmp/ccqrQiWb.s 			page 2
 
 
   35:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   * @attention
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
   89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** static HAL_StatusTypeDef  FLASH_OB_DisableWRP(uint32_t WRPSector, uint32_t Banks);
   90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** static HAL_StatusTypeDef  FLASH_OB_RDP_LevelConfig(uint8_t Level);
   91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** static HAL_StatusTypeDef  FLASH_OB_UserConfig(uint8_t Iwdg, uint8_t Stop, uint8_t Stdby);
-ARM GAS  /tmp/ccccninX.s 			page 3
+ARM GAS  /tmp/ccqrQiWb.s 			page 3
 
 
   92:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** static HAL_StatusTypeDef  FLASH_OB_BOR_LevelConfig(uint8_t Level);
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   if(status == HAL_OK)
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   {
-ARM GAS  /tmp/ccccninX.s 			page 4
+ARM GAS  /tmp/ccqrQiWb.s 			page 4
 
 
  149:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****     /*Initialization of SectorError variable*/
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   */
  204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit)
  205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** {
-ARM GAS  /tmp/ccccninX.s 			page 5
+ARM GAS  /tmp/ccqrQiWb.s 			page 5
 
 
  206:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  260:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   
  261:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   /* Process Locked */
  262:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   __HAL_LOCK(&pFlash);
-ARM GAS  /tmp/ccccninX.s 			page 6
+ARM GAS  /tmp/ccqrQiWb.s 			page 6
 
 
  263:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  317:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** {
  318:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   pOBInit->OptionType = OPTIONBYTE_WRP | OPTIONBYTE_RDP | OPTIONBYTE_USER | OPTIONBYTE_BOR;
  319:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccccninX.s 			page 7
+ARM GAS  /tmp/ccqrQiWb.s 			page 7
 
 
  320:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   /*Get WRP*/
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  374:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   else
  375:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   {
  376:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****     tmp_psize = FLASH_PSIZE_DOUBLE_WORD;
-ARM GAS  /tmp/ccccninX.s 			page 8
+ARM GAS  /tmp/ccqrQiWb.s 			page 8
 
 
  377:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   }
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  431:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *            @arg FLASH_BANK_1: Bank1 to be erased
  432:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *
  433:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   * @retval None
-ARM GAS  /tmp/ccccninX.s 			page 9
+ARM GAS  /tmp/ccqrQiWb.s 			page 9
 
 
  434:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   */
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  451:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   * @brief  Enable the write protection of the desired bank 1 sectors
  452:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *
  453:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   * @note   When the memory read protection level is selected (RDP level = 1), 
-ARM GAS  /tmp/ccccninX.s 			page 10
+ARM GAS  /tmp/ccqrQiWb.s 			page 10
 
 
  454:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *         it is not possible to program or erase the flash sector i if CortexM3  
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  508:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   /* Prevent unused argument(s) compilation warning */
  509:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   UNUSED(Banks);
  510:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccccninX.s 			page 11
+ARM GAS  /tmp/ccqrQiWb.s 			page 11
 
 
  511:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   /* Check the parameters */
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  565:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *            @arg OB_STOP_RST: Reset generated when entering in STOP
  566:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   * @param  Stdby Reset event when entering Standby mode.
  567:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *          This parameter  can be one of the following values:
-ARM GAS  /tmp/ccccninX.s 			page 12
+ARM GAS  /tmp/ccqrQiWb.s 			page 12
 
 
  568:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *            @arg OB_STDBY_NO_RST: No reset generated when entering in STANDBY
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
   72 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
   73 0004 02F0F302 		and	r2, r2, #243
   74 0008 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccccninX.s 			page 13
+ARM GAS  /tmp/ccqrQiWb.s 			page 13
 
 
  614:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   *(__IO uint8_t *)OPTCR_BYTE0_ADDRESS |= Level;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  115              	.LFE84:
  117              		.section	.text.FLASH_OB_GetWRP,"ax",%progbits
  118              		.align	1
-ARM GAS  /tmp/ccccninX.s 			page 14
+ARM GAS  /tmp/ccqrQiWb.s 			page 14
 
 
  119              		.syntax unified
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  155              		@ frame_needed = 0, uses_anonymous_args = 0
  156              		@ link register save eliminated.
  157              	.LVL4:
-ARM GAS  /tmp/ccccninX.s 			page 15
+ARM GAS  /tmp/ccqrQiWb.s 			page 15
 
 
  651:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   uint8_t readstatus = OB_RDP_LEVEL_0;
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  194              		.thumb
  195              		.thumb_func
  196              		.fpu softvfp
-ARM GAS  /tmp/ccccninX.s 			page 16
+ARM GAS  /tmp/ccqrQiWb.s 			page 16
 
 
  198              	FLASH_OB_GetBOR:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  478:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
  239              		.loc 1 478 0
  240 0004 4CF25030 		movw	r0, #50000
-ARM GAS  /tmp/ccccninX.s 			page 17
+ARM GAS  /tmp/ccqrQiWb.s 			page 17
 
 
  241              	.LVL9:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  291              		.loc 1 518 0
  292 000c 0346     		mov	r3, r0
  293 000e 20B9     		cbnz	r0, .L29
-ARM GAS  /tmp/ccccninX.s 			page 18
+ARM GAS  /tmp/ccqrQiWb.s 			page 18
 
 
  520:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   }
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  344 0012 1470     		strb	r4, [r2]
  345              	.L34:
  554:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccccninX.s 			page 19
+ARM GAS  /tmp/ccqrQiWb.s 			page 19
 
 
  346              		.loc 1 554 0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  397 001c 3043     		orrs	r0, r0, r6
  398              	.LVL30:
  399 001e 2843     		orrs	r0, r0, r5
-ARM GAS  /tmp/ccccninX.s 			page 20
+ARM GAS  /tmp/ccqrQiWb.s 			page 20
 
 
  400 0020 2043     		orrs	r0, r0, r4
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  449 001a 4368     		ldr	r3, [r0, #4]
  450 001c 9342     		cmp	r3, r2
  451 001e 04D0     		beq	.L56
-ARM GAS  /tmp/ccccninX.s 			page 21
+ARM GAS  /tmp/ccqrQiWb.s 			page 21
 
 
  279:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****     }
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  497              		.loc 1 286 0
  498 0056 207C     		ldrb	r0, [r4, #16]	@ zero_extendqisi2
  499              	.LVL40:
-ARM GAS  /tmp/ccccninX.s 			page 22
+ARM GAS  /tmp/ccqrQiWb.s 			page 22
 
 
  500 0058 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  551              		@ frame_needed = 0, uses_anonymous_args = 0
  552              	.LVL48:
  553 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccccninX.s 			page 23
+ARM GAS  /tmp/ccqrQiWb.s 			page 23
 
 
  554              	.LCFI6:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  603              	.LVL54:
  362:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****   {
  604              		.loc 1 362 0
-ARM GAS  /tmp/ccccninX.s 			page 24
+ARM GAS  /tmp/ccqrQiWb.s 			page 24
 
 
  605 0002 49B1     		cbz	r1, .L66
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
   10:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
   11:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   12:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
-ARM GAS  /tmp/ccccninX.s 			page 25
+ARM GAS  /tmp/ccqrQiWb.s 			page 25
 
 
   13:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
   67:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
   68:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccccninX.s 			page 26
+ARM GAS  /tmp/ccqrQiWb.s 			page 26
 
 
   70:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  124:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  125:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
  126:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
-ARM GAS  /tmp/ccccninX.s 			page 27
+ARM GAS  /tmp/ccqrQiWb.s 			page 27
 
 
  127:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  181:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
  182:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  183:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
-ARM GAS  /tmp/ccccninX.s 			page 28
+ARM GAS  /tmp/ccqrQiWb.s 			page 28
 
 
  184:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  238:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  239:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  240:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccccninX.s 			page 29
+ARM GAS  /tmp/ccqrQiWb.s 			page 29
 
 
  241:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  295:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  296:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  297:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
-ARM GAS  /tmp/ccccninX.s 			page 30
+ARM GAS  /tmp/ccqrQiWb.s 			page 30
 
 
  298:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  352:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
  353:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
  354:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               SP Register value
-ARM GAS  /tmp/ccccninX.s 			page 31
+ARM GAS  /tmp/ccqrQiWb.s 			page 31
 
 
  355:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  409:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
  410:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
  411:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccccninX.s 			page 32
+ARM GAS  /tmp/ccqrQiWb.s 			page 32
 
 
  412:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  466:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  467:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  468:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccccninX.s 			page 33
+ARM GAS  /tmp/ccqrQiWb.s 			page 33
 
 
  469:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  523:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask
  524:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Fault Mask register.
  525:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
-ARM GAS  /tmp/ccccninX.s 			page 34
+ARM GAS  /tmp/ccqrQiWb.s 			page 34
 
 
  526:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  580:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
  581:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    )
  582:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccccninX.s 			page 35
+ARM GAS  /tmp/ccqrQiWb.s 			page 35
 
 
  583:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  637:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSPLIM(uint32_t ProcStackPtrLimit)
  638:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  639:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
-ARM GAS  /tmp/ccccninX.s 			page 36
+ARM GAS  /tmp/ccqrQiWb.s 			page 36
 
 
  640:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  694:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  695:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer Limit (non-secure)
  696:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
-ARM GAS  /tmp/ccccninX.s 			page 37
+ARM GAS  /tmp/ccqrQiWb.s 			page 37
 
 
  697:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always.
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  751:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  752:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msplim_ns, %0" : : "r" (MainStackPtrLimit));
  753:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /tmp/ccccninX.s 			page 38
+ARM GAS  /tmp/ccqrQiWb.s 			page 38
 
 
  754:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  808:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  809:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  810:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
-ARM GAS  /tmp/ccccninX.s 			page 39
+ARM GAS  /tmp/ccqrQiWb.s 			page 39
 
 
  811:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  865:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  866:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __ISB(void)
  867:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccccninX.s 			page 40
+ARM GAS  /tmp/ccqrQiWb.s 			page 40
 
 
  868:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("isb 0xF":::"memory");
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  922:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  923:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("rev16 %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
  924:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
-ARM GAS  /tmp/ccccninX.s 			page 41
+ARM GAS  /tmp/ccqrQiWb.s 			page 41
 
 
  925:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  979:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
  980:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  981:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __RBIT(uint32_t value)
-ARM GAS  /tmp/ccccninX.s 			page 42
+ARM GAS  /tmp/ccqrQiWb.s 			page 42
 
 
  982:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  685              	.LFE76:
  687              		.section	.text.HAL_FLASHEx_Erase_IT,"ax",%progbits
  688              		.align	1
-ARM GAS  /tmp/ccccninX.s 			page 43
+ARM GAS  /tmp/ccqrQiWb.s 			page 43
 
 
  689              		.global	HAL_FLASHEx_Erase_IT
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  736 0030 1A70     		strb	r2, [r3]
  239:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****     pFlash.Sector = pEraseInit->Sector;
  737              		.loc 1 239 0
-ARM GAS  /tmp/ccccninX.s 			page 44
+ARM GAS  /tmp/ccqrQiWb.s 			page 44
 
 
  738 0032 C268     		ldr	r2, [r0, #12]
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  782              	.L79:
  783 0064 00000000 		.word	pFlash
  784 0068 003C0240 		.word	1073888256
-ARM GAS  /tmp/ccccninX.s 			page 45
+ARM GAS  /tmp/ccqrQiWb.s 			page 45
 
 
  785              		.cfi_endproc
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  834 003e 1A60     		str	r2, [r3]
  410:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****     /* Enable data cache */
  835              		.loc 1 410 0
-ARM GAS  /tmp/ccccninX.s 			page 46
+ARM GAS  /tmp/ccqrQiWb.s 			page 46
 
 
  836 0040 1A68     		ldr	r2, [r3]
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  139:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c **** 
  888              		.loc 1 139 0 is_stmt 0 discriminator 2
  889 000e 1F4B     		ldr	r3, .L98
-ARM GAS  /tmp/ccccninX.s 			page 47
+ARM GAS  /tmp/ccqrQiWb.s 			page 47
 
 
  890 0010 0122     		movs	r2, #1
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  169:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c ****       {
  934              		.loc 1 169 0 discriminator 2
  935 0056 0135     		adds	r5, r5, #1
-ARM GAS  /tmp/ccccninX.s 			page 48
+ARM GAS  /tmp/ccqrQiWb.s 			page 48
 
 
  936              	.LVL78:
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  982              	.L99:
  983              		.align	2
  984              	.L98:
-ARM GAS  /tmp/ccccninX.s 			page 49
+ARM GAS  /tmp/ccqrQiWb.s 			page 49
 
 
  985 008c 00000000 		.word	pFlash
@@ -2897,58 +2897,58 @@ ARM GAS  /tmp/ccccninX.s 			page 1
  999              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
  1000              		.file 11 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
  1001              		.file 12 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
-ARM GAS  /tmp/ccccninX.s 			page 50
+ARM GAS  /tmp/ccqrQiWb.s 			page 50
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f2xx_hal_flash_ex.c
-     /tmp/ccccninX.s:16     .text.FLASH_MassErase:0000000000000000 $t
-     /tmp/ccccninX.s:22     .text.FLASH_MassErase:0000000000000000 FLASH_MassErase
-     /tmp/ccccninX.s:51     .text.FLASH_MassErase:0000000000000020 $d
-     /tmp/ccccninX.s:56     .text.FLASH_OB_BOR_LevelConfig:0000000000000000 $t
-     /tmp/ccccninX.s:62     .text.FLASH_OB_BOR_LevelConfig:0000000000000000 FLASH_OB_BOR_LevelConfig
-     /tmp/ccccninX.s:86     .text.FLASH_OB_BOR_LevelConfig:0000000000000014 $d
-     /tmp/ccccninX.s:91     .text.FLASH_OB_GetUser:0000000000000000 $t
-     /tmp/ccccninX.s:97     .text.FLASH_OB_GetUser:0000000000000000 FLASH_OB_GetUser
-     /tmp/ccccninX.s:113    .text.FLASH_OB_GetUser:000000000000000c $d
-     /tmp/ccccninX.s:118    .text.FLASH_OB_GetWRP:0000000000000000 $t
-     /tmp/ccccninX.s:124    .text.FLASH_OB_GetWRP:0000000000000000 FLASH_OB_GetWRP
-     /tmp/ccccninX.s:139    .text.FLASH_OB_GetWRP:0000000000000008 $d
-     /tmp/ccccninX.s:144    .text.FLASH_OB_GetRDP:0000000000000000 $t
-     /tmp/ccccninX.s:150    .text.FLASH_OB_GetRDP:0000000000000000 FLASH_OB_GetRDP
-     /tmp/ccccninX.s:187    .text.FLASH_OB_GetRDP:0000000000000020 $d
-     /tmp/ccccninX.s:192    .text.FLASH_OB_GetBOR:0000000000000000 $t
-     /tmp/ccccninX.s:198    .text.FLASH_OB_GetBOR:0000000000000000 FLASH_OB_GetBOR
-     /tmp/ccccninX.s:214    .text.FLASH_OB_GetBOR:000000000000000c $d
-     /tmp/ccccninX.s:219    .text.FLASH_OB_EnableWRP:0000000000000000 $t
-     /tmp/ccccninX.s:225    .text.FLASH_OB_EnableWRP:0000000000000000 FLASH_OB_EnableWRP
-     /tmp/ccccninX.s:261    .text.FLASH_OB_EnableWRP:0000000000000020 $d
-     /tmp/ccccninX.s:266    .text.FLASH_OB_DisableWRP:0000000000000000 $t
-     /tmp/ccccninX.s:272    .text.FLASH_OB_DisableWRP:0000000000000000 FLASH_OB_DisableWRP
-     /tmp/ccccninX.s:309    .text.FLASH_OB_DisableWRP:0000000000000020 $d
-     /tmp/ccccninX.s:314    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 $t
-     /tmp/ccccninX.s:320    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 FLASH_OB_RDP_LevelConfig
-     /tmp/ccccninX.s:353    .text.FLASH_OB_RDP_LevelConfig:0000000000000018 $d
-     /tmp/ccccninX.s:358    .text.FLASH_OB_UserConfig:0000000000000000 $t
-     /tmp/ccccninX.s:364    .text.FLASH_OB_UserConfig:0000000000000000 FLASH_OB_UserConfig
-     /tmp/ccccninX.s:409    .text.FLASH_OB_UserConfig:0000000000000028 $d
-     /tmp/ccccninX.s:414    .text.HAL_FLASHEx_OBProgram:0000000000000000 $t
-     /tmp/ccccninX.s:421    .text.HAL_FLASHEx_OBProgram:0000000000000000 HAL_FLASHEx_OBProgram
-     /tmp/ccccninX.s:534    .text.HAL_FLASHEx_OBProgram:0000000000000080 $d
-     /tmp/ccccninX.s:539    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 $t
-     /tmp/ccccninX.s:546    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 HAL_FLASHEx_OBGetConfig
-     /tmp/ccccninX.s:584    .text.FLASH_Erase_Sector:0000000000000000 $t
-     /tmp/ccccninX.s:591    .text.FLASH_Erase_Sector:0000000000000000 FLASH_Erase_Sector
-     /tmp/ccccninX.s:683    .text.FLASH_Erase_Sector:000000000000005c $d
-     /tmp/ccccninX.s:688    .text.HAL_FLASHEx_Erase_IT:0000000000000000 $t
-     /tmp/ccccninX.s:695    .text.HAL_FLASHEx_Erase_IT:0000000000000000 HAL_FLASHEx_Erase_IT
-     /tmp/ccccninX.s:783    .text.HAL_FLASHEx_Erase_IT:0000000000000064 $d
-     /tmp/ccccninX.s:789    .text.FLASH_FlushCaches:0000000000000000 $t
-     /tmp/ccccninX.s:796    .text.FLASH_FlushCaches:0000000000000000 FLASH_FlushCaches
-     /tmp/ccccninX.s:852    .text.FLASH_FlushCaches:000000000000005c $d
-     /tmp/ccccninX.s:857    .text.HAL_FLASHEx_Erase:0000000000000000 $t
-     /tmp/ccccninX.s:864    .text.HAL_FLASHEx_Erase:0000000000000000 HAL_FLASHEx_Erase
-     /tmp/ccccninX.s:985    .text.HAL_FLASHEx_Erase:000000000000008c $d
+     /tmp/ccqrQiWb.s:16     .text.FLASH_MassErase:0000000000000000 $t
+     /tmp/ccqrQiWb.s:22     .text.FLASH_MassErase:0000000000000000 FLASH_MassErase
+     /tmp/ccqrQiWb.s:51     .text.FLASH_MassErase:0000000000000020 $d
+     /tmp/ccqrQiWb.s:56     .text.FLASH_OB_BOR_LevelConfig:0000000000000000 $t
+     /tmp/ccqrQiWb.s:62     .text.FLASH_OB_BOR_LevelConfig:0000000000000000 FLASH_OB_BOR_LevelConfig
+     /tmp/ccqrQiWb.s:86     .text.FLASH_OB_BOR_LevelConfig:0000000000000014 $d
+     /tmp/ccqrQiWb.s:91     .text.FLASH_OB_GetUser:0000000000000000 $t
+     /tmp/ccqrQiWb.s:97     .text.FLASH_OB_GetUser:0000000000000000 FLASH_OB_GetUser
+     /tmp/ccqrQiWb.s:113    .text.FLASH_OB_GetUser:000000000000000c $d
+     /tmp/ccqrQiWb.s:118    .text.FLASH_OB_GetWRP:0000000000000000 $t
+     /tmp/ccqrQiWb.s:124    .text.FLASH_OB_GetWRP:0000000000000000 FLASH_OB_GetWRP
+     /tmp/ccqrQiWb.s:139    .text.FLASH_OB_GetWRP:0000000000000008 $d
+     /tmp/ccqrQiWb.s:144    .text.FLASH_OB_GetRDP:0000000000000000 $t
+     /tmp/ccqrQiWb.s:150    .text.FLASH_OB_GetRDP:0000000000000000 FLASH_OB_GetRDP
+     /tmp/ccqrQiWb.s:187    .text.FLASH_OB_GetRDP:0000000000000020 $d
+     /tmp/ccqrQiWb.s:192    .text.FLASH_OB_GetBOR:0000000000000000 $t
+     /tmp/ccqrQiWb.s:198    .text.FLASH_OB_GetBOR:0000000000000000 FLASH_OB_GetBOR
+     /tmp/ccqrQiWb.s:214    .text.FLASH_OB_GetBOR:000000000000000c $d
+     /tmp/ccqrQiWb.s:219    .text.FLASH_OB_EnableWRP:0000000000000000 $t
+     /tmp/ccqrQiWb.s:225    .text.FLASH_OB_EnableWRP:0000000000000000 FLASH_OB_EnableWRP
+     /tmp/ccqrQiWb.s:261    .text.FLASH_OB_EnableWRP:0000000000000020 $d
+     /tmp/ccqrQiWb.s:266    .text.FLASH_OB_DisableWRP:0000000000000000 $t
+     /tmp/ccqrQiWb.s:272    .text.FLASH_OB_DisableWRP:0000000000000000 FLASH_OB_DisableWRP
+     /tmp/ccqrQiWb.s:309    .text.FLASH_OB_DisableWRP:0000000000000020 $d
+     /tmp/ccqrQiWb.s:314    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 $t
+     /tmp/ccqrQiWb.s:320    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 FLASH_OB_RDP_LevelConfig
+     /tmp/ccqrQiWb.s:353    .text.FLASH_OB_RDP_LevelConfig:0000000000000018 $d
+     /tmp/ccqrQiWb.s:358    .text.FLASH_OB_UserConfig:0000000000000000 $t
+     /tmp/ccqrQiWb.s:364    .text.FLASH_OB_UserConfig:0000000000000000 FLASH_OB_UserConfig
+     /tmp/ccqrQiWb.s:409    .text.FLASH_OB_UserConfig:0000000000000028 $d
+     /tmp/ccqrQiWb.s:414    .text.HAL_FLASHEx_OBProgram:0000000000000000 $t
+     /tmp/ccqrQiWb.s:421    .text.HAL_FLASHEx_OBProgram:0000000000000000 HAL_FLASHEx_OBProgram
+     /tmp/ccqrQiWb.s:534    .text.HAL_FLASHEx_OBProgram:0000000000000080 $d
+     /tmp/ccqrQiWb.s:539    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 $t
+     /tmp/ccqrQiWb.s:546    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 HAL_FLASHEx_OBGetConfig
+     /tmp/ccqrQiWb.s:584    .text.FLASH_Erase_Sector:0000000000000000 $t
+     /tmp/ccqrQiWb.s:591    .text.FLASH_Erase_Sector:0000000000000000 FLASH_Erase_Sector
+     /tmp/ccqrQiWb.s:683    .text.FLASH_Erase_Sector:000000000000005c $d
+     /tmp/ccqrQiWb.s:688    .text.HAL_FLASHEx_Erase_IT:0000000000000000 $t
+     /tmp/ccqrQiWb.s:695    .text.HAL_FLASHEx_Erase_IT:0000000000000000 HAL_FLASHEx_Erase_IT
+     /tmp/ccqrQiWb.s:783    .text.HAL_FLASHEx_Erase_IT:0000000000000064 $d
+     /tmp/ccqrQiWb.s:789    .text.FLASH_FlushCaches:0000000000000000 $t
+     /tmp/ccqrQiWb.s:796    .text.FLASH_FlushCaches:0000000000000000 FLASH_FlushCaches
+     /tmp/ccqrQiWb.s:852    .text.FLASH_FlushCaches:000000000000005c $d
+     /tmp/ccqrQiWb.s:857    .text.HAL_FLASHEx_Erase:0000000000000000 $t
+     /tmp/ccqrQiWb.s:864    .text.HAL_FLASHEx_Erase:0000000000000000 HAL_FLASHEx_Erase
+     /tmp/ccqrQiWb.s:985    .text.HAL_FLASHEx_Erase:000000000000008c $d
 
 UNDEFINED SYMBOLS
 FLASH_WaitForLastOperation

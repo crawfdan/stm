@@ -6,7 +6,7 @@
 
 #define NUM_BUTTONS 1
 #define DEBOUNCE_THRESHOLD 10
-#define HOLD_THRESHOLD 1000
+#define HOLD_THRESHOLD 200
 
 typedef enum {
     invalidState = -1,
@@ -47,7 +47,8 @@ static  Button_t buttonArray[NUM_BUTTONS] = {
         .holdCount = 0,
         .holdThreshold = HOLD_THRESHOLD,
         .pressedCb = &led_activateGreenLed,
-        .longPressCb = &led_activateBlueLed
+        .longPressCb = &led_activateBlueLed,
+
     }
 };
 
@@ -60,13 +61,13 @@ void button_updateButton(void)
         //if dbc < threshold and pin set
         if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
         {
-            if (buttonArray[i].debounceCount < DEBOUNCE_THRESHOLD)
+            if (buttonArray[i].debounceCount < buttonArray[i].debounceThreshold)
             {
                 buttonArray[i].debounceCount++;
             }
         }
         //if dbc > 0 and pin is not set
-        else
+        else if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_RESET)
         {
             if (buttonArray[i].debounceCount > 0)
             {
@@ -99,6 +100,8 @@ void button_updateButton(void)
             }
         }
         //no valid state
+
+        //***not necessary, since we want to stay in the current state even if 0 < dbc < 10
         // else
         // {
         //     buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
