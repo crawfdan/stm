@@ -1,0 +1,337 @@
+ARM GAS  /tmp/ccRFuHUy.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"led.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.led_resetLeds,"ax",%progbits
+  16              		.align	1
+  17              		.global	led_resetLeds
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	led_resetLeds:
+  24              	.LFB76:
+  25              		.file 1 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c"
+   1:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "led.h"
+   2:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "main.h"
+   3:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include <stdint.h>
+   4:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "stm32f207xx.h"
+   5:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+   6:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #define NUM_LEDS 3
+   7:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+   8:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef struct led {
+   9:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     uint16_t pin; //GPIO Pin of led
+  10:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     GPIO_TypeDef *port; //GPIO port of led
+  11:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } Led_t;
+  12:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  13:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** static  Led_t ledArray[NUM_LEDS] = {
+  14:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     [green] = 
+  15:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  16:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .pin = ledG_Pin,
+  17:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .port = ledG_GPIO_Port
+  18:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     },
+  19:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  20:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     [red] = 
+  21:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  22:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .pin = ledR_Pin,
+  23:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .port = ledR_GPIO_Port
+  24:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     },
+  25:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  26:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     [blue] = 
+  27:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  28:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .pin = ledB_Pin,
+  29:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .port = ledB_GPIO_Port
+  30:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+  31:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** };
+  32:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  33:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateLed(ledColor_t color)
+ARM GAS  /tmp/ccRFuHUy.s 			page 2
+
+
+  34:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  35:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_resetLeds();
+  36:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     HAL_GPIO_WritePin(ledArray[color].port, ledArray[color].pin, GPIO_PIN_SET);
+  37:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+  38:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+  39:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  40:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateRedLed()
+  41:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  42:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(red);
+  43:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+  44:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+  45:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  46:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateBlueLed()
+  47:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  48:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(blue);
+  49:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+  50:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+  51:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  52:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateGreenLed()
+  53:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  54:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(green);
+  55:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+  56:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+  57:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  58:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_resetLeds()
+  59:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  26              		.loc 1 59 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 10B5     		push	{r4, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 4, -8
+  34              		.cfi_offset 14, -4
+  35              	.LVL0:
+  60:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     int i;
+  61:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     for (i = 0; i < NUM_LEDS; i++)
+  36              		.loc 1 61 0
+  37 0002 0024     		movs	r4, #0
+  38 0004 00E0     		b	.L2
+  39              	.LVL1:
+  40              	.L3:
+  41              		.loc 1 61 0 is_stmt 0 discriminator 2
+  42 0006 0134     		adds	r4, r4, #1
+  43              	.LVL2:
+  44              	.L2:
+  45              		.loc 1 61 0 discriminator 1
+  46 0008 022C     		cmp	r4, #2
+  47 000a 13DC     		bgt	.L6
+  62:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  63:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         if (HAL_GPIO_ReadPin(ledArray[i].port, ledArray[i].pin) == GPIO_PIN_SET)
+  48              		.loc 1 63 0 is_stmt 1
+  49 000c 0A4B     		ldr	r3, .L7
+  50 000e 03EBC402 		add	r2, r3, r4, lsl #3
+  51 0012 33F83410 		ldrh	r1, [r3, r4, lsl #3]
+  52 0016 5068     		ldr	r0, [r2, #4]
+ARM GAS  /tmp/ccRFuHUy.s 			page 3
+
+
+  53 0018 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  54              	.LVL3:
+  55 001c 0128     		cmp	r0, #1
+  56 001e F2D1     		bne	.L3
+  64:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+  65:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             HAL_GPIO_WritePin(ledArray[i].port, ledArray[i].pin, GPIO_PIN_RESET);
+  57              		.loc 1 65 0
+  58 0020 054B     		ldr	r3, .L7
+  59 0022 03EBC400 		add	r0, r3, r4, lsl #3
+  60 0026 0022     		movs	r2, #0
+  61 0028 33F83410 		ldrh	r1, [r3, r4, lsl #3]
+  62 002c 4068     		ldr	r0, [r0, #4]
+  63 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  64              	.LVL4:
+  65 0032 E8E7     		b	.L3
+  66              	.L6:
+  66:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+  67:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+  68:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+  69:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }...
+  67              		.loc 1 69 0
+  68 0034 10BD     		pop	{r4, pc}
+  69              	.LVL5:
+  70              	.L8:
+  71 0036 00BF     		.align	2
+  72              	.L7:
+  73 0038 00000000 		.word	.LANCHOR0
+  74              		.cfi_endproc
+  75              	.LFE76:
+  77              		.section	.text.led_activateLed,"ax",%progbits
+  78              		.align	1
+  79              		.global	led_activateLed
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu softvfp
+  85              	led_activateLed:
+  86              	.LFB72:
+  34:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+  87              		.loc 1 34 0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              	.LVL6:
+  92 0000 10B5     		push	{r4, lr}
+  93              	.LCFI1:
+  94              		.cfi_def_cfa_offset 8
+  95              		.cfi_offset 4, -8
+  96              		.cfi_offset 14, -4
+  97 0002 0446     		mov	r4, r0
+  35:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_resetLeds();
+  98              		.loc 1 35 0
+  99 0004 FFF7FEFF 		bl	led_resetLeds
+ 100              	.LVL7:
+  36:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     HAL_GPIO_WritePin(ledArray[color].port, ledArray[color].pin, GPIO_PIN_SET);
+ 101              		.loc 1 36 0
+ 102 0008 044B     		ldr	r3, .L11
+ARM GAS  /tmp/ccRFuHUy.s 			page 4
+
+
+ 103 000a 03EBC400 		add	r0, r3, r4, lsl #3
+ 104 000e 0122     		movs	r2, #1
+ 105 0010 33F83410 		ldrh	r1, [r3, r4, lsl #3]
+ 106 0014 4068     		ldr	r0, [r0, #4]
+ 107 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 108              	.LVL8:
+  38:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 109              		.loc 1 38 0
+ 110 001a 10BD     		pop	{r4, pc}
+ 111              	.L12:
+ 112              		.align	2
+ 113              	.L11:
+ 114 001c 00000000 		.word	.LANCHOR0
+ 115              		.cfi_endproc
+ 116              	.LFE72:
+ 118              		.section	.text.led_activateRedLed,"ax",%progbits
+ 119              		.align	1
+ 120              		.global	led_activateRedLed
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu softvfp
+ 126              	led_activateRedLed:
+ 127              	.LFB73:
+  41:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 128              		.loc 1 41 0
+ 129              		.cfi_startproc
+ 130              		@ args = 0, pretend = 0, frame = 0
+ 131              		@ frame_needed = 0, uses_anonymous_args = 0
+ 132 0000 08B5     		push	{r3, lr}
+ 133              	.LCFI2:
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 3, -8
+ 136              		.cfi_offset 14, -4
+  42:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(red);
+ 137              		.loc 1 42 0
+ 138 0002 0120     		movs	r0, #1
+ 139 0004 FFF7FEFF 		bl	led_activateLed
+ 140              	.LVL9:
+  44:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 141              		.loc 1 44 0
+ 142 0008 08BD     		pop	{r3, pc}
+ 143              		.cfi_endproc
+ 144              	.LFE73:
+ 146              		.section	.text.led_activateBlueLed,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	led_activateBlueLed
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.fpu softvfp
+ 154              	led_activateBlueLed:
+ 155              	.LFB74:
+  47:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 156              		.loc 1 47 0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccRFuHUy.s 			page 5
+
+
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160 0000 08B5     		push	{r3, lr}
+ 161              	.LCFI3:
+ 162              		.cfi_def_cfa_offset 8
+ 163              		.cfi_offset 3, -8
+ 164              		.cfi_offset 14, -4
+  48:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(blue);
+ 165              		.loc 1 48 0
+ 166 0002 0220     		movs	r0, #2
+ 167 0004 FFF7FEFF 		bl	led_activateLed
+ 168              	.LVL10:
+  50:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 169              		.loc 1 50 0
+ 170 0008 08BD     		pop	{r3, pc}
+ 171              		.cfi_endproc
+ 172              	.LFE74:
+ 174              		.section	.text.led_activateGreenLed,"ax",%progbits
+ 175              		.align	1
+ 176              		.global	led_activateGreenLed
+ 177              		.syntax unified
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.fpu softvfp
+ 182              	led_activateGreenLed:
+ 183              	.LFB75:
+  53:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 184              		.loc 1 53 0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188 0000 08B5     		push	{r3, lr}
+ 189              	.LCFI4:
+ 190              		.cfi_def_cfa_offset 8
+ 191              		.cfi_offset 3, -8
+ 192              		.cfi_offset 14, -4
+  54:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_activateLed(green);
+ 193              		.loc 1 54 0
+ 194 0002 0020     		movs	r0, #0
+ 195 0004 FFF7FEFF 		bl	led_activateLed
+ 196              	.LVL11:
+  56:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 197              		.loc 1 56 0
+ 198 0008 08BD     		pop	{r3, pc}
+ 199              		.cfi_endproc
+ 200              	.LFE75:
+ 202              		.section	.rodata.ledArray,"a",%progbits
+ 203              		.align	2
+ 204              		.set	.LANCHOR0,. + 0
+ 207              	ledArray:
+ 208 0000 2000     		.short	32
+ 209 0002 0000     		.space	2
+ 210 0004 00000240 		.word	1073872896
+ 211 0008 0040     		.short	16384
+ 212 000a 0000     		.space	2
+ 213 000c 00040240 		.word	1073873920
+ 214 0010 8000     		.short	128
+ 215 0012 0000     		.space	2
+ARM GAS  /tmp/ccRFuHUy.s 			page 6
+
+
+ 216 0014 00040240 		.word	1073873920
+ 217              		.text
+ 218              	.Letext0:
+ 219              		.file 2 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/led.h"
+ 220              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+ 221              		.file 4 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+ 222              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+ 223              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 224              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 225              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 226              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ARM GAS  /tmp/ccRFuHUy.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 led.c
+     /tmp/ccRFuHUy.s:16     .text.led_resetLeds:0000000000000000 $t
+     /tmp/ccRFuHUy.s:23     .text.led_resetLeds:0000000000000000 led_resetLeds
+     /tmp/ccRFuHUy.s:73     .text.led_resetLeds:0000000000000038 $d
+     /tmp/ccRFuHUy.s:78     .text.led_activateLed:0000000000000000 $t
+     /tmp/ccRFuHUy.s:85     .text.led_activateLed:0000000000000000 led_activateLed
+     /tmp/ccRFuHUy.s:114    .text.led_activateLed:000000000000001c $d
+     /tmp/ccRFuHUy.s:119    .text.led_activateRedLed:0000000000000000 $t
+     /tmp/ccRFuHUy.s:126    .text.led_activateRedLed:0000000000000000 led_activateRedLed
+     /tmp/ccRFuHUy.s:147    .text.led_activateBlueLed:0000000000000000 $t
+     /tmp/ccRFuHUy.s:154    .text.led_activateBlueLed:0000000000000000 led_activateBlueLed
+     /tmp/ccRFuHUy.s:175    .text.led_activateGreenLed:0000000000000000 $t
+     /tmp/ccRFuHUy.s:182    .text.led_activateGreenLed:0000000000000000 led_activateGreenLed
+     /tmp/ccRFuHUy.s:203    .rodata.ledArray:0000000000000000 $d
+     /tmp/ccRFuHUy.s:207    .rodata.ledArray:0000000000000000 ledArray
+
+UNDEFINED SYMBOLS
+HAL_GPIO_ReadPin
+HAL_GPIO_WritePin

@@ -10,13 +10,6 @@ typedef struct led {
     GPIO_TypeDef *port; //GPIO port of led
 } Led_t;
 
-typedef enum {
-    invalidColor = -1,
-    green,
-    red,
-    blue
-} ledColor_t;
-
 static  Led_t ledArray[NUM_LEDS] = {
     [green] = 
     {

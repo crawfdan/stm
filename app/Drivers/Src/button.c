@@ -6,7 +6,7 @@
 
 #define NUM_BUTTONS 1
 #define DEBOUNCE_THRESHOLD 10
-#define HOLD_THRESHOLD 10
+#define HOLD_THRESHOLD 1000
 
 typedef enum {
     invalidState = -1,
@@ -55,7 +55,7 @@ void button_updateButton(void)
 {
     int i;
 
-    for(i = 0; i < sizeof(buttonArray); i++)
+    for(i = 0; i < NUM_BUTTONS; i++)
     {
         //if dbc < threshold and pin set
         if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
@@ -78,6 +78,7 @@ void button_updateButton(void)
         //change states
         if (buttonArray[i].debounceCount == 0)
         {
+            buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
             buttonArray[i].currButtonState = unpressed;
         }
             //state is either pressed or long press
@@ -86,22 +87,24 @@ void button_updateButton(void)
             //change to long press state
             if (buttonArray[i].holdCount == buttonArray[i].holdThreshold)
             {
+                buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
                 buttonArray[i].currButtonState = longPress;
             }
             //stay in pressed state, increment hold count
             else
             {
+                buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
                 buttonArray[i].currButtonState = pressed;
                 buttonArray[i].holdCount++;
             }
         }
-            //no valid state
-        else
-        {
-            buttonArray[i].currButtonState = invalidState;
-            assert();
-            return;
-        }
+        //no valid state
+        // else
+        // {
+        //     buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+        //     buttonArray[i].currButtonState = invalidState;
+        //     break;
+        // }
         
         //callbacks
         if (buttonArray[i].prevButtonState != buttonArray[i].currButtonState)
