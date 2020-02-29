@@ -158,7 +158,7 @@ AS_INCLUDES  =
 # C includes #TODO - Daniel - comment out sources that are not currently generated, add missing sources
 C_INCLUDES =  \
 -I$(ST_DIR)/Inc \
--I$(GIT_ROOT_DIR)/app/Drivers/Inc \
+-I$(GIT_ROOT_DIR)/app/Drivers/inc \
 -I$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Inc \
 -I$(ST_DIR)/Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
 -I$(ST_DIR)/Drivers/CMSIS/Device/ST/STM32F2xx/Include \
@@ -176,8 +176,7 @@ APPSOURCES =
 C_SOURCES += $(APPSOURCES)
 C_INCLUDES += -I$(APP_INC_DIR)
 
-# compile gcc flags
-ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+# compile gcc flagsd46f75aefce7b78ead0f300b1f1899e66996f767) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
 CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
