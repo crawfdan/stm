@@ -44,7 +44,8 @@
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- /mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/button.h
+ /mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/button.h \
+ /mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/led.h
 
 /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Inc/main.h:
 
@@ -135,3 +136,5 @@
 /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
 /mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/button.h:
+
+/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Inc/led.h:

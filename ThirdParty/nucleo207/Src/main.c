@@ -21,11 +21,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "button.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "button.h"
+#include "led.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -216,15 +216,24 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
-    
-    
-    
-
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
+  int count = 0;
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_WritePin(ledG_GPIO_Port, ledG_Pin, SET);
+    count++;
+    if((count % 10) == 0)
+    {
+      HAL_GPIO_WritePin(ledB_GPIO_Port, ledB_Pin, SET);
+      if ((count % 100) == 0)
+      {
+        HAL_GPIO_WritePin(ledR_GPIO_Port, ledR_Pin, SET);
+      }
+    }
+    osDelay(100);
+    led_resetLeds();
+    osDelay(100);
   }
   /* USER CODE END 5 */ 
 }
@@ -241,7 +250,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
   if (htim->Instance == TIM1) {
-    button_updateButton();
+    //button_updateButton();
   }
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM1) {
