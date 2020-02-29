@@ -9,48 +9,63 @@
 #define NUM_COLLS 1
 #define BLINK_THRESHOLD 1000
 
+typedef enum {
+    ledColors_Red             = 0x1,
+    ledColors_Blue            = 0x2,
+    ledColors_Green           = 0x4,
+    ledColors_Magenta         = ledColors_Red | ledColors_Blue,
+    ledColors_Yellow          = ledColors_Green | ledColors_Red,
+    ledColors_Cyan            = ledColors_Green | ledColors_Blue,
+    ledColors_White           = ledColors_Red | ledColors_Green | ledColors_Blue
+} ledColors_t;
+
+typedef enum {
+    ledBehavior_Drive,
+    ledBehavior_Blinking 
+} ledBehavior_t;
+
+typedef enum {
+    ledCollectionState_Off,
+    ledCollectionState_On
+} ledCollectionState_t;
 
 typedef struct led {
     uint16_t pin; //GPIO Pin of led
     GPIO_TypeDef *port; //GPIO port of led
-} Led_t;
+} led_t;
 
+//NOTE may need larger values for count/thresh
 typedef struct blinkInfo {
     int blinkCount;
-    int blinkThreshold;
+    int blinkThreshold; 
+    int numBlinks;
 } BlinkInfo_t;
 
 typedef struct collection {
-    Led_t leds[NUM_LEDS];
+    led_t leds[NUM_LEDS];
     ledColors_t color;
     BlinkInfo_t blink;
+    ledCollectionState_t state;
+    ledBehavior_t behavior; 
 } Collection_t;
 
-typedef enum {
-    invalidColor = 0x0,
-    red = 0x1,
-    blue = 0x2,
-    magenta = red | blue,
-    green = 0x4,
-    yellow = green | red,
-    cyan = green | blue,
-    white = red | green | blue
-} ledColors_t;
+
 
 // static  Led_t ledArray[NUM_LEDS] = {
-//     [green] = 
+
+//     [ledColors_Green] = 
 //     {
 //         .pin = ledG_Pin,
 //         .port = ledG_GPIO_Port
 //     },
 
-//     [red] = 
+//     [ledColors_Red] = 
 //     {
 //         .pin = ledR_Pin,
 //         .port = ledR_GPIO_Port
 //     },
 
-//     [blue] = 
+//     [ledColors_Blue] = 
 //     {
 //         .pin = ledB_Pin,
 //         .port = ledB_GPIO_Port
@@ -79,35 +94,42 @@ static Collection_t collArray[NUM_COLLS] = {
                         .port = ledB_GPIO_Port
                     }
                 },
-        .color = invalidColor,
-        .blink = {.blinkCount = 0, .blinkThreshold = BLINK_THRESHOLD}
+        .color = ledColors_White,
+        .blink = {.blinkCount = 0, .blinkThreshold = BLINK_THRESHOLD, .numBlinks = 10}
     }
 };
 
 
-
-void led_activateLed(ledColor_t color)
+//turn on the led indefinitely
+void led_activateLed(Collection_t coll)
 {
-    //led_resetLeds();
-    HAL_GPIO_WritePin(ledArray[color].port, ledArray[color].pin, GPIO_PIN_SET);
+    int i;
+    for(i = 0; i < NUM_LEDS; i++)
+    {
+        if ()
+        {
+            HAL_GPIO_WritePin(coll.leds[], GPIO_PIN_SET);
+        }
+    }
+    
     return;
 }
 
 void led_activateRedLed()
 {
-    led_activateLed(red);
+    led_activateLed(ledColors_Red);
     return;
 }
 
 void led_activateBlueLed()
 {
-    led_activateLed(blue);
+    led_activateLed(ledColors_Blue);
     return;
 }
 
 void led_activateGreenLed()
 {
-    led_activateLed(green);
+    led_activateLed(ledColors_Green);
     return;
 }
 
