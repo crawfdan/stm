@@ -57,3 +57,6 @@
 
 # Libraries
 /lib
+
+# Doxygen
+build/doxygen
