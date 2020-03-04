@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPDXMyq.s 			page 1
+ARM GAS  /tmp/cck6DyCn.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** all the API functions to use the MPU wrappers.  That should only be done when
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** task.h is included from an application file. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 2
+ARM GAS  /tmp/cck6DyCn.s 			page 2
 
 
   35:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE is only true if it is possible for a
   90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** task to be created using either statically or dynamically allocated RAM.  Note
   91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** that if portUSING_MPU_WRAPPERS is 1 then a protected task can be created with
-ARM GAS  /tmp/ccPDXMyq.s 			page 3
+ARM GAS  /tmp/cck6DyCn.s 			page 3
 
 
   92:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** a statically allocated stack and a dynamically allocated TCB.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	} /* taskRECORD_READY_PRIORITY */
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	/*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccPDXMyq.s 			page 4
+ARM GAS  /tmp/cck6DyCn.s 			page 4
 
 
  149:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( listCURRENT_LIST_LENGTH( &( pxReadyTasksLists[ ( uxPriority ) ] ) ) == ( UBaseType_t ) 0 )	\
  204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{																								\
  205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			portRESET_READY_PRIORITY( ( uxPriority ), ( uxTopReadyPriority ) );							\
-ARM GAS  /tmp/ccPDXMyq.s 			page 5
+ARM GAS  /tmp/cck6DyCn.s 			page 5
 
 
  206:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}																								\
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  260:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #else
  261:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#define taskEVENT_LIST_ITEM_VALUE_IN_USE	0x80000000UL
  262:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif
-ARM GAS  /tmp/ccPDXMyq.s 			page 6
+ARM GAS  /tmp/cck6DyCn.s 			page 6
 
 
  263:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  317:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		responsible for resulting newlib operation.  User must be familiar with
  318:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		newlib and must provide system-wide implementations of the necessary
  319:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		stubs. Be warned that (at the time of writing) the current newlib design
-ARM GAS  /tmp/ccPDXMyq.s 			page 7
+ARM GAS  /tmp/cck6DyCn.s 			page 7
 
 
  320:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		implements a system-wide malloc() that must be provided with locks. */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  374:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_DATA static volatile UBaseType_t uxTopReadyPriority 		= tskIDLE_PRIORITY;
  375:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_DATA static volatile BaseType_t xSchedulerRunning 		= pdFALSE;
  376:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_DATA static volatile UBaseType_t uxPendedTicks 			= ( UBaseType_t ) 0U;
-ARM GAS  /tmp/ccPDXMyq.s 			page 8
+ARM GAS  /tmp/cck6DyCn.s 			page 8
 
 
  377:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_DATA static volatile BaseType_t xYieldPending 			= pdFALSE;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  431:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * Utility to ready all the lists used by the scheduler.  This is called
  432:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * automatically upon the creation of the first task.
  433:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  */
-ARM GAS  /tmp/ccPDXMyq.s 			page 9
+ARM GAS  /tmp/cck6DyCn.s 			page 9
 
 
  434:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** static void prvInitialiseTaskLists( void ) PRIVILEGED_FUNCTION;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  488:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  489:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*
  490:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * Searches pxList for a task with name pcNameToQuery - returning a handle to
-ARM GAS  /tmp/ccPDXMyq.s 			page 10
+ARM GAS  /tmp/cck6DyCn.s 			page 10
 
 
  491:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * the task if it is found, or NULL if the task is not found.
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  545:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** static void prvInitialiseNewTask( 	TaskFunction_t pxTaskCode,
  546:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									const char * const pcName, 		/*lint !e971 Unqualified char types are allowed for strings a
  547:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									const uint32_t ulStackDepth,
-ARM GAS  /tmp/ccPDXMyq.s 			page 11
+ARM GAS  /tmp/cck6DyCn.s 			page 11
 
 
  548:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									void * const pvParameters,
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  602:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* The memory used for the task's TCB and stack are passed into this
  603:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			function - use them. */
  604:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxNewTCB = ( TCB_t * ) pxTaskBuffer; /*lint !e740 Unusual cast is ok as the structures are desig
-ARM GAS  /tmp/ccPDXMyq.s 			page 12
+ARM GAS  /tmp/cck6DyCn.s 			page 12
 
 
  605:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxNewTCB->pxStack = ( StackType_t * ) puxStackBuffer;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  659:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									( uint32_t ) pxTaskDefinition->usStackDepth,
  660:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									pxTaskDefinition->pvParameters,
  661:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									pxTaskDefinition->uxPriority,
-ARM GAS  /tmp/ccPDXMyq.s 			page 13
+ARM GAS  /tmp/cck6DyCn.s 			page 13
 
 
  662:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									pxCreatedTask, pxNewTCB,
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  716:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
  717:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  718:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return xReturn;
-ARM GAS  /tmp/ccPDXMyq.s 			page 14
+ARM GAS  /tmp/cck6DyCn.s 			page 14
 
 
  719:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  773:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				if( pxNewTCB != NULL )
  774:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
  775:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					/* Store the stack location in the TCB. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 15
+ARM GAS  /tmp/cck6DyCn.s 			page 15
 
 
  776:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					pxNewTCB->pxStack = pxStack;
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  830:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Should the task be created in privileged mode? */
  831:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		BaseType_t xRunPrivileged;
  832:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( ( uxPriority & portPRIVILEGE_BIT ) != 0U )
-ARM GAS  /tmp/ccPDXMyq.s 			page 16
+ARM GAS  /tmp/cck6DyCn.s 			page 16
 
 
  833:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  887:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pcTaskName[ x ] = pcName[ x ];
  888:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  889:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Don't copy all configMAX_TASK_NAME_LEN if the string is shorter than
-ARM GAS  /tmp/ccPDXMyq.s 			page 17
+ARM GAS  /tmp/cck6DyCn.s 			page 17
 
 
  890:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		configMAX_TASK_NAME_LEN characters just in case the memory after the
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  944:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pxTaskTag = NULL;
  945:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  946:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* configUSE_APPLICATION_TASK_TAG */
-ARM GAS  /tmp/ccPDXMyq.s 			page 18
+ARM GAS  /tmp/cck6DyCn.s 			page 18
 
 
  947:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1001:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 1002:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#else /* portUSING_MPU_WRAPPERS */
 1003:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
-ARM GAS  /tmp/ccPDXMyq.s 			page 19
+ARM GAS  /tmp/cck6DyCn.s 			page 19
 
 
 1004:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pxTopOfStack = pxPortInitialiseStack( pxTopOfStack, pxTaskCode, pvParameters );
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1058:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 1059:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
 1060:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  /tmp/ccPDXMyq.s 			page 20
+ARM GAS  /tmp/cck6DyCn.s 			page 20
 
 
 1061:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1115:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1116:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* Remove task from the ready list. */
 1117:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
-ARM GAS  /tmp/ccPDXMyq.s 			page 21
+ARM GAS  /tmp/cck6DyCn.s 			page 21
 
 
 1118:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1172:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			traceTASK_DELETE( pxTCB );
 1174:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
-ARM GAS  /tmp/ccPDXMyq.s 			page 22
+ARM GAS  /tmp/cck6DyCn.s 			page 22
 
 
 1175:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskEXIT_CRITICAL();
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1229:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
 1230:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
 1231:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
-ARM GAS  /tmp/ccPDXMyq.s 			page 23
+ARM GAS  /tmp/cck6DyCn.s 			page 23
 
 
 1232:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1286:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* A delay time of zero just forces a reschedule. */
 1287:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( xTicksToDelay > ( TickType_t ) 0U )
 1288:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  /tmp/ccPDXMyq.s 			page 24
+ARM GAS  /tmp/cck6DyCn.s 			page 24
 
 
 1289:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			configASSERT( uxSchedulerSuspended == 0 );
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1343:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 1344:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				pxStateList = ( List_t * ) listLIST_ITEM_CONTAINER( &( pxTCB->xStateListItem ) );
 1345:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
-ARM GAS  /tmp/ccPDXMyq.s 			page 25
+ARM GAS  /tmp/cck6DyCn.s 			page 25
 
 
 1346:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			taskEXIT_CRITICAL();
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1400:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t *pxTCB;
 1401:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	UBaseType_t uxReturn;
 1402:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 26
+ARM GAS  /tmp/cck6DyCn.s 			page 26
 
 
 1403:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskENTER_CRITICAL();
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1457:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1458:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( INCLUDE_vTaskPrioritySet == 1 )
 1459:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 27
+ARM GAS  /tmp/cck6DyCn.s 			page 27
 
 
 1460:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority )
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1514:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						}
 1515:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 1516:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					else
-ARM GAS  /tmp/ccPDXMyq.s 			page 28
+ARM GAS  /tmp/cck6DyCn.s 			page 28
 
 
 1517:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					{
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1571:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 1572:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
 1573:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  /tmp/ccPDXMyq.s 			page 29
+ARM GAS  /tmp/cck6DyCn.s 			page 29
 
 
 1574:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1628:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskENTER_CRITICAL();
 1629:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 1630:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* If null is passed in here then it is the running task that is
-ARM GAS  /tmp/ccPDXMyq.s 			page 30
+ARM GAS  /tmp/cck6DyCn.s 			page 30
 
 
 1631:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			being suspended. */
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1685:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 1686:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1687:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( pxTCB == pxCurrentTCB )
-ARM GAS  /tmp/ccPDXMyq.s 			page 31
+ARM GAS  /tmp/cck6DyCn.s 			page 31
 
 
 1688:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   32 0000 50B1     		cbz	r0, .L8
 1735:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1736:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Is the task being resumed actually in the suspended list? */
-ARM GAS  /tmp/ccPDXMyq.s 			page 32
+ARM GAS  /tmp/cck6DyCn.s 			page 32
 
 
 1737:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( listIS_CONTAINED_WITHIN( &xSuspendedTaskList, &( pxTCB->xStateListItem ) ) != pdFALSE )
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   25:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h ****  * 1 tab == 4 spaces!
   26:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h ****  */
   27:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 33
+ARM GAS  /tmp/cck6DyCn.s 			page 33
 
 
   28:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   82:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;								\
   83:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 																				\
   84:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	/* Barriers are normally not required but do ensure the code is completely	\
-ARM GAS  /tmp/ccPDXMyq.s 			page 34
+ARM GAS  /tmp/cck6DyCn.s 			page 34
 
 
   85:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	within the specified behaviour for the architecture. */						\
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  139:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	#if( configMAX_PRIORITIES > 32 )
  140:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 		#error configUSE_PORT_OPTIMISED_TASK_SELECTION can only be set to 1 when configMAX_PRIORITIES is 
  141:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	#endif
-ARM GAS  /tmp/ccPDXMyq.s 			page 35
+ARM GAS  /tmp/cck6DyCn.s 			page 35
 
 
  142:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   54              		.loc 2 195 0
   55              		.syntax unified
   56              	@ 195 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sour
-ARM GAS  /tmp/ccPDXMyq.s 			page 36
+ARM GAS  /tmp/cck6DyCn.s 			page 36
 
 
   57 0018 4FF05003 			mov r3, #80												
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
   90 0038 00000000 		.word	.LANCHOR0
   91 003c 00000000 		.word	.LANCHOR1
   92              		.cfi_endproc
-ARM GAS  /tmp/ccPDXMyq.s 			page 37
+ARM GAS  /tmp/cck6DyCn.s 			page 37
 
 
   93              	.LFE14:
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1810:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 1811:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			taskEXIT_CRITICAL();
 1812:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
-ARM GAS  /tmp/ccPDXMyq.s 			page 38
+ARM GAS  /tmp/cck6DyCn.s 			page 38
 
 
 1813:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1867:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					{
 1868:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						mtCOVERAGE_TEST_MARKER();
 1869:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
-ARM GAS  /tmp/ccPDXMyq.s 			page 39
+ARM GAS  /tmp/cck6DyCn.s 			page 39
 
 
 1870:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1924:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 1925:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 1926:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#else
-ARM GAS  /tmp/ccPDXMyq.s 			page 40
+ARM GAS  /tmp/cck6DyCn.s 			page 40
 
 
 1927:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1981:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* If configGENERATE_RUN_TIME_STATS is defined then the following
 1982:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		macro must be defined to configure the timer/counter used to generate
 1983:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		the run time counter time base.   NOTE:  If configGENERATE_RUN_TIME_STATS
-ARM GAS  /tmp/ccPDXMyq.s 			page 41
+ARM GAS  /tmp/cck6DyCn.s 			page 41
 
 
 1984:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		is set to 0 and the following line fails to build then ensure you do not
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2038:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	static TickType_t prvGetExpectedIdleTime( void )
 2039:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
 2040:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TickType_t xReturn;
-ARM GAS  /tmp/ccPDXMyq.s 			page 42
+ARM GAS  /tmp/cck6DyCn.s 			page 42
 
 
 2041:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	UBaseType_t uxHigherPriorityReadyTasks = pdFALSE;
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2095:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2096:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configUSE_TICKLESS_IDLE */
 2097:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*----------------------------------------------------------*/
-ARM GAS  /tmp/ccPDXMyq.s 			page 43
+ARM GAS  /tmp/cck6DyCn.s 			page 43
 
 
 2098:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2152:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2153:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* If any ticks occurred while the scheduler was suspended then
 2154:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				they should be processed now.  This ensures the tick count does
-ARM GAS  /tmp/ccPDXMyq.s 			page 44
+ARM GAS  /tmp/cck6DyCn.s 			page 44
 
 
 2155:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				not	slip, and that any delayed tasks are resumed at the correct
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2209:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** TickType_t xTaskGetTickCount( void )
 2210:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
 2211:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** TickType_t xTicks;
-ARM GAS  /tmp/ccPDXMyq.s 			page 45
+ARM GAS  /tmp/cck6DyCn.s 			page 45
 
 
 2212:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2266:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2267:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	/* If null is passed in here then the name of the calling task is being
 2268:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	queried. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 46
+ARM GAS  /tmp/cck6DyCn.s 			page 46
 
 
 2269:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	pxTCB = prvGetTCBFromHandle( xTaskToQuery );
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2323:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			} while( pxNextTCB != pxFirstTCB );
 2324:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 2325:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
-ARM GAS  /tmp/ccPDXMyq.s 			page 47
+ARM GAS  /tmp/cck6DyCn.s 			page 47
 
 
 2326:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2380:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 2381:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			#endif
 2382:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 48
+ARM GAS  /tmp/cck6DyCn.s 			page 48
 
 
 2383:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			#if( INCLUDE_vTaskDelete == 1 )
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2437:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					each task in the Suspended state. */
 2438:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					uxTask += prvListTasksWithinSingleList( &( pxTaskStatusArray[ uxTask ] ), &xSuspendedTaskList,
 2439:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  /tmp/ccPDXMyq.s 			page 49
+ARM GAS  /tmp/cck6DyCn.s 			page 49
 
 
 2440:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				#endif
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2494:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	void vTaskStepTick( const TickType_t xTicksToJump )
 2495:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
 2496:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Correct the tick count value after a period during which the tick
-ARM GAS  /tmp/ccPDXMyq.s 			page 50
+ARM GAS  /tmp/cck6DyCn.s 			page 50
 
 
 2497:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		was suppressed.  Note this does *not* call the tick hook function for
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2551:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				switch if preemption is turned off. */
 2552:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				#if (  configUSE_PREEMPTION == 1 )
 2553:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
-ARM GAS  /tmp/ccPDXMyq.s 			page 51
+ARM GAS  /tmp/cck6DyCn.s 			page 51
 
 
 2554:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					/* Preemption is on, but a context switch should only be
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2608:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 2609:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			mtCOVERAGE_TEST_MARKER();
 2610:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
-ARM GAS  /tmp/ccPDXMyq.s 			page 52
+ARM GAS  /tmp/cck6DyCn.s 			page 52
 
 
 2611:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2665:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						mtCOVERAGE_TEST_MARKER();
 2666:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 2667:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 53
+ARM GAS  /tmp/cck6DyCn.s 			page 53
 
 
 2668:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					/* Place the unblocked task into the appropriate ready
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2722:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 2723:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#endif /* configUSE_TICK_HOOK */
 2724:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
-ARM GAS  /tmp/ccPDXMyq.s 			page 54
+ARM GAS  /tmp/cck6DyCn.s 			page 54
 
 
 2725:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	else
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2779:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configUSE_APPLICATION_TASK_TAG */
 2780:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 2781:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 55
+ARM GAS  /tmp/cck6DyCn.s 			page 55
 
 
 2782:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( configUSE_APPLICATION_TASK_TAG == 1 )
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2836:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			xReturn = pdFAIL;
 2837:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 2838:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 56
+ARM GAS  /tmp/cck6DyCn.s 			page 56
 
 
 2839:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return xReturn;
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2893:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#if ( configUSE_NEWLIB_REENTRANT == 1 )
 2894:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 2895:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* Switch Newlib's _impure_ptr variable to point to the _reent
-ARM GAS  /tmp/ccPDXMyq.s 			page 57
+ARM GAS  /tmp/cck6DyCn.s 			page 57
 
 
 2896:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			structure specific to this task. */
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2950:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2951:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* This function should not be called by application code hence the
 2952:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		'Restricted' in its name.  It is not part of the public API.  It is
-ARM GAS  /tmp/ccPDXMyq.s 			page 58
+ARM GAS  /tmp/cck6DyCn.s 			page 58
 
 
 2953:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		designed for use by kernel code, and has special calling requirements -
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3007:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* The delayed and ready lists cannot be accessed, so hold this task
 3008:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pending until the scheduler is resumed. */
 3009:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		vListInsertEnd( &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );
-ARM GAS  /tmp/ccPDXMyq.s 			page 59
+ARM GAS  /tmp/cck6DyCn.s 			page 59
 
 
 3010:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3064:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	scheduler is suspended so interrupts will not be accessing the ready
 3065:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	lists. */
 3066:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	( void ) uxListRemove( &( pxUnblockedTCB->xStateListItem ) );
-ARM GAS  /tmp/ccPDXMyq.s 			page 60
+ARM GAS  /tmp/cck6DyCn.s 			page 60
 
 
 3067:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	prvAddTaskToReadyList( pxUnblockedTCB );
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3121:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
 3122:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#endif
 3123:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 61
+ARM GAS  /tmp/cck6DyCn.s 			page 61
 
 
 3124:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#if ( INCLUDE_vTaskSuspend == 1 )
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3178:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTCB = ( TCB_t * ) xTask;
 3179:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			uxReturn = pxTCB->uxTaskNumber;
 3180:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
-ARM GAS  /tmp/ccPDXMyq.s 			page 62
+ARM GAS  /tmp/cck6DyCn.s 			page 62
 
 
 3181:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3235:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		prvCheckTasksWaitingTermination();
 3236:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3237:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#if ( configUSE_PREEMPTION == 0 )
-ARM GAS  /tmp/ccPDXMyq.s 			page 63
+ARM GAS  /tmp/cck6DyCn.s 			page 63
 
 
 3238:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3292:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			test of the expected idle time is performed without the
 3293:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			scheduler suspended.  The result here is not necessarily
 3294:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			valid. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 64
+ARM GAS  /tmp/cck6DyCn.s 			page 64
 
 
 3295:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			xExpectedIdleTime = prvGetExpectedIdleTime();
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3349:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 3350:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* A yield was pended while the scheduler was suspended. */
 3351:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			eReturn = eAbortSleep;
-ARM GAS  /tmp/ccPDXMyq.s 			page 65
+ARM GAS  /tmp/cck6DyCn.s 			page 65
 
 
 3352:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3406:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3407:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3408:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return pvReturn;
-ARM GAS  /tmp/ccPDXMyq.s 			page 66
+ARM GAS  /tmp/cck6DyCn.s 			page 66
 
 
 3409:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3463:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
 3464:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3465:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	/** THIS FUNCTION IS CALLED FROM THE RTOS IDLE TASK **/
-ARM GAS  /tmp/ccPDXMyq.s 			page 67
+ARM GAS  /tmp/cck6DyCn.s 			page 67
 
 
 3466:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3520:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#else
 3521:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 3522:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTaskStatus->ulRunTimeCounter = 0;
-ARM GAS  /tmp/ccPDXMyq.s 			page 68
+ARM GAS  /tmp/cck6DyCn.s 			page 68
 
 
 3523:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3577:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3578:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
 3579:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  /tmp/ccPDXMyq.s 			page 69
+ARM GAS  /tmp/cck6DyCn.s 			page 69
 
 
 3580:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTaskStatus->usStackHighWaterMark = 0;
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3634:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return ( uint16_t ) ulCount;
 3635:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 3636:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 70
+ARM GAS  /tmp/cck6DyCn.s 			page 70
 
 
 3637:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* ( ( configUSE_TRACE_FACILITY == 1 ) || ( INCLUDE_uxTaskGetStackHighWaterMark == 1 ) ) */
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3691:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3692:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#elif( tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE != 0 ) /*lint !e731 Macro has been consolidated 
 3693:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  /tmp/ccPDXMyq.s 			page 71
+ARM GAS  /tmp/cck6DyCn.s 			page 71
 
 
 3694:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* The task could have been allocated statically or dynamically, so
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3738:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* The new current delayed list is not empty, get the value of
 3739:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		the item at the head of the delayed list.  This is the time at
 3740:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		which the task at the head of the delayed list should be removed
-ARM GAS  /tmp/ccPDXMyq.s 			page 72
+ARM GAS  /tmp/cck6DyCn.s 			page 72
 
 
 3741:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		from the Blocked state. */
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  162 0004 006B     		ldr	r0, [r0, #48]
  163              	.LVL12:
  164 0006 FFF7FEFF 		bl	vPortFree
-ARM GAS  /tmp/ccPDXMyq.s 			page 73
+ARM GAS  /tmp/cck6DyCn.s 			page 73
 
 
  165              	.LVL13:
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  885:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
  216              		.loc 1 885 0
  217 001e 0023     		movs	r3, #0
-ARM GAS  /tmp/ccPDXMyq.s 			page 74
+ARM GAS  /tmp/cck6DyCn.s 			page 74
 
 
  218              	.LVL20:
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  260              	.LVL25:
  930:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  261              		.loc 1 930 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 75
+ARM GAS  /tmp/cck6DyCn.s 			page 75
 
 
  262 005a 2461     		str	r4, [r4, #16]
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  309              		.cfi_offset 14, -4
  310              	.LVL28:
 3434:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
-ARM GAS  /tmp/ccPDXMyq.s 			page 76
+ARM GAS  /tmp/cck6DyCn.s 			page 76
 
 
  311              		.loc 1 3434 0
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3458:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
  356              		.loc 1 3458 0
  357 0040 084B     		ldr	r3, .L31+28
-ARM GAS  /tmp/ccPDXMyq.s 			page 77
+ARM GAS  /tmp/cck6DyCn.s 			page 77
 
 
  358 0042 1C60     		str	r4, [r3]
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  408 0016 1F4B     		ldr	r3, .L40+8
  409 0018 1B68     		ldr	r3, [r3]
  410 001a 6BB9     		cbnz	r3, .L35
-ARM GAS  /tmp/ccPDXMyq.s 			page 78
+ARM GAS  /tmp/cck6DyCn.s 			page 78
 
 
 1053:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  457 0066 6BB1     		cbz	r3, .L33
 1088:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
  458              		.loc 1 1088 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 79
+ARM GAS  /tmp/cck6DyCn.s 			page 79
 
 
  459 0068 094B     		ldr	r3, .L40+4
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  511              		@ args = 0, pretend = 0, frame = 0
  512              		@ frame_needed = 0, uses_anonymous_args = 0
  513              	.LBB96:
-ARM GAS  /tmp/ccPDXMyq.s 			page 80
+ARM GAS  /tmp/cck6DyCn.s 			page 80
 
 
 3473:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  558 0034 1B68     		ldr	r3, [r3]
  559 0036 002B     		cmp	r3, #0
  560 0038 E6D1     		bne	.L44
-ARM GAS  /tmp/ccPDXMyq.s 			page 81
+ARM GAS  /tmp/cck6DyCn.s 			page 81
 
 
  561              	.LBE97:
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  612 0010 4FF08052 		mov	r2, #268435456
  613 0014 1A60     		str	r2, [r3]
  614              		.syntax unified
-ARM GAS  /tmp/ccPDXMyq.s 			page 82
+ARM GAS  /tmp/cck6DyCn.s 			page 82
 
 
  615              	@ 3260 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sou
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3776:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 3777:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( uxSchedulerSuspended == ( UBaseType_t ) pdFALSE )
 3778:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  /tmp/ccPDXMyq.s 			page 83
+ARM GAS  /tmp/cck6DyCn.s 			page 83
 
 
 3779:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				xReturn = taskSCHEDULER_RUNNING;
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3833:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 3834:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3835:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					/* Inherit the priority before being moved into the new list. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 84
+ARM GAS  /tmp/cck6DyCn.s 			page 84
 
 
 3836:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					pxMutexHolderTCB->uxPriority = pxCurrentTCB->uxPriority;
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3890:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			If the mutex is held by a task then it cannot be given from an
 3891:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			interrupt, and if a mutex is given by the holding task then it must
 3892:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			be the running state task. */
-ARM GAS  /tmp/ccPDXMyq.s 			page 85
+ARM GAS  /tmp/cck6DyCn.s 			page 85
 
 
 3893:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			configASSERT( pxTCB == pxCurrentTCB );
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3947:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 3948:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3949:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
-ARM GAS  /tmp/ccPDXMyq.s 			page 86
+ARM GAS  /tmp/cck6DyCn.s 			page 86
 
 
 3950:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4004:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					traceTASK_PRIORITY_DISINHERIT( pxTCB, pxTCB->uxBasePriority );
 4005:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					uxPriorityUsedOnEntry = pxTCB->uxPriority;
 4006:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					pxTCB->uxPriority = uxPriorityToUse;
-ARM GAS  /tmp/ccPDXMyq.s 			page 87
+ARM GAS  /tmp/cck6DyCn.s 			page 87
 
 
 4007:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4061:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4062:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( portCRITICAL_NESTING_IN_TCB == 1 )
 4063:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 88
+ARM GAS  /tmp/cck6DyCn.s 			page 88
 
 
 4064:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	void vTaskEnterCritical( void )
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4118:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			mtCOVERAGE_TEST_MARKER();
 4119:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 4120:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
-ARM GAS  /tmp/ccPDXMyq.s 			page 89
+ARM GAS  /tmp/cck6DyCn.s 			page 89
 
 
 4121:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4175:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * printf-stdarg.c (note printf-stdarg.c does not provide a full
 4176:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * snprintf() implementation!).
 4177:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 *
-ARM GAS  /tmp/ccPDXMyq.s 			page 90
+ARM GAS  /tmp/cck6DyCn.s 			page 90
 
 
 4178:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * It is recommended that production systems call uxTaskGetSystemState()
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4232:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				sprintf( pcWriteBuffer, "\t%c\t%u\t%u\t%u\r\n", cStatus, ( unsigned int ) pxTaskStatusArray[ x 
 4233:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				pcWriteBuffer += strlen( pcWriteBuffer );
 4234:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
-ARM GAS  /tmp/ccPDXMyq.s 			page 91
+ARM GAS  /tmp/cck6DyCn.s 			page 91
 
 
 4235:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4289:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		*pcWriteBuffer = 0x00;
 4290:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4291:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Take a snapshot of the number of tasks in case it changes while this
-ARM GAS  /tmp/ccPDXMyq.s 			page 92
+ARM GAS  /tmp/cck6DyCn.s 			page 92
 
 
 4292:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		function is executing. */
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4346:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						#else
 4347:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						{
 4348:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 							/* sizeof( int ) == sizeof( long ) so a smaller
-ARM GAS  /tmp/ccPDXMyq.s 			page 93
+ARM GAS  /tmp/cck6DyCn.s 			page 93
 
 
 4349:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 							printf() library can be used. */
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4403:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4404:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configUSE_MUTEXES */
 4405:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  /tmp/ccPDXMyq.s 			page 94
+ARM GAS  /tmp/cck6DyCn.s 			page 94
 
 
 4406:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4460:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
 4461:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 4462:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				mtCOVERAGE_TEST_MARKER();
-ARM GAS  /tmp/ccPDXMyq.s 			page 95
+ARM GAS  /tmp/cck6DyCn.s 			page 95
 
 
 4463:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4517:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskENTER_CRITICAL();
 4518:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 4519:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			traceTASK_NOTIFY_WAIT();
-ARM GAS  /tmp/ccPDXMyq.s 			page 96
+ARM GAS  /tmp/cck6DyCn.s 			page 96
 
 
 4520:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4574:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4575:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTCB->ucNotifyState = taskNOTIFICATION_RECEIVED;
 4576:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 97
+ARM GAS  /tmp/cck6DyCn.s 			page 97
 
 
 4577:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			switch( eAction )
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4631:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					xNextTaskUnblockTime here to ensure it is updated at the
 4632:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					earliest possible time. */
 4633:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvResetNextTaskUnblockTime();
-ARM GAS  /tmp/ccPDXMyq.s 			page 98
+ARM GAS  /tmp/cck6DyCn.s 			page 98
 
 
 4634:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4688:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		portASSERT_IF_INTERRUPT_PRIORITY_INVALID();
 4689:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4690:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxTCB = ( TCB_t * ) xTaskToNotify;
-ARM GAS  /tmp/ccPDXMyq.s 			page 99
+ARM GAS  /tmp/cck6DyCn.s 			page 99
 
 
 4691:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4745:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					( void ) uxListRemove( &( pxTCB->xStateListItem ) );
 4746:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvAddTaskToReadyList( pxTCB );
 4747:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  /tmp/ccPDXMyq.s 			page 100
+ARM GAS  /tmp/cck6DyCn.s 			page 100
 
 
 4748:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				else
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4802:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		failure if a FreeRTOS API function is called from an interrupt that has
 4803:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		been assigned a priority above the configured maximum system call
 4804:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		priority.  Only FreeRTOS functions that end in FromISR can be called
-ARM GAS  /tmp/ccPDXMyq.s 			page 101
+ARM GAS  /tmp/cck6DyCn.s 			page 101
 
 
 4805:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		from interrupts	that have been assigned a priority at or (logically)
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4859:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 4860:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
 4861:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				else
-ARM GAS  /tmp/ccPDXMyq.s 			page 102
+ARM GAS  /tmp/cck6DyCn.s 			page 102
 
 
 4862:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  649              		.cfi_offset 4, -16
  650              		.cfi_offset 5, -12
  651              		.cfi_offset 6, -8
-ARM GAS  /tmp/ccPDXMyq.s 			page 103
+ARM GAS  /tmp/cck6DyCn.s 			page 103
 
 
  652              		.cfi_offset 14, -4
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  678              		.loc 1 4935 0
  679 002c B4F1FF3F 		cmp	r4, #-1
  680 0030 13D0     		beq	.L63
-ARM GAS  /tmp/ccPDXMyq.s 			page 104
+ARM GAS  /tmp/cck6DyCn.s 			page 104
 
 
  681              	.L59:
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  703 0050 A342     		cmp	r3, r4
  704 0052 12D9     		bls	.L57
 4968:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
-ARM GAS  /tmp/ccPDXMyq.s 			page 105
+ARM GAS  /tmp/cck6DyCn.s 			page 105
 
 
 4969:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					xNextTaskUnblockTime = xTimeToWake;
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4935:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
  712              		.loc 1 4935 0 discriminator 1
  713 005a 002E     		cmp	r6, #0
-ARM GAS  /tmp/ccPDXMyq.s 			page 106
+ARM GAS  /tmp/cck6DyCn.s 			page 106
 
 
  714 005c E9D0     		beq	.L59
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  767              		.cfi_def_cfa_offset 28
  768              		.cfi_offset 4, -28
  769              		.cfi_offset 5, -24
-ARM GAS  /tmp/ccPDXMyq.s 			page 107
+ARM GAS  /tmp/cck6DyCn.s 			page 107
 
 
  770              		.cfi_offset 6, -20
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  817 003a 3846     		mov	r0, r7
  818 003c FFF7FEFF 		bl	prvInitialiseNewTask
  819              	.LVL70:
-ARM GAS  /tmp/ccPDXMyq.s 			page 108
+ARM GAS  /tmp/cck6DyCn.s 			page 108
 
 
  803:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			xReturn = pdPASS;
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  870              	vTaskDelete:
  871              	.LFB8:
 1107:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t *pxTCB;
-ARM GAS  /tmp/ccPDXMyq.s 			page 109
+ARM GAS  /tmp/cck6DyCn.s 			page 109
 
 
  872              		.loc 1 1107 0
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  919 003c FFF7FEFF 		bl	uxListRemove
  920              	.LVL84:
  921              	.L77:
-ARM GAS  /tmp/ccPDXMyq.s 			page 110
+ARM GAS  /tmp/cck6DyCn.s 			page 110
 
 
 1140:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  966 007a C7E7     		b	.L75
  967              	.LVL90:
  968              	.L85:
-ARM GAS  /tmp/ccPDXMyq.s 			page 111
+ARM GAS  /tmp/cck6DyCn.s 			page 111
 
 
 1149:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1018 00b6 DDE7     		b	.L74
  1019              	.L88:
  1020              		.align	2
-ARM GAS  /tmp/ccPDXMyq.s 			page 112
+ARM GAS  /tmp/cck6DyCn.s 			page 112
 
 
  1021              	.L87:
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1071 0012 10BD     		pop	{r4, pc}
  1072              	.LVL98:
  1073              	.L92:
-ARM GAS  /tmp/ccPDXMyq.s 			page 113
+ARM GAS  /tmp/cck6DyCn.s 			page 113
 
 
 1407:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			uxReturn = pxTCB->uxPriority;
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  211:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	__asm volatile
  1112              		.loc 2 211 0
  1113              		.syntax unified
-ARM GAS  /tmp/ccPDXMyq.s 			page 114
+ARM GAS  /tmp/cck6DyCn.s 			page 114
 
 
  1114              	@ 211 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sour
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1147              	.LVL105:
  1148              	.L98:
 1447:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			uxReturn = pxTCB->uxPriority;
-ARM GAS  /tmp/ccPDXMyq.s 			page 115
+ARM GAS  /tmp/cck6DyCn.s 			page 115
 
 
  1149              		.loc 1 1447 0 discriminator 1
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1202              		.syntax unified
  1203              	.L103:
  1204 0016 FEE7     		b	.L103
-ARM GAS  /tmp/ccPDXMyq.s 			page 116
+ARM GAS  /tmp/cck6DyCn.s 			page 116
 
 
  1205              	.L102:
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1248 0044 BB42     		cmp	r3, r7
  1249 0046 00D1     		bne	.L108
 1548:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
-ARM GAS  /tmp/ccPDXMyq.s 			page 117
+ARM GAS  /tmp/cck6DyCn.s 			page 117
 
 
  1250              		.loc 1 1548 0
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1297 0094 00FB0230 		mla	r0, r0, r2, r3
  1298 0098 FFF7FEFF 		bl	vListInsertEnd
  1299              	.LVL119:
-ARM GAS  /tmp/ccPDXMyq.s 			page 118
+ARM GAS  /tmp/cck6DyCn.s 			page 118
 
 
  1300              	.L110:
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1346              	.L116:
  1347 00cc 00000000 		.word	.LANCHOR10
  1348 00d0 00000000 		.word	.LANCHOR4
-ARM GAS  /tmp/ccPDXMyq.s 			page 119
+ARM GAS  /tmp/cck6DyCn.s 			page 119
 
 
  1349 00d4 00000000 		.word	.LANCHOR13
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1398              		.loc 1 1817 0
  1399 001e 38BD     		pop	{r3, r4, r5, pc}
  1400              	.LVL128:
-ARM GAS  /tmp/ccPDXMyq.s 			page 120
+ARM GAS  /tmp/cck6DyCn.s 			page 120
 
 
  1401              	.L124:
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1450 0064 4FF08052 		mov	r2, #268435456
  1451 0068 1A60     		str	r2, [r3]
  1452              		.syntax unified
-ARM GAS  /tmp/ccPDXMyq.s 			page 121
+ARM GAS  /tmp/cck6DyCn.s 			page 121
 
 
  1453              	@ 1799 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sou
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1506 000c BFF36F8F 		isb														
  1507 0010 BFF34F8F 		dsb														
  1508              	
-ARM GAS  /tmp/ccPDXMyq.s 			page 122
+ARM GAS  /tmp/cck6DyCn.s 			page 122
 
 
  1509              	@ 0 "" 2
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1557              	.LVL138:
 1871:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvAddTaskToReadyList( pxTCB );
  1558              		.loc 1 1871 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 123
+ARM GAS  /tmp/cck6DyCn.s 			page 123
 
 
  1559 004c 261D     		adds	r6, r4, #4
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1608 008a 0025     		movs	r5, #0
  1609 008c F0E7     		b	.L131
  1610              	.L138:
-ARM GAS  /tmp/ccPDXMyq.s 			page 124
+ARM GAS  /tmp/cck6DyCn.s 			page 124
 
 
  1611 008e 00BF     		.align	2
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1662              	.LCFI20:
  1663              		.cfi_remember_state
  1664              		.cfi_def_cfa_offset 4
-ARM GAS  /tmp/ccPDXMyq.s 			page 125
+ARM GAS  /tmp/cck6DyCn.s 			page 125
 
 
  1665              		@ sp needed
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1713              	
  1714              	@ 0 "" 2
  1715              	.LVL149:
-ARM GAS  /tmp/ccPDXMyq.s 			page 126
+ARM GAS  /tmp/cck6DyCn.s 			page 126
 
 
  1716              		.thumb
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1769 0012 034B     		ldr	r3, .L150
  1770 0014 0022     		movs	r2, #0
  1771 0016 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccPDXMyq.s 			page 127
+ARM GAS  /tmp/cck6DyCn.s 			page 127
 
 
 2022:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1824              		.cfi_startproc
  1825              		@ args = 0, pretend = 0, frame = 0
  1826              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 128
+ARM GAS  /tmp/cck6DyCn.s 			page 128
 
 
  1827              		@ link register save eliminated.
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  1878              		.global	uxTaskGetNumberOfTasks
  1879              		.syntax unified
  1880              		.thumb
-ARM GAS  /tmp/ccPDXMyq.s 			page 129
+ARM GAS  /tmp/cck6DyCn.s 			page 129
 
 
  1881              		.thumb_func
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2269:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	configASSERT( pxTCB );
  1931              		.loc 1 2269 0 discriminator 1
  1932 000c 054B     		ldr	r3, .L171
-ARM GAS  /tmp/ccPDXMyq.s 			page 130
+ARM GAS  /tmp/cck6DyCn.s 			page 130
 
 
  1933 000e 1B68     		ldr	r3, [r3]
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2593:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
  1987              		.loc 1 2593 0
  1988 0002 3A4B     		ldr	r3, .L194
-ARM GAS  /tmp/ccPDXMyq.s 			page 131
+ARM GAS  /tmp/cck6DyCn.s 			page 131
 
 
  1989 0004 1B68     		ldr	r3, [r3]
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2037 003e 0133     		adds	r3, r3, #1
  2038 0040 1360     		str	r3, [r2]
  2039 0042 FFF7FEFF 		bl	prvResetNextTaskUnblockTime
-ARM GAS  /tmp/ccPDXMyq.s 			page 132
+ARM GAS  /tmp/cck6DyCn.s 			page 132
 
 
  2040              	.LVL164:
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2086 007a 7368     		ldr	r3, [r6, #4]
  2087              	.LVL170:
 2639:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					{
-ARM GAS  /tmp/ccPDXMyq.s 			page 133
+ARM GAS  /tmp/cck6DyCn.s 			page 133
 
 
  2088              		.loc 1 2639 0
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 2627:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					break;
  2136              		.loc 1 2627 0
  2137 00c4 0E4B     		ldr	r3, .L194+20
-ARM GAS  /tmp/ccPDXMyq.s 			page 134
+ARM GAS  /tmp/cck6DyCn.s 			page 134
 
 
  2138 00c6 4FF0FF32 		mov	r2, #-1
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2184 0110 00000000 		.word	.LANCHOR19
  2185 0114 00000000 		.word	.LANCHOR20
  2186              		.cfi_endproc
-ARM GAS  /tmp/ccPDXMyq.s 			page 135
+ARM GAS  /tmp/cck6DyCn.s 			page 135
 
 
  2187              	.LFE25:
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2238 001e 2C4B     		ldr	r3, .L212
  2239 0020 1A68     		ldr	r2, [r3]
  2240 0022 013A     		subs	r2, r2, #1
-ARM GAS  /tmp/ccPDXMyq.s 			page 136
+ARM GAS  /tmp/cck6DyCn.s 			page 136
 
 
  2241 0024 1A60     		str	r2, [r3]
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2284              		.loc 1 2128 0
  2285 005a E36A     		ldr	r3, [r4, #44]
  2286 005c 0122     		movs	r2, #1
-ARM GAS  /tmp/ccPDXMyq.s 			page 137
+ARM GAS  /tmp/cck6DyCn.s 			page 137
 
 
  2287 005e 9A40     		lsls	r2, r2, r3
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2333 00a2 1A60     		str	r2, [r3]
  2334              	.L205:
  2335              	.LVL194:
-ARM GAS  /tmp/ccPDXMyq.s 			page 138
+ARM GAS  /tmp/cck6DyCn.s 			page 138
 
 
 2173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2384 00dc 00000000 		.word	.LANCHOR13
  2385 00e0 00000000 		.word	.LANCHOR4
  2386 00e4 00000000 		.word	.LANCHOR10
-ARM GAS  /tmp/ccPDXMyq.s 			page 139
+ARM GAS  /tmp/cck6DyCn.s 			page 139
 
 
  2387 00e8 00000000 		.word	.LANCHOR20
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2439              	.LBE133:
 1290:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
  2440              		.loc 1 1290 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 140
+ARM GAS  /tmp/cck6DyCn.s 			page 140
 
 
  2441 001e FFF7FEFF 		bl	vTaskSuspendAll
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2491              		@ args = 0, pretend = 0, frame = 0
  2492              		@ frame_needed = 0, uses_anonymous_args = 0
  2493              		@ link register save eliminated.
-ARM GAS  /tmp/ccPDXMyq.s 			page 141
+ARM GAS  /tmp/cck6DyCn.s 			page 141
 
 
 2847:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2541 0036 BFF36F8F 		isb														
  2542 003a BFF34F8F 		dsb														
  2543              	
-ARM GAS  /tmp/ccPDXMyq.s 			page 142
+ARM GAS  /tmp/cck6DyCn.s 			page 142
 
 
  2544              	@ 0 "" 2
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2594              		.cfi_remember_state
  2595              		.cfi_restore 4
  2596              		.cfi_def_cfa_offset 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 143
+ARM GAS  /tmp/cck6DyCn.s 			page 143
 
 
  2597 0072 7047     		bx	lr
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 1632:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  2650              		.loc 1 1632 0
  2651 0008 64B3     		cbz	r4, .L246
-ARM GAS  /tmp/ccPDXMyq.s 			page 144
+ARM GAS  /tmp/cck6DyCn.s 			page 144
 
 
  2652              	.LVL218:
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2697              		.loc 1 1672 0
  2698 0054 204B     		ldr	r3, .L250+12
  2699 0056 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccPDXMyq.s 			page 145
+ARM GAS  /tmp/cck6DyCn.s 			page 145
 
 
  2700 0058 5BB9     		cbnz	r3, .L248
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  195:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	(
  2745              		.loc 2 195 0
  2746              		.syntax unified
-ARM GAS  /tmp/ccPDXMyq.s 			page 146
+ARM GAS  /tmp/cck6DyCn.s 			page 146
 
 
  2747              	@ 195 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sour
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2796 00ca 00BF     		.align	2
  2797              	.L250:
  2798 00cc 00000000 		.word	.LANCHOR4
-ARM GAS  /tmp/ccPDXMyq.s 			page 147
+ARM GAS  /tmp/cck6DyCn.s 			page 147
 
 
  2799 00d0 00000000 		.word	.LANCHOR13
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2851 0016 0C46     		mov	r4, r1
 2915:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  2852              		.loc 1 2915 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 148
+ARM GAS  /tmp/cck6DyCn.s 			page 148
 
 
  2853 0018 044B     		ldr	r3, .L257
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2904              		.syntax unified
  2905              	.L261:
  2906 0012 FEE7     		b	.L261
-ARM GAS  /tmp/ccPDXMyq.s 			page 149
+ARM GAS  /tmp/cck6DyCn.s 			page 149
 
 
  2907              	.L260:
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  2956 0042 1831     		adds	r1, r1, #24
  2957 0044 FFF7FEFF 		bl	vListInsertEnd
  2958              	.LVL246:
-ARM GAS  /tmp/ccPDXMyq.s 			page 150
+ARM GAS  /tmp/cck6DyCn.s 			page 150
 
 
 2941:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3009 000c 83F31188 		msr basepri, r3											
  3010 0010 BFF36F8F 		isb														
  3011 0014 BFF34F8F 		dsb														
-ARM GAS  /tmp/ccPDXMyq.s 			page 151
+ARM GAS  /tmp/cck6DyCn.s 			page 151
 
 
  3012              	
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3021:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  3061              		.loc 1 3021 0
  3062 005c 0120     		movs	r0, #1
-ARM GAS  /tmp/ccPDXMyq.s 			page 152
+ARM GAS  /tmp/cck6DyCn.s 			page 152
 
 
  3063 005e 094B     		ldr	r3, .L276+16
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3114              		.cfi_offset 4, -12
  3115              		.cfi_offset 5, -8
  3116              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccPDXMyq.s 			page 153
+ARM GAS  /tmp/cck6DyCn.s 			page 153
 
 
 3052:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3163 003a 0243     		orrs	r2, r2, r0
  3164 003c 0A60     		str	r2, [r1]
  3165 003e 03EB8303 		add	r3, r3, r3, lsl #2
-ARM GAS  /tmp/ccPDXMyq.s 			page 154
+ARM GAS  /tmp/cck6DyCn.s 			page 154
 
 
  3166 0042 9A00     		lsls	r2, r3, #2
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3217              		.section	.text.vTaskSetTimeOutState,"ax",%progbits
  3218              		.align	1
  3219              		.global	vTaskSetTimeOutState
-ARM GAS  /tmp/ccPDXMyq.s 			page 155
+ARM GAS  /tmp/cck6DyCn.s 			page 155
 
 
  3220              		.syntax unified
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3268 0022 044B     		ldr	r3, .L293+4
  3269 0024 1B68     		ldr	r3, [r3]
  3270 0026 6360     		str	r3, [r4, #4]
-ARM GAS  /tmp/ccPDXMyq.s 			page 156
+ARM GAS  /tmp/cck6DyCn.s 			page 156
 
 
 3088:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3322              		.syntax unified
  3323              		.thumb
  3324              		.thumb_func
-ARM GAS  /tmp/ccPDXMyq.s 			page 157
+ARM GAS  /tmp/cck6DyCn.s 			page 157
 
 
  3325              		.fpu softvfp
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3376              	@ 0 "" 2
  3377              	.LVL278:
  3378              		.thumb
-ARM GAS  /tmp/ccPDXMyq.s 			page 158
+ARM GAS  /tmp/cck6DyCn.s 			page 158
 
 
  3379              		.syntax unified
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3424              	.L310:
 3147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			vTaskInternalSetTimeOutState( pxTimeOut );
  3425              		.loc 1 3147 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 159
+ARM GAS  /tmp/cck6DyCn.s 			page 159
 
 
  3426 005c 9B1A     		subs	r3, r3, r2
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3475              		.loc 1 3164 0
  3476              		.cfi_startproc
  3477              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 160
+ARM GAS  /tmp/cck6DyCn.s 			page 160
 
 
  3478              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 3768:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	BaseType_t xReturn;
  3531              		.loc 1 3768 0
  3532              		.cfi_startproc
-ARM GAS  /tmp/ccPDXMyq.s 			page 161
+ARM GAS  /tmp/cck6DyCn.s 			page 161
 
 
  3533              		@ args = 0, pretend = 0, frame = 0
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3581              		.loc 1 3803 0
  3582 0000 0028     		cmp	r0, #0
  3583 0002 50D0     		beq	.L333
-ARM GAS  /tmp/ccPDXMyq.s 			page 162
+ARM GAS  /tmp/cck6DyCn.s 			page 162
 
 
 3796:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t * const pxMutexHolderTCB = ( TCB_t * ) pxMutexHolder;
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3630 0040 38BD     		pop	{r3, r4, r5, pc}
  3631              	.LVL298:
  3632              	.L339:
-ARM GAS  /tmp/ccPDXMyq.s 			page 163
+ARM GAS  /tmp/cck6DyCn.s 			page 163
 
 
 3826:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					{
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3680 0092 426C     		ldr	r2, [r0, #68]
  3681 0094 054B     		ldr	r3, .L341
  3682 0096 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccPDXMyq.s 			page 164
+ARM GAS  /tmp/cck6DyCn.s 			page 164
 
 
  3683 0098 DB6A     		ldr	r3, [r3, #44]
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3733              		.loc 1 3887 0
  3734 0000 0028     		cmp	r0, #0
  3735 0002 49D0     		beq	.L350
-ARM GAS  /tmp/ccPDXMyq.s 			page 165
+ARM GAS  /tmp/cck6DyCn.s 			page 165
 
 
 3883:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t * const pxTCB = ( TCB_t * ) pxMutexHolder;
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3785              		.syntax unified
  3786              	.L348:
  3787 0036 FEE7     		b	.L348
-ARM GAS  /tmp/ccPDXMyq.s 			page 166
+ARM GAS  /tmp/cck6DyCn.s 			page 166
 
 
  3788              	.L347:
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3833 007e 0B49     		ldr	r1, .L357+8
  3834 0080 0868     		ldr	r0, [r1]
  3835 0082 0243     		orrs	r2, r2, r0
-ARM GAS  /tmp/ccPDXMyq.s 			page 167
+ARM GAS  /tmp/cck6DyCn.s 			page 167
 
 
  3836 0084 0A60     		str	r2, [r1]
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3884              	.LFE43:
  3886              		.section	.text.vTaskPriorityDisinheritAfterTimeout,"ax",%progbits
  3887              		.align	1
-ARM GAS  /tmp/ccPDXMyq.s 			page 168
+ARM GAS  /tmp/cck6DyCn.s 			page 168
 
 
  3888              		.global	vTaskPriorityDisinheritAfterTimeout
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3937              		.loc 1 3978 0
  3938 001e 5A6C     		ldr	r2, [r3, #68]
  3939 0020 8A42     		cmp	r2, r1
-ARM GAS  /tmp/ccPDXMyq.s 			page 169
+ARM GAS  /tmp/cck6DyCn.s 			page 169
 
 
  3940 0022 00D2     		bcs	.L363
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  3986              		.loc 1 4010 0
  3987 004e 9869     		ldr	r0, [r3, #24]
  3988 0050 0028     		cmp	r0, #0
-ARM GAS  /tmp/ccPDXMyq.s 			page 170
+ARM GAS  /tmp/cck6DyCn.s 			page 170
 
 
  3989 0052 02DB     		blt	.L366
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4037 00aa FFF7FEFF 		bl	vListInsertEnd
  4038              	.LVL332:
 4057:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  /tmp/ccPDXMyq.s 			page 171
+ARM GAS  /tmp/cck6DyCn.s 			page 171
 
 
  4039              		.loc 1 4057 0
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4091              		.cfi_endproc
  4092              	.LFE45:
  4094              		.section	.text.pvTaskIncrementMutexHeldCount,"ax",%progbits
-ARM GAS  /tmp/ccPDXMyq.s 			page 172
+ARM GAS  /tmp/cck6DyCn.s 			page 172
 
 
  4095              		.align	1
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4146              	.LVL335:
  4147 0000 38B5     		push	{r3, r4, r5, lr}
  4148              	.LCFI44:
-ARM GAS  /tmp/ccPDXMyq.s 			page 173
+ARM GAS  /tmp/cck6DyCn.s 			page 173
 
 
  4149              		.cfi_def_cfa_offset 16
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4465:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
  4193              		.loc 1 4465 0
  4194 0038 0D4B     		ldr	r3, .L389
-ARM GAS  /tmp/ccPDXMyq.s 			page 174
+ARM GAS  /tmp/cck6DyCn.s 			page 174
 
 
  4195 003a 1B68     		ldr	r3, [r3]
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4245              		.thumb
  4246              		.thumb_func
  4247              		.fpu softvfp
-ARM GAS  /tmp/ccPDXMyq.s 			page 175
+ARM GAS  /tmp/cck6DyCn.s 			page 175
 
 
  4249              	xTaskNotifyWait:
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4295              		.loc 1 4517 0
  4296 0036 FFF7FEFF 		bl	vPortEnterCritical
  4297              	.LVL347:
-ARM GAS  /tmp/ccPDXMyq.s 			page 176
+ARM GAS  /tmp/cck6DyCn.s 			page 176
 
 
 4521:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4343              	@ 4503 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sou
  4344 007a BFF36F8F 		isb
  4345              	@ 0 "" 2
-ARM GAS  /tmp/ccPDXMyq.s 			page 177
+ARM GAS  /tmp/cck6DyCn.s 			page 177
 
 
  4346              		.thumb
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4398              	.LBB175:
  195:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 	(
  4399              		.loc 2 195 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 178
+ARM GAS  /tmp/cck6DyCn.s 			page 178
 
 
  4400              		.syntax unified
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4448              		.p2align 1
  4449              	.L406:
 4580:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					break;
-ARM GAS  /tmp/ccPDXMyq.s 			page 179
+ARM GAS  /tmp/cck6DyCn.s 			page 179
 
 
  4450              		.loc 1 4580 0
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4492 006a E664     		str	r6, [r4, #76]
 4560:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	uint8_t ucOriginalNotifyState;
  4493              		.loc 1 4560 0
-ARM GAS  /tmp/ccPDXMyq.s 			page 180
+ARM GAS  /tmp/cck6DyCn.s 			page 180
 
 
  4494 006c 0125     		movs	r5, #1
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4543              	.L412:
  4544              	.LBE177:
  4545              	.LBE176:
-ARM GAS  /tmp/ccPDXMyq.s 			page 181
+ARM GAS  /tmp/cck6DyCn.s 			page 181
 
 
 4637:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4599              		.cfi_offset 7, -16
  4600              		.cfi_offset 8, -12
  4601              		.cfi_offset 9, -8
-ARM GAS  /tmp/ccPDXMyq.s 			page 182
+ARM GAS  /tmp/cck6DyCn.s 			page 182
 
 
  4602              		.cfi_offset 14, -4
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4651 003a B9F1000F 		cmp	r9, #0
  4652 003e 02D0     		beq	.L423
 4696:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
-ARM GAS  /tmp/ccPDXMyq.s 			page 183
+ARM GAS  /tmp/cck6DyCn.s 			page 183
 
 
  4653              		.loc 1 4696 0
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
 4780:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  4701              		.loc 1 4780 0
  4702 0072 2846     		mov	r0, r5
-ARM GAS  /tmp/ccPDXMyq.s 			page 184
+ARM GAS  /tmp/cck6DyCn.s 			page 184
 
 
  4703 0074 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4745              		.loc 2 195 0
  4746              		.syntax unified
  4747              	@ 195 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Sour
-ARM GAS  /tmp/ccPDXMyq.s 			page 185
+ARM GAS  /tmp/cck6DyCn.s 			page 185
 
 
  4748 00a2 4FF05003 			mov r3, #80												
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4796              		.loc 1 4761 0
  4797 00ee 0123     		movs	r3, #1
  4798 00f0 3360     		str	r3, [r6]
-ARM GAS  /tmp/ccPDXMyq.s 			page 186
+ARM GAS  /tmp/cck6DyCn.s 			page 186
 
 
  4799 00f2 BCE7     		b	.L430
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4851              		.loc 1 4793 0
  4852 0002 40B9     		cbnz	r0, .L443
  4853              	.LBB186:
-ARM GAS  /tmp/ccPDXMyq.s 			page 187
+ARM GAS  /tmp/cck6DyCn.s 			page 187
 
 
  4854              	.LBB187:
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4902 0040 0132     		adds	r2, r2, #1
  4903 0042 E264     		str	r2, [r4, #76]
 4828:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  /tmp/ccPDXMyq.s 			page 188
+ARM GAS  /tmp/cck6DyCn.s 			page 188
 
 
  4904              		.loc 1 4828 0
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  4953 006a 271D     		adds	r7, r4, #4
  4954 006c 3846     		mov	r0, r7
  4955 006e FFF7FEFF 		bl	uxListRemove
-ARM GAS  /tmp/ccPDXMyq.s 			page 189
+ARM GAS  /tmp/cck6DyCn.s 			page 189
 
 
  4956              	.LVL399:
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  5004 00c4 00000000 		.word	.LANCHOR10
  5005 00c8 00000000 		.word	.LANCHOR1
  5006 00cc 00000000 		.word	.LANCHOR20
-ARM GAS  /tmp/ccPDXMyq.s 			page 190
+ARM GAS  /tmp/cck6DyCn.s 			page 190
 
 
  5007              		.cfi_endproc
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  5055              		.loc 1 4883 0 discriminator 1
  5056 001e 044B     		ldr	r3, .L462
  5057 0020 1C68     		ldr	r4, [r3]
-ARM GAS  /tmp/ccPDXMyq.s 			page 191
+ARM GAS  /tmp/cck6DyCn.s 			page 191
 
 
  5058              	.LVL408:
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  5119 0000 00000000 		.space	4
  5120              		.section	.bss.uxPendedTicks,"aw",%nobits
  5121              		.align	2
-ARM GAS  /tmp/ccPDXMyq.s 			page 192
+ARM GAS  /tmp/cck6DyCn.s 			page 192
 
 
  5122              		.set	.LANCHOR19,. + 0
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  5188              	xPendingReadyList:
  5189 0000 00000000 		.space	20
  5189      00000000 
-ARM GAS  /tmp/ccPDXMyq.s 			page 193
+ARM GAS  /tmp/cck6DyCn.s 			page 193
 
 
  5189      00000000 
@@ -11576,211 +11576,211 @@ ARM GAS  /tmp/ccPDXMyq.s 			page 1
  5240              		.file 12 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
  5241              		.file 13 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
  5242              		.file 14 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Middlewares/Third_Party/FreeRTOS/
-ARM GAS  /tmp/ccPDXMyq.s 			page 194
+ARM GAS  /tmp/cck6DyCn.s 			page 194
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 tasks.c
-     /tmp/ccPDXMyq.s:16     .text.prvTaskIsTaskSuspended:0000000000000000 $t
-     /tmp/ccPDXMyq.s:22     .text.prvTaskIsTaskSuspended:0000000000000000 prvTaskIsTaskSuspended
-     /tmp/ccPDXMyq.s:90     .text.prvTaskIsTaskSuspended:0000000000000038 $d
-     /tmp/ccPDXMyq.s:96     .text.prvResetNextTaskUnblockTime:0000000000000000 $t
-     /tmp/ccPDXMyq.s:102    .text.prvResetNextTaskUnblockTime:0000000000000000 prvResetNextTaskUnblockTime
-     /tmp/ccPDXMyq.s:136    .text.prvResetNextTaskUnblockTime:0000000000000024 $d
-     /tmp/ccPDXMyq.s:142    .text.prvDeleteTCB:0000000000000000 $t
-     /tmp/ccPDXMyq.s:148    .text.prvDeleteTCB:0000000000000000 prvDeleteTCB
-     /tmp/ccPDXMyq.s:176    .text.prvInitialiseNewTask:0000000000000000 $t
-     /tmp/ccPDXMyq.s:182    .text.prvInitialiseNewTask:0000000000000000 prvInitialiseNewTask
-     /tmp/ccPDXMyq.s:291    .text.prvInitialiseTaskLists:0000000000000000 $t
-     /tmp/ccPDXMyq.s:297    .text.prvInitialiseTaskLists:0000000000000000 prvInitialiseTaskLists
-     /tmp/ccPDXMyq.s:364    .text.prvInitialiseTaskLists:0000000000000048 $d
-     /tmp/ccPDXMyq.s:376    .text.prvAddNewTaskToReadyList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:382    .text.prvAddNewTaskToReadyList:0000000000000000 prvAddNewTaskToReadyList
-     /tmp/ccPDXMyq.s:490    .text.prvAddNewTaskToReadyList:000000000000008c $d
-     /tmp/ccPDXMyq.s:501    .text.prvCheckTasksWaitingTermination:0000000000000000 $t
-     /tmp/ccPDXMyq.s:507    .text.prvCheckTasksWaitingTermination:0000000000000000 prvCheckTasksWaitingTermination
-     /tmp/ccPDXMyq.s:574    .text.prvCheckTasksWaitingTermination:0000000000000040 $d
-     /tmp/ccPDXMyq.s:581    .text.prvIdleTask:0000000000000000 $t
-     /tmp/ccPDXMyq.s:587    .text.prvIdleTask:0000000000000000 prvIdleTask
-     /tmp/ccPDXMyq.s:627    .text.prvIdleTask:0000000000000020 $d
-     /tmp/ccPDXMyq.s:633    .text.prvAddCurrentTaskToDelayedList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:639    .text.prvAddCurrentTaskToDelayedList:0000000000000000 prvAddCurrentTaskToDelayedList
-     /tmp/ccPDXMyq.s:740    .text.prvAddCurrentTaskToDelayedList:000000000000007c $d
-     /tmp/ccPDXMyq.s:751    .text.xTaskCreate:0000000000000000 $t
-     /tmp/ccPDXMyq.s:758    .text.xTaskCreate:0000000000000000 xTaskCreate
-     /tmp/ccPDXMyq.s:863    .text.vTaskDelete:0000000000000000 $t
-     /tmp/ccPDXMyq.s:870    .text.vTaskDelete:0000000000000000 vTaskDelete
-     /tmp/ccPDXMyq.s:1022   .text.vTaskDelete:00000000000000b8 $d
-     /tmp/ccPDXMyq.s:1036   .text.uxTaskPriorityGet:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1043   .text.uxTaskPriorityGet:0000000000000000 uxTaskPriorityGet
-     /tmp/ccPDXMyq.s:1082   .text.uxTaskPriorityGet:000000000000001c $d
-     /tmp/ccPDXMyq.s:1087   .text.uxTaskPriorityGetFromISR:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1094   .text.uxTaskPriorityGetFromISR:0000000000000000 uxTaskPriorityGetFromISR
-     /tmp/ccPDXMyq.s:1157   .text.uxTaskPriorityGetFromISR:000000000000002c $d
-     /tmp/ccPDXMyq.s:1162   .text.vTaskPrioritySet:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1169   .text.vTaskPrioritySet:0000000000000000 vTaskPrioritySet
-     /tmp/ccPDXMyq.s:1347   .text.vTaskPrioritySet:00000000000000cc $d
-     /tmp/ccPDXMyq.s:1355   .text.vTaskResume:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1362   .text.vTaskResume:0000000000000000 vTaskResume
-     /tmp/ccPDXMyq.s:1465   .text.vTaskResume:0000000000000074 $d
-     /tmp/ccPDXMyq.s:1473   .text.xTaskResumeFromISR:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1480   .text.xTaskResumeFromISR:0000000000000000 xTaskResumeFromISR
-     /tmp/ccPDXMyq.s:1613   .text.xTaskResumeFromISR:0000000000000090 $d
-     /tmp/ccPDXMyq.s:1622   .text.vTaskStartScheduler:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1629   .text.vTaskStartScheduler:0000000000000000 vTaskStartScheduler
-     /tmp/ccPDXMyq.s:1723   .text.vTaskStartScheduler:0000000000000064 $d
-     /tmp/ccPDXMyq.s:1735   .text.vTaskEndScheduler:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1742   .text.vTaskEndScheduler:0000000000000000 vTaskEndScheduler
-     /tmp/ccPDXMyq.s:1780   .text.vTaskEndScheduler:0000000000000020 $d
-     /tmp/ccPDXMyq.s:1785   .text.vTaskSuspendAll:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1792   .text.vTaskSuspendAll:0000000000000000 vTaskSuspendAll
-     /tmp/ccPDXMyq.s:1809   .text.vTaskSuspendAll:000000000000000c $d
-     /tmp/ccPDXMyq.s:1814   .text.xTaskGetTickCount:0000000000000000 $t
-ARM GAS  /tmp/ccPDXMyq.s 			page 195
+     /tmp/cck6DyCn.s:16     .text.prvTaskIsTaskSuspended:0000000000000000 $t
+     /tmp/cck6DyCn.s:22     .text.prvTaskIsTaskSuspended:0000000000000000 prvTaskIsTaskSuspended
+     /tmp/cck6DyCn.s:90     .text.prvTaskIsTaskSuspended:0000000000000038 $d
+     /tmp/cck6DyCn.s:96     .text.prvResetNextTaskUnblockTime:0000000000000000 $t
+     /tmp/cck6DyCn.s:102    .text.prvResetNextTaskUnblockTime:0000000000000000 prvResetNextTaskUnblockTime
+     /tmp/cck6DyCn.s:136    .text.prvResetNextTaskUnblockTime:0000000000000024 $d
+     /tmp/cck6DyCn.s:142    .text.prvDeleteTCB:0000000000000000 $t
+     /tmp/cck6DyCn.s:148    .text.prvDeleteTCB:0000000000000000 prvDeleteTCB
+     /tmp/cck6DyCn.s:176    .text.prvInitialiseNewTask:0000000000000000 $t
+     /tmp/cck6DyCn.s:182    .text.prvInitialiseNewTask:0000000000000000 prvInitialiseNewTask
+     /tmp/cck6DyCn.s:291    .text.prvInitialiseTaskLists:0000000000000000 $t
+     /tmp/cck6DyCn.s:297    .text.prvInitialiseTaskLists:0000000000000000 prvInitialiseTaskLists
+     /tmp/cck6DyCn.s:364    .text.prvInitialiseTaskLists:0000000000000048 $d
+     /tmp/cck6DyCn.s:376    .text.prvAddNewTaskToReadyList:0000000000000000 $t
+     /tmp/cck6DyCn.s:382    .text.prvAddNewTaskToReadyList:0000000000000000 prvAddNewTaskToReadyList
+     /tmp/cck6DyCn.s:490    .text.prvAddNewTaskToReadyList:000000000000008c $d
+     /tmp/cck6DyCn.s:501    .text.prvCheckTasksWaitingTermination:0000000000000000 $t
+     /tmp/cck6DyCn.s:507    .text.prvCheckTasksWaitingTermination:0000000000000000 prvCheckTasksWaitingTermination
+     /tmp/cck6DyCn.s:574    .text.prvCheckTasksWaitingTermination:0000000000000040 $d
+     /tmp/cck6DyCn.s:581    .text.prvIdleTask:0000000000000000 $t
+     /tmp/cck6DyCn.s:587    .text.prvIdleTask:0000000000000000 prvIdleTask
+     /tmp/cck6DyCn.s:627    .text.prvIdleTask:0000000000000020 $d
+     /tmp/cck6DyCn.s:633    .text.prvAddCurrentTaskToDelayedList:0000000000000000 $t
+     /tmp/cck6DyCn.s:639    .text.prvAddCurrentTaskToDelayedList:0000000000000000 prvAddCurrentTaskToDelayedList
+     /tmp/cck6DyCn.s:740    .text.prvAddCurrentTaskToDelayedList:000000000000007c $d
+     /tmp/cck6DyCn.s:751    .text.xTaskCreate:0000000000000000 $t
+     /tmp/cck6DyCn.s:758    .text.xTaskCreate:0000000000000000 xTaskCreate
+     /tmp/cck6DyCn.s:863    .text.vTaskDelete:0000000000000000 $t
+     /tmp/cck6DyCn.s:870    .text.vTaskDelete:0000000000000000 vTaskDelete
+     /tmp/cck6DyCn.s:1022   .text.vTaskDelete:00000000000000b8 $d
+     /tmp/cck6DyCn.s:1036   .text.uxTaskPriorityGet:0000000000000000 $t
+     /tmp/cck6DyCn.s:1043   .text.uxTaskPriorityGet:0000000000000000 uxTaskPriorityGet
+     /tmp/cck6DyCn.s:1082   .text.uxTaskPriorityGet:000000000000001c $d
+     /tmp/cck6DyCn.s:1087   .text.uxTaskPriorityGetFromISR:0000000000000000 $t
+     /tmp/cck6DyCn.s:1094   .text.uxTaskPriorityGetFromISR:0000000000000000 uxTaskPriorityGetFromISR
+     /tmp/cck6DyCn.s:1157   .text.uxTaskPriorityGetFromISR:000000000000002c $d
+     /tmp/cck6DyCn.s:1162   .text.vTaskPrioritySet:0000000000000000 $t
+     /tmp/cck6DyCn.s:1169   .text.vTaskPrioritySet:0000000000000000 vTaskPrioritySet
+     /tmp/cck6DyCn.s:1347   .text.vTaskPrioritySet:00000000000000cc $d
+     /tmp/cck6DyCn.s:1355   .text.vTaskResume:0000000000000000 $t
+     /tmp/cck6DyCn.s:1362   .text.vTaskResume:0000000000000000 vTaskResume
+     /tmp/cck6DyCn.s:1465   .text.vTaskResume:0000000000000074 $d
+     /tmp/cck6DyCn.s:1473   .text.xTaskResumeFromISR:0000000000000000 $t
+     /tmp/cck6DyCn.s:1480   .text.xTaskResumeFromISR:0000000000000000 xTaskResumeFromISR
+     /tmp/cck6DyCn.s:1613   .text.xTaskResumeFromISR:0000000000000090 $d
+     /tmp/cck6DyCn.s:1622   .text.vTaskStartScheduler:0000000000000000 $t
+     /tmp/cck6DyCn.s:1629   .text.vTaskStartScheduler:0000000000000000 vTaskStartScheduler
+     /tmp/cck6DyCn.s:1723   .text.vTaskStartScheduler:0000000000000064 $d
+     /tmp/cck6DyCn.s:1735   .text.vTaskEndScheduler:0000000000000000 $t
+     /tmp/cck6DyCn.s:1742   .text.vTaskEndScheduler:0000000000000000 vTaskEndScheduler
+     /tmp/cck6DyCn.s:1780   .text.vTaskEndScheduler:0000000000000020 $d
+     /tmp/cck6DyCn.s:1785   .text.vTaskSuspendAll:0000000000000000 $t
+     /tmp/cck6DyCn.s:1792   .text.vTaskSuspendAll:0000000000000000 vTaskSuspendAll
+     /tmp/cck6DyCn.s:1809   .text.vTaskSuspendAll:000000000000000c $d
+     /tmp/cck6DyCn.s:1814   .text.xTaskGetTickCount:0000000000000000 $t
+ARM GAS  /tmp/cck6DyCn.s 			page 195
 
 
-     /tmp/ccPDXMyq.s:1821   .text.xTaskGetTickCount:0000000000000000 xTaskGetTickCount
-     /tmp/ccPDXMyq.s:1837   .text.xTaskGetTickCount:0000000000000008 $d
-     /tmp/ccPDXMyq.s:1842   .text.xTaskGetTickCountFromISR:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1849   .text.xTaskGetTickCountFromISR:0000000000000000 xTaskGetTickCountFromISR
-     /tmp/ccPDXMyq.s:1872   .text.xTaskGetTickCountFromISR:000000000000000c $d
-     /tmp/ccPDXMyq.s:1877   .text.uxTaskGetNumberOfTasks:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1884   .text.uxTaskGetNumberOfTasks:0000000000000000 uxTaskGetNumberOfTasks
-     /tmp/ccPDXMyq.s:1899   .text.uxTaskGetNumberOfTasks:0000000000000008 $d
-     /tmp/ccPDXMyq.s:1904   .text.pcTaskGetName:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1911   .text.pcTaskGetName:0000000000000000 pcTaskGetName
-     /tmp/ccPDXMyq.s:1957   .text.pcTaskGetName:0000000000000024 $d
-     /tmp/ccPDXMyq.s:1964   .text.xTaskIncrementTick:0000000000000000 $t
-     /tmp/ccPDXMyq.s:1971   .text.xTaskIncrementTick:0000000000000000 xTaskIncrementTick
-     /tmp/ccPDXMyq.s:2175   .text.xTaskIncrementTick:00000000000000ec $d
-     /tmp/ccPDXMyq.s:2190   .text.xTaskResumeAll:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2197   .text.xTaskResumeAll:0000000000000000 xTaskResumeAll
-     /tmp/ccPDXMyq.s:2381   .text.xTaskResumeAll:00000000000000d0 $d
-     /tmp/ccPDXMyq.s:2394   .text.vTaskDelay:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2401   .text.vTaskDelay:0000000000000000 vTaskDelay
-     /tmp/ccPDXMyq.s:2474   .text.vTaskDelay:0000000000000044 $d
-     /tmp/ccPDXMyq.s:2480   .text.vTaskSwitchContext:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2487   .text.vTaskSwitchContext:0000000000000000 vTaskSwitchContext
-     /tmp/ccPDXMyq.s:2614   .text.vTaskSwitchContext:0000000000000084 $d
-     /tmp/ccPDXMyq.s:2625   .text.vTaskSuspend:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2632   .text.vTaskSuspend:0000000000000000 vTaskSuspend
-     /tmp/ccPDXMyq.s:2798   .text.vTaskSuspend:00000000000000cc $d
-     /tmp/ccPDXMyq.s:2810   .text.vTaskPlaceOnEventList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2817   .text.vTaskPlaceOnEventList:0000000000000000 vTaskPlaceOnEventList
-     /tmp/ccPDXMyq.s:2870   .text.vTaskPlaceOnEventList:000000000000002c $d
-     /tmp/ccPDXMyq.s:2875   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2882   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 vTaskPlaceOnUnorderedEventList
-     /tmp/ccPDXMyq.s:2970   .text.vTaskPlaceOnUnorderedEventList:0000000000000054 $d
-     /tmp/ccPDXMyq.s:2976   .text.xTaskRemoveFromEventList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:2983   .text.xTaskRemoveFromEventList:0000000000000000 xTaskRemoveFromEventList
-     /tmp/ccPDXMyq.s:3086   .text.xTaskRemoveFromEventList:0000000000000074 $d
-     /tmp/ccPDXMyq.s:3096   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3103   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 vTaskRemoveFromUnorderedEventList
-     /tmp/ccPDXMyq.s:3207   .text.vTaskRemoveFromUnorderedEventList:0000000000000074 $d
-     /tmp/ccPDXMyq.s:3218   .text.vTaskSetTimeOutState:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3225   .text.vTaskSetTimeOutState:0000000000000000 vTaskSetTimeOutState
-     /tmp/ccPDXMyq.s:3280   .text.vTaskSetTimeOutState:0000000000000030 $d
-     /tmp/ccPDXMyq.s:3286   .text.vTaskInternalSetTimeOutState:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3293   .text.vTaskInternalSetTimeOutState:0000000000000000 vTaskInternalSetTimeOutState
-     /tmp/ccPDXMyq.s:3314   .text.vTaskInternalSetTimeOutState:0000000000000010 $d
-     /tmp/ccPDXMyq.s:3320   .text.xTaskCheckForTimeOut:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3327   .text.xTaskCheckForTimeOut:0000000000000000 xTaskCheckForTimeOut
-     /tmp/ccPDXMyq.s:3459   .text.xTaskCheckForTimeOut:0000000000000078 $d
-     /tmp/ccPDXMyq.s:3466   .text.vTaskMissedYield:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3473   .text.vTaskMissedYield:0000000000000000 vTaskMissedYield
-     /tmp/ccPDXMyq.s:3489   .text.vTaskMissedYield:0000000000000008 $d
-     /tmp/ccPDXMyq.s:3494   .text.xTaskGetCurrentTaskHandle:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3501   .text.xTaskGetCurrentTaskHandle:0000000000000000 xTaskGetCurrentTaskHandle
-     /tmp/ccPDXMyq.s:3517   .text.xTaskGetCurrentTaskHandle:0000000000000008 $d
-     /tmp/ccPDXMyq.s:3522   .text.xTaskGetSchedulerState:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3529   .text.xTaskGetSchedulerState:0000000000000000 xTaskGetSchedulerState
-     /tmp/ccPDXMyq.s:3561   .text.xTaskGetSchedulerState:0000000000000018 $d
-     /tmp/ccPDXMyq.s:3567   .text.xTaskPriorityInherit:0000000000000000 $t
-ARM GAS  /tmp/ccPDXMyq.s 			page 196
+     /tmp/cck6DyCn.s:1821   .text.xTaskGetTickCount:0000000000000000 xTaskGetTickCount
+     /tmp/cck6DyCn.s:1837   .text.xTaskGetTickCount:0000000000000008 $d
+     /tmp/cck6DyCn.s:1842   .text.xTaskGetTickCountFromISR:0000000000000000 $t
+     /tmp/cck6DyCn.s:1849   .text.xTaskGetTickCountFromISR:0000000000000000 xTaskGetTickCountFromISR
+     /tmp/cck6DyCn.s:1872   .text.xTaskGetTickCountFromISR:000000000000000c $d
+     /tmp/cck6DyCn.s:1877   .text.uxTaskGetNumberOfTasks:0000000000000000 $t
+     /tmp/cck6DyCn.s:1884   .text.uxTaskGetNumberOfTasks:0000000000000000 uxTaskGetNumberOfTasks
+     /tmp/cck6DyCn.s:1899   .text.uxTaskGetNumberOfTasks:0000000000000008 $d
+     /tmp/cck6DyCn.s:1904   .text.pcTaskGetName:0000000000000000 $t
+     /tmp/cck6DyCn.s:1911   .text.pcTaskGetName:0000000000000000 pcTaskGetName
+     /tmp/cck6DyCn.s:1957   .text.pcTaskGetName:0000000000000024 $d
+     /tmp/cck6DyCn.s:1964   .text.xTaskIncrementTick:0000000000000000 $t
+     /tmp/cck6DyCn.s:1971   .text.xTaskIncrementTick:0000000000000000 xTaskIncrementTick
+     /tmp/cck6DyCn.s:2175   .text.xTaskIncrementTick:00000000000000ec $d
+     /tmp/cck6DyCn.s:2190   .text.xTaskResumeAll:0000000000000000 $t
+     /tmp/cck6DyCn.s:2197   .text.xTaskResumeAll:0000000000000000 xTaskResumeAll
+     /tmp/cck6DyCn.s:2381   .text.xTaskResumeAll:00000000000000d0 $d
+     /tmp/cck6DyCn.s:2394   .text.vTaskDelay:0000000000000000 $t
+     /tmp/cck6DyCn.s:2401   .text.vTaskDelay:0000000000000000 vTaskDelay
+     /tmp/cck6DyCn.s:2474   .text.vTaskDelay:0000000000000044 $d
+     /tmp/cck6DyCn.s:2480   .text.vTaskSwitchContext:0000000000000000 $t
+     /tmp/cck6DyCn.s:2487   .text.vTaskSwitchContext:0000000000000000 vTaskSwitchContext
+     /tmp/cck6DyCn.s:2614   .text.vTaskSwitchContext:0000000000000084 $d
+     /tmp/cck6DyCn.s:2625   .text.vTaskSuspend:0000000000000000 $t
+     /tmp/cck6DyCn.s:2632   .text.vTaskSuspend:0000000000000000 vTaskSuspend
+     /tmp/cck6DyCn.s:2798   .text.vTaskSuspend:00000000000000cc $d
+     /tmp/cck6DyCn.s:2810   .text.vTaskPlaceOnEventList:0000000000000000 $t
+     /tmp/cck6DyCn.s:2817   .text.vTaskPlaceOnEventList:0000000000000000 vTaskPlaceOnEventList
+     /tmp/cck6DyCn.s:2870   .text.vTaskPlaceOnEventList:000000000000002c $d
+     /tmp/cck6DyCn.s:2875   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 $t
+     /tmp/cck6DyCn.s:2882   .text.vTaskPlaceOnUnorderedEventList:0000000000000000 vTaskPlaceOnUnorderedEventList
+     /tmp/cck6DyCn.s:2970   .text.vTaskPlaceOnUnorderedEventList:0000000000000054 $d
+     /tmp/cck6DyCn.s:2976   .text.xTaskRemoveFromEventList:0000000000000000 $t
+     /tmp/cck6DyCn.s:2983   .text.xTaskRemoveFromEventList:0000000000000000 xTaskRemoveFromEventList
+     /tmp/cck6DyCn.s:3086   .text.xTaskRemoveFromEventList:0000000000000074 $d
+     /tmp/cck6DyCn.s:3096   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 $t
+     /tmp/cck6DyCn.s:3103   .text.vTaskRemoveFromUnorderedEventList:0000000000000000 vTaskRemoveFromUnorderedEventList
+     /tmp/cck6DyCn.s:3207   .text.vTaskRemoveFromUnorderedEventList:0000000000000074 $d
+     /tmp/cck6DyCn.s:3218   .text.vTaskSetTimeOutState:0000000000000000 $t
+     /tmp/cck6DyCn.s:3225   .text.vTaskSetTimeOutState:0000000000000000 vTaskSetTimeOutState
+     /tmp/cck6DyCn.s:3280   .text.vTaskSetTimeOutState:0000000000000030 $d
+     /tmp/cck6DyCn.s:3286   .text.vTaskInternalSetTimeOutState:0000000000000000 $t
+     /tmp/cck6DyCn.s:3293   .text.vTaskInternalSetTimeOutState:0000000000000000 vTaskInternalSetTimeOutState
+     /tmp/cck6DyCn.s:3314   .text.vTaskInternalSetTimeOutState:0000000000000010 $d
+     /tmp/cck6DyCn.s:3320   .text.xTaskCheckForTimeOut:0000000000000000 $t
+     /tmp/cck6DyCn.s:3327   .text.xTaskCheckForTimeOut:0000000000000000 xTaskCheckForTimeOut
+     /tmp/cck6DyCn.s:3459   .text.xTaskCheckForTimeOut:0000000000000078 $d
+     /tmp/cck6DyCn.s:3466   .text.vTaskMissedYield:0000000000000000 $t
+     /tmp/cck6DyCn.s:3473   .text.vTaskMissedYield:0000000000000000 vTaskMissedYield
+     /tmp/cck6DyCn.s:3489   .text.vTaskMissedYield:0000000000000008 $d
+     /tmp/cck6DyCn.s:3494   .text.xTaskGetCurrentTaskHandle:0000000000000000 $t
+     /tmp/cck6DyCn.s:3501   .text.xTaskGetCurrentTaskHandle:0000000000000000 xTaskGetCurrentTaskHandle
+     /tmp/cck6DyCn.s:3517   .text.xTaskGetCurrentTaskHandle:0000000000000008 $d
+     /tmp/cck6DyCn.s:3522   .text.xTaskGetSchedulerState:0000000000000000 $t
+     /tmp/cck6DyCn.s:3529   .text.xTaskGetSchedulerState:0000000000000000 xTaskGetSchedulerState
+     /tmp/cck6DyCn.s:3561   .text.xTaskGetSchedulerState:0000000000000018 $d
+     /tmp/cck6DyCn.s:3567   .text.xTaskPriorityInherit:0000000000000000 $t
+ARM GAS  /tmp/cck6DyCn.s 			page 196
 
 
-     /tmp/ccPDXMyq.s:3574   .text.xTaskPriorityInherit:0000000000000000 xTaskPriorityInherit
-     /tmp/ccPDXMyq.s:3712   .text.xTaskPriorityInherit:00000000000000ac $d
-     /tmp/ccPDXMyq.s:3719   .text.xTaskPriorityDisinherit:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3726   .text.xTaskPriorityDisinherit:0000000000000000 xTaskPriorityDisinherit
-     /tmp/ccPDXMyq.s:3880   .text.xTaskPriorityDisinherit:00000000000000a4 $d
-     /tmp/ccPDXMyq.s:3887   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 $t
-     /tmp/ccPDXMyq.s:3894   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 vTaskPriorityDisinheritAfterTimeout
-     /tmp/ccPDXMyq.s:4053   .text.vTaskPriorityDisinheritAfterTimeout:00000000000000b4 $d
-     /tmp/ccPDXMyq.s:4060   .text.uxTaskResetEventItemValue:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4067   .text.uxTaskResetEventItemValue:0000000000000000 uxTaskResetEventItemValue
-     /tmp/ccPDXMyq.s:4090   .text.uxTaskResetEventItemValue:0000000000000014 $d
-     /tmp/ccPDXMyq.s:4095   .text.pvTaskIncrementMutexHeldCount:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4102   .text.pvTaskIncrementMutexHeldCount:0000000000000000 pvTaskIncrementMutexHeldCount
-     /tmp/ccPDXMyq.s:4128   .text.pvTaskIncrementMutexHeldCount:0000000000000018 $d
-     /tmp/ccPDXMyq.s:4133   .text.ulTaskNotifyTake:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4140   .text.ulTaskNotifyTake:0000000000000000 ulTaskNotifyTake
-     /tmp/ccPDXMyq.s:4236   .text.ulTaskNotifyTake:0000000000000070 $d
-     /tmp/ccPDXMyq.s:4242   .text.xTaskNotifyWait:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4249   .text.xTaskNotifyWait:0000000000000000 xTaskNotifyWait
-     /tmp/ccPDXMyq.s:4365   .text.xTaskNotifyWait:0000000000000090 $d
-     /tmp/ccPDXMyq.s:4371   .text.xTaskGenericNotify:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4378   .text.xTaskGenericNotify:0000000000000000 xTaskGenericNotify
-     /tmp/ccPDXMyq.s:4444   .text.xTaskGenericNotify:000000000000003e $d
-     /tmp/ccPDXMyq.s:4448   .text.xTaskGenericNotify:0000000000000042 $t
-     /tmp/ccPDXMyq.s:4570   .text.xTaskGenericNotify:00000000000000d0 $d
-     /tmp/ccPDXMyq.s:4578   .text.xTaskGenericNotifyFromISR:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4585   .text.xTaskGenericNotifyFromISR:0000000000000000 xTaskGenericNotifyFromISR
-     /tmp/ccPDXMyq.s:4670   .text.xTaskGenericNotifyFromISR:000000000000005c $d
-     /tmp/ccPDXMyq.s:4674   .text.xTaskGenericNotifyFromISR:0000000000000060 $t
-     /tmp/ccPDXMyq.s:4818   .text.xTaskGenericNotifyFromISR:0000000000000108 $d
-     /tmp/ccPDXMyq.s:4828   .text.vTaskNotifyGiveFromISR:0000000000000000 $t
-     /tmp/ccPDXMyq.s:4835   .text.vTaskNotifyGiveFromISR:0000000000000000 vTaskNotifyGiveFromISR
-     /tmp/ccPDXMyq.s:5001   .text.vTaskNotifyGiveFromISR:00000000000000b8 $d
-     /tmp/ccPDXMyq.s:5011   .text.xTaskNotifyStateClear:0000000000000000 $t
-     /tmp/ccPDXMyq.s:5018   .text.xTaskNotifyStateClear:0000000000000000 xTaskNotifyStateClear
-     /tmp/ccPDXMyq.s:5073   .text.xTaskNotifyStateClear:0000000000000030 $d
-     /tmp/ccPDXMyq.s:5083   .bss.pxCurrentTCB:0000000000000000 pxCurrentTCB
-     /tmp/ccPDXMyq.s:5079   .bss.pxCurrentTCB:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5086   .bss.pxDelayedTaskList:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5090   .bss.pxDelayedTaskList:0000000000000000 pxDelayedTaskList
-     /tmp/ccPDXMyq.s:5093   .bss.pxOverflowDelayedTaskList:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5097   .bss.pxOverflowDelayedTaskList:0000000000000000 pxOverflowDelayedTaskList
-     /tmp/ccPDXMyq.s:5100   .bss.pxReadyTasksLists:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5104   .bss.pxReadyTasksLists:0000000000000000 pxReadyTasksLists
-     /tmp/ccPDXMyq.s:5107   .bss.uxCurrentNumberOfTasks:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5111   .bss.uxCurrentNumberOfTasks:0000000000000000 uxCurrentNumberOfTasks
-     /tmp/ccPDXMyq.s:5114   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5118   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 uxDeletedTasksWaitingCleanUp
-     /tmp/ccPDXMyq.s:5121   .bss.uxPendedTicks:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5125   .bss.uxPendedTicks:0000000000000000 uxPendedTicks
-     /tmp/ccPDXMyq.s:5128   .bss.uxSchedulerSuspended:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5132   .bss.uxSchedulerSuspended:0000000000000000 uxSchedulerSuspended
-     /tmp/ccPDXMyq.s:5135   .bss.uxTaskNumber:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5139   .bss.uxTaskNumber:0000000000000000 uxTaskNumber
-     /tmp/ccPDXMyq.s:5142   .bss.uxTopReadyPriority:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5146   .bss.uxTopReadyPriority:0000000000000000 uxTopReadyPriority
-     /tmp/ccPDXMyq.s:5149   .bss.xDelayedTaskList1:0000000000000000 $d
-ARM GAS  /tmp/ccPDXMyq.s 			page 197
+     /tmp/cck6DyCn.s:3574   .text.xTaskPriorityInherit:0000000000000000 xTaskPriorityInherit
+     /tmp/cck6DyCn.s:3712   .text.xTaskPriorityInherit:00000000000000ac $d
+     /tmp/cck6DyCn.s:3719   .text.xTaskPriorityDisinherit:0000000000000000 $t
+     /tmp/cck6DyCn.s:3726   .text.xTaskPriorityDisinherit:0000000000000000 xTaskPriorityDisinherit
+     /tmp/cck6DyCn.s:3880   .text.xTaskPriorityDisinherit:00000000000000a4 $d
+     /tmp/cck6DyCn.s:3887   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 $t
+     /tmp/cck6DyCn.s:3894   .text.vTaskPriorityDisinheritAfterTimeout:0000000000000000 vTaskPriorityDisinheritAfterTimeout
+     /tmp/cck6DyCn.s:4053   .text.vTaskPriorityDisinheritAfterTimeout:00000000000000b4 $d
+     /tmp/cck6DyCn.s:4060   .text.uxTaskResetEventItemValue:0000000000000000 $t
+     /tmp/cck6DyCn.s:4067   .text.uxTaskResetEventItemValue:0000000000000000 uxTaskResetEventItemValue
+     /tmp/cck6DyCn.s:4090   .text.uxTaskResetEventItemValue:0000000000000014 $d
+     /tmp/cck6DyCn.s:4095   .text.pvTaskIncrementMutexHeldCount:0000000000000000 $t
+     /tmp/cck6DyCn.s:4102   .text.pvTaskIncrementMutexHeldCount:0000000000000000 pvTaskIncrementMutexHeldCount
+     /tmp/cck6DyCn.s:4128   .text.pvTaskIncrementMutexHeldCount:0000000000000018 $d
+     /tmp/cck6DyCn.s:4133   .text.ulTaskNotifyTake:0000000000000000 $t
+     /tmp/cck6DyCn.s:4140   .text.ulTaskNotifyTake:0000000000000000 ulTaskNotifyTake
+     /tmp/cck6DyCn.s:4236   .text.ulTaskNotifyTake:0000000000000070 $d
+     /tmp/cck6DyCn.s:4242   .text.xTaskNotifyWait:0000000000000000 $t
+     /tmp/cck6DyCn.s:4249   .text.xTaskNotifyWait:0000000000000000 xTaskNotifyWait
+     /tmp/cck6DyCn.s:4365   .text.xTaskNotifyWait:0000000000000090 $d
+     /tmp/cck6DyCn.s:4371   .text.xTaskGenericNotify:0000000000000000 $t
+     /tmp/cck6DyCn.s:4378   .text.xTaskGenericNotify:0000000000000000 xTaskGenericNotify
+     /tmp/cck6DyCn.s:4444   .text.xTaskGenericNotify:000000000000003e $d
+     /tmp/cck6DyCn.s:4448   .text.xTaskGenericNotify:0000000000000042 $t
+     /tmp/cck6DyCn.s:4570   .text.xTaskGenericNotify:00000000000000d0 $d
+     /tmp/cck6DyCn.s:4578   .text.xTaskGenericNotifyFromISR:0000000000000000 $t
+     /tmp/cck6DyCn.s:4585   .text.xTaskGenericNotifyFromISR:0000000000000000 xTaskGenericNotifyFromISR
+     /tmp/cck6DyCn.s:4670   .text.xTaskGenericNotifyFromISR:000000000000005c $d
+     /tmp/cck6DyCn.s:4674   .text.xTaskGenericNotifyFromISR:0000000000000060 $t
+     /tmp/cck6DyCn.s:4818   .text.xTaskGenericNotifyFromISR:0000000000000108 $d
+     /tmp/cck6DyCn.s:4828   .text.vTaskNotifyGiveFromISR:0000000000000000 $t
+     /tmp/cck6DyCn.s:4835   .text.vTaskNotifyGiveFromISR:0000000000000000 vTaskNotifyGiveFromISR
+     /tmp/cck6DyCn.s:5001   .text.vTaskNotifyGiveFromISR:00000000000000b8 $d
+     /tmp/cck6DyCn.s:5011   .text.xTaskNotifyStateClear:0000000000000000 $t
+     /tmp/cck6DyCn.s:5018   .text.xTaskNotifyStateClear:0000000000000000 xTaskNotifyStateClear
+     /tmp/cck6DyCn.s:5073   .text.xTaskNotifyStateClear:0000000000000030 $d
+     /tmp/cck6DyCn.s:5083   .bss.pxCurrentTCB:0000000000000000 pxCurrentTCB
+     /tmp/cck6DyCn.s:5079   .bss.pxCurrentTCB:0000000000000000 $d
+     /tmp/cck6DyCn.s:5086   .bss.pxDelayedTaskList:0000000000000000 $d
+     /tmp/cck6DyCn.s:5090   .bss.pxDelayedTaskList:0000000000000000 pxDelayedTaskList
+     /tmp/cck6DyCn.s:5093   .bss.pxOverflowDelayedTaskList:0000000000000000 $d
+     /tmp/cck6DyCn.s:5097   .bss.pxOverflowDelayedTaskList:0000000000000000 pxOverflowDelayedTaskList
+     /tmp/cck6DyCn.s:5100   .bss.pxReadyTasksLists:0000000000000000 $d
+     /tmp/cck6DyCn.s:5104   .bss.pxReadyTasksLists:0000000000000000 pxReadyTasksLists
+     /tmp/cck6DyCn.s:5107   .bss.uxCurrentNumberOfTasks:0000000000000000 $d
+     /tmp/cck6DyCn.s:5111   .bss.uxCurrentNumberOfTasks:0000000000000000 uxCurrentNumberOfTasks
+     /tmp/cck6DyCn.s:5114   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 $d
+     /tmp/cck6DyCn.s:5118   .bss.uxDeletedTasksWaitingCleanUp:0000000000000000 uxDeletedTasksWaitingCleanUp
+     /tmp/cck6DyCn.s:5121   .bss.uxPendedTicks:0000000000000000 $d
+     /tmp/cck6DyCn.s:5125   .bss.uxPendedTicks:0000000000000000 uxPendedTicks
+     /tmp/cck6DyCn.s:5128   .bss.uxSchedulerSuspended:0000000000000000 $d
+     /tmp/cck6DyCn.s:5132   .bss.uxSchedulerSuspended:0000000000000000 uxSchedulerSuspended
+     /tmp/cck6DyCn.s:5135   .bss.uxTaskNumber:0000000000000000 $d
+     /tmp/cck6DyCn.s:5139   .bss.uxTaskNumber:0000000000000000 uxTaskNumber
+     /tmp/cck6DyCn.s:5142   .bss.uxTopReadyPriority:0000000000000000 $d
+     /tmp/cck6DyCn.s:5146   .bss.uxTopReadyPriority:0000000000000000 uxTopReadyPriority
+     /tmp/cck6DyCn.s:5149   .bss.xDelayedTaskList1:0000000000000000 $d
+ARM GAS  /tmp/cck6DyCn.s 			page 197
 
 
-     /tmp/ccPDXMyq.s:5153   .bss.xDelayedTaskList1:0000000000000000 xDelayedTaskList1
-     /tmp/ccPDXMyq.s:5156   .bss.xDelayedTaskList2:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5160   .bss.xDelayedTaskList2:0000000000000000 xDelayedTaskList2
-     /tmp/ccPDXMyq.s:5163   .bss.xIdleTaskHandle:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5167   .bss.xIdleTaskHandle:0000000000000000 xIdleTaskHandle
-     /tmp/ccPDXMyq.s:5170   .bss.xNextTaskUnblockTime:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5174   .bss.xNextTaskUnblockTime:0000000000000000 xNextTaskUnblockTime
-     /tmp/ccPDXMyq.s:5177   .bss.xNumOfOverflows:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5181   .bss.xNumOfOverflows:0000000000000000 xNumOfOverflows
-     /tmp/ccPDXMyq.s:5184   .bss.xPendingReadyList:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5188   .bss.xPendingReadyList:0000000000000000 xPendingReadyList
-     /tmp/ccPDXMyq.s:5191   .bss.xSchedulerRunning:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5195   .bss.xSchedulerRunning:0000000000000000 xSchedulerRunning
-     /tmp/ccPDXMyq.s:5198   .bss.xSuspendedTaskList:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5202   .bss.xSuspendedTaskList:0000000000000000 xSuspendedTaskList
-     /tmp/ccPDXMyq.s:5205   .bss.xTasksWaitingTermination:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5209   .bss.xTasksWaitingTermination:0000000000000000 xTasksWaitingTermination
-     /tmp/ccPDXMyq.s:5212   .bss.xTickCount:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5216   .bss.xTickCount:0000000000000000 xTickCount
-     /tmp/ccPDXMyq.s:5219   .bss.xYieldPending:0000000000000000 $d
-     /tmp/ccPDXMyq.s:5223   .bss.xYieldPending:0000000000000000 xYieldPending
-     /tmp/ccPDXMyq.s:5226   .rodata.vTaskStartScheduler.str1.4:0000000000000000 $d
+     /tmp/cck6DyCn.s:5153   .bss.xDelayedTaskList1:0000000000000000 xDelayedTaskList1
+     /tmp/cck6DyCn.s:5156   .bss.xDelayedTaskList2:0000000000000000 $d
+     /tmp/cck6DyCn.s:5160   .bss.xDelayedTaskList2:0000000000000000 xDelayedTaskList2
+     /tmp/cck6DyCn.s:5163   .bss.xIdleTaskHandle:0000000000000000 $d
+     /tmp/cck6DyCn.s:5167   .bss.xIdleTaskHandle:0000000000000000 xIdleTaskHandle
+     /tmp/cck6DyCn.s:5170   .bss.xNextTaskUnblockTime:0000000000000000 $d
+     /tmp/cck6DyCn.s:5174   .bss.xNextTaskUnblockTime:0000000000000000 xNextTaskUnblockTime
+     /tmp/cck6DyCn.s:5177   .bss.xNumOfOverflows:0000000000000000 $d
+     /tmp/cck6DyCn.s:5181   .bss.xNumOfOverflows:0000000000000000 xNumOfOverflows
+     /tmp/cck6DyCn.s:5184   .bss.xPendingReadyList:0000000000000000 $d
+     /tmp/cck6DyCn.s:5188   .bss.xPendingReadyList:0000000000000000 xPendingReadyList
+     /tmp/cck6DyCn.s:5191   .bss.xSchedulerRunning:0000000000000000 $d
+     /tmp/cck6DyCn.s:5195   .bss.xSchedulerRunning:0000000000000000 xSchedulerRunning
+     /tmp/cck6DyCn.s:5198   .bss.xSuspendedTaskList:0000000000000000 $d
+     /tmp/cck6DyCn.s:5202   .bss.xSuspendedTaskList:0000000000000000 xSuspendedTaskList
+     /tmp/cck6DyCn.s:5205   .bss.xTasksWaitingTermination:0000000000000000 $d
+     /tmp/cck6DyCn.s:5209   .bss.xTasksWaitingTermination:0000000000000000 xTasksWaitingTermination
+     /tmp/cck6DyCn.s:5212   .bss.xTickCount:0000000000000000 $d
+     /tmp/cck6DyCn.s:5216   .bss.xTickCount:0000000000000000 xTickCount
+     /tmp/cck6DyCn.s:5219   .bss.xYieldPending:0000000000000000 $d
+     /tmp/cck6DyCn.s:5223   .bss.xYieldPending:0000000000000000 xYieldPending
+     /tmp/cck6DyCn.s:5226   .rodata.vTaskStartScheduler.str1.4:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 vPortFree

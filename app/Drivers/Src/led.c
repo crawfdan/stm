@@ -2,22 +2,21 @@
 #include "main.h"
 #include <stdint.h>
 #include <string.h>
+#include <assert.h>
 #include "stm32f207xx.h"
+#include "FreeRTOS.h"
 
 
 #define NUM_LEDS 3
 #define NUM_COLLS 1
-#define BLINK_THRESHOLD 1000
+#define BLINK_THRESHOLD 100
 
 typedef enum {
-    ledColors_Red             = 0x1,
-    ledColors_Blue            = 0x2,
-    ledColors_Green           = 0x4,
-    ledColors_Magenta         = ledColors_Red | ledColors_Blue,
-    ledColors_Yellow          = ledColors_Green | ledColors_Red,
-    ledColors_Cyan            = ledColors_Green | ledColors_Blue,
-    ledColors_White           = ledColors_Red | ledColors_Green | ledColors_Blue
-} ledColors_t;
+    ledRGB_Red = 0,
+    ledRGB_Green,
+    ledRGB_Blue,
+} ledRGB_t;
+
 
 //current given behavior for led collection
 typedef enum {
@@ -30,11 +29,6 @@ typedef enum {
     ledCollectionState_Off = 0x0,
     ledCollectionState_On
 } ledCollectionState_t;
-
-typedef enum {
-    invalidCollection = -1,
-    collection1
-} ledCollections_t;
 
 //single led structure
 typedef struct led {
@@ -50,60 +44,38 @@ typedef struct blinkInfo {
 } blinkInfo_t;
 
 //struct for collection of rgb leds
-typedef struct collection {
+struct collection {
     led_t leds[NUM_LEDS]; //leds in the collection
     ledColors_t color; //current color of collection
     blinkInfo_t blink; //blink info for collection
     ledCollectionState_t state; //current on/off state of collection
     ledBehavior_t behavior; //driving or blinking
-} Collection_t;
+};
 
-
-
-// static  Led_t ledArray[NUM_LEDS] = {
-
-//     [ledColors_Green] = 
-//     {
-//         .pin = ledG_Pin,
-//         .port = ledG_GPIO_Port
-//     },
-
-//     [ledColors_Red] = 
-//     {
-//         .pin = ledR_Pin,
-//         .port = ledR_GPIO_Port
-//     },
-
-//     [ledColors_Blue] = 
-//     {
-//         .pin = ledB_Pin,
-//         .port = ledB_GPIO_Port
-//     }
-// };
 
 static Collection_t collArray[NUM_COLLS] = {
-    [0] =
+    [ledCollections_1] =
     {
         .leds = {
-                    [0] = 
+                    [ledRGB_Red] = 
                     {
                         .pin = ledR_Pin,
                         .port = ledR_GPIO_Port
                     },
 
-                    [1] = 
+                    [ledRGB_Green] = 
                     {
                         .pin = ledG_Pin,
                         .port = ledG_GPIO_Port
                     },
 
-                    [2] = 
+                    [ledRGB_Blue] = 
                     {
                         .pin = ledB_Pin,
                         .port = ledB_GPIO_Port
                     }
                 },
-        .color = ledColors_White,
+        .color = ledColors_Blue,
         .blink = {.blinkCount = 0, .blinkThreshold = BLINK_THRESHOLD, .numBlinks = 10},
         .state = ledCollectionState_Off,
         .behavior = ledBehavior_Drive
@@ -112,89 +84,190 @@ static Collection_t collArray[NUM_COLLS] = {
 
 
 //turn on the led indefinitely
-void led_On(Collection_t coll)
+void led_On(ledCollections_t index)
 {
+    Collection_t *coll = &collArray[index];
     int i;
     unsigned mask = 0x1;
     for(i = 0; i < NUM_LEDS; i++)
     {
         //if there is a 1 in the bit position of the color, turn on that pin
-        if ((coll.color & mask) > 0)
+        if ((coll->color & mask) > 0)
         {
-            HAL_GPIO_WritePin(coll.leds[i].port, coll.leds[i].pin, SET);
+            HAL_GPIO_WritePin(coll->leds[i].port, coll->leds[i].pin, SET);
         }
 
         //shift mask for next bit in color
         mask <<= 1;
     }
-    coll.state = ledCollectionState_On;
+    coll->state = ledCollectionState_On;
     return;
 }
 
 //turns off leds in a collection indefinitely
-void led_Off (Collection_t coll)
+void led_Off (ledCollections_t index)
 {
+    Collection_t *coll = &collArray[index];
     int i;
     //set all leds to off state
     for(i = 0; i < NUM_LEDS; i++)
     {
-        HAL_GPIO_WritePin(coll.leds[i].port, coll.leds[i].pin, RESET);
+        HAL_GPIO_WritePin(coll->leds[i].port, coll->leds[i].pin, RESET);
     }
     //update states
-    coll.state = ledCollectionState_Off;
+    coll->state = ledCollectionState_Off;
     return;
 }
 
-void led_ColorChange (Collection_t coll, ledColors_t newColor)
+void led_ColorChange (ledCollections_t index, ledColors_t newColor)
 {
     assert(newColor >= ledColors_Red);
-    coll.color = newColor;
+
+    Collection_t *coll = &collArray[index];
+    coll->color = newColor;
     return;
 }
 
-void led_Blink (Collection_t coll)
+//toggle led state or increase blink counter
+bool led_Blink (ledCollections_t index)
 {
-    //if we meet the threshold, toggle the pin
-    if (coll.blink.blinkCount == coll.blink.blinkThreshold)
+    //asserts
+    // assert(coll.blink.numBlinks >= 0);
+    // assert(coll.behavior == ledBehavior_Blinking);--
+
+    Collection_t *coll = &collArray[index];
+    //if number of blinks satisfied, return to task
+    if (coll->blink.numBlinks == 0)
     {
-        if (coll.state == ledCollectionState_Off)
+        led_StopBlink(index);
+        return false;
+    }
+    //if we meet the threshold, toggle the pin
+    else if (coll->blink.blinkCount == coll->blink.blinkThreshold)
+    {
+        if (coll->state == ledCollectionState_Off)
         {
-            led_On(coll);
-            coll.blink.numBlinks++;
+            led_On(index);
+            //coll->blink.numBlinks--;
         }
 
         else
         {
-            led_Off(coll);
+            led_Off(index);
         }
-        
+        coll->blink.blinkCount = 0;
     }
 
     else
     {
-        coll.blink.blinkCount++;
+        coll->blink.blinkCount++;
     }
 
+    return true;
+}
+
+//stop led from blinking and update behavior
+void led_StopBlink (ledCollections_t index)
+{
+    Collection_t *coll = &collArray[index];
+    led_Off(index);
+    coll->behavior = ledBehavior_Drive;
     return;
 }
 
+//create a task for led handling
+void led_taskCreate()
+{
+    xTaskCreate();
+    return;
+}
+
+/***************************************************************
+****************************************************************
+TEST FUNCTIONS
+*****************************************************************
+*****************************************************************/
+
+//change color to red and turn on leds
 void led_activateRedLed()
 {
-    led_ColorChange(collArray[collection1], ledColors_Red);
-    led_On(collArray[collection1]);
+    led_ColorChange(ledCollections_1, ledColors_Red);
+    led_On(ledCollections_1);
     return;
 }
 
+//change color to blue and turn on leds
 void led_activateBlueLed()
 {
-    led_ColorChange(collArray[collection1], ledColors_Blue);
-    led_On(collArray[collection1]);
+    //collArray[ledCollections_1].color = ledColors_Blue;
+    led_ColorChange(ledCollections_1, ledColors_Blue);
+    led_On(ledCollections_1);
     return;
 }
 
+//change color to green and turn on leds
 void led_activateGreenLed()
 {
-    led_ColorChange(collArray[collection1], ledColors_Green);
-    led_On(collArray[collection1]);
+    led_ColorChange(ledCollections_1, ledColors_Green);
+    led_On(ledCollections_1);
     return;
 }
+
+void led_test()
+{
+    led_On(ledCollections_1);
+    return;
+}
+void led_test2()
+{
+    //led_Off(ledCollections_1);
+    // collArray[ledCollections_1].color = ledColors_Red;
+    led_ColorChange(ledCollections_1, nextColor());
+    return;
+}
+
+bool blink()
+{
+    bool blinking = true;
+    collArray[ledCollections_1].behavior = ledBehavior_Blinking;
+    blinking = led_Blink(ledCollections_1);
+    return blinking;
+}
+
+ledColors_t nextColor()
+{
+    if (collArray[ledCollections_1].color == ledColors_White)
+    {
+        collArray[ledCollections_1].color = ledColors_Red;
+        return ledColors_White;
+    }
+
+    else
+    {
+        return collArray[ledCollections_1].color++;
+    }
+    
+}
+
+void speedUp()
+{
+    if(collArray[ledCollections_1].blink.blinkThreshold > 10)
+    {
+        collArray[ledCollections_1].blink.blinkThreshold -= 10;
+    }
+    
+    return;
+}
+
+// void blinkColors()
+// {
+//     while (blink())
+//     {
+//         return;
+//     }
+
+//     collArray[ledCollections_1].color = nextColor();
+//     collArray[ledCollections_1].blink.numBlinks = 10;
+//     return;
+    
+// }

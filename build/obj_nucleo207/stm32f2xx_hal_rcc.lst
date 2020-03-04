@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc5WOdXJ.s 			page 1
+ARM GAS  /tmp/ccnYd9kL.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   31:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       (+) Configure the AHB and APB busses prescalers
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       (+) Enable the clock for the peripheral(s) to be used
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       (+) Configure the clock source(s) for peripherals which clocks are not
-ARM GAS  /tmp/cc5WOdXJ.s 			page 2
+ARM GAS  /tmp/ccnYd9kL.s 			page 2
 
 
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           derived from the System clock (I2S, RTC, ADC, USB OTG FS/SDIO/RNG)
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   88:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
   89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** /* Private macro -------------------------------------------------------------*/
   90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** #define __MCO1_CLK_ENABLE()   __HAL_RCC_GPIOA_CLK_ENABLE()
-ARM GAS  /tmp/cc5WOdXJ.s 			page 3
+ARM GAS  /tmp/ccnYd9kL.s 			page 3
 
 
   91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** #define MCO1_GPIO_PORT        GPIOA
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  145:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****              and if a HSE clock failure occurs(HSE used directly or through PLL as System
  146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****              clock source), the System clocks automatically switched to HSI and an interrupt
  147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****              is generated if enabled. The interrupt is linked to the Cortex-M3 NMI
-ARM GAS  /tmp/cc5WOdXJ.s 			page 4
+ARM GAS  /tmp/ccnYd9kL.s 			page 4
 
 
  148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****              (Non-Maskable Interrupt) exception vector.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  202:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****  |7WS(8CPU cycle)|      NA        |      NA        |       NA        |112 < HCLK <= 120|
  203:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****  +-------------------------------------------------------------------------------------+
  204:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** @endverbatim
-ARM GAS  /tmp/cc5WOdXJ.s 			page 5
+ARM GAS  /tmp/ccnYd9kL.s 			page 5
 
 
  205:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   * @{
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   52 0016 13F0020F 		tst	r3, #2
   53 001a 07D1     		bne	.L19
  233:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 6
+ARM GAS  /tmp/ccnYd9kL.s 			page 6
 
 
  234:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     if ((HAL_GetTick() - tickstart) > HSI_TIMEOUT_VALUE)
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  279:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   /* Wait till PLL is disabled */
  280:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   while (READ_BIT(RCC->CR, RCC_CR_PLLRDY) != RESET)
  281:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 7
+ARM GAS  /tmp/ccnYd9kL.s 			page 7
 
 
  282:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     if ((HAL_GetTick() - tickstart) > PLL_TIMEOUT_VALUE)
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   70 002e 2B68     		ldr	r3, [r5]
   71 0030 43F08003 		orr	r3, r3, #128
   72 0034 2B60     		str	r3, [r5]
-ARM GAS  /tmp/cc5WOdXJ.s 			page 8
+ARM GAS  /tmp/ccnYd9kL.s 			page 8
 
 
  244:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  118              	.LVL12:
  119 007a 001B     		subs	r0, r0, r4
  120 007c 6428     		cmp	r0, #100
-ARM GAS  /tmp/cc5WOdXJ.s 			page 9
+ARM GAS  /tmp/ccnYd9kL.s 			page 9
 
 
  121 007e F5D9     		bls	.L7
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  166              	.LVL19:
  167              	.L11:
  298:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 10
+ARM GAS  /tmp/ccnYd9kL.s 			page 10
 
 
  168              		.loc 1 298 0
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  214 0110 00000000 		.word	SystemCoreClock
  215 0114 0024F400 		.word	16000000
  216 0118 00000000 		.word	uwTickPrio
-ARM GAS  /tmp/cc5WOdXJ.s 			page 11
+ARM GAS  /tmp/ccnYd9kL.s 			page 11
 
 
  217              		.cfi_endproc
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  350:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     return HAL_ERROR;
  351:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   }
  352:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc5WOdXJ.s 			page 12
+ARM GAS  /tmp/ccnYd9kL.s 			page 12
 
 
  353:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   /* Check the parameters */
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  277 0038 FFF7FEFF 		bl	HAL_GetTick
  278              	.LVL23:
  279 003c 0546     		mov	r5, r0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 13
+ARM GAS  /tmp/ccnYd9kL.s 			page 13
 
 
  280              	.LVL24:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  395:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         while(__HAL_RCC_GET_FLAG(RCC_FLAG_HSERDY) != RESET)
  396:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         {
  397:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           if((HAL_GetTick() - tickstart ) > HSE_TIMEOUT_VALUE)
-ARM GAS  /tmp/cc5WOdXJ.s 			page 14
+ARM GAS  /tmp/ccnYd9kL.s 			page 14
 
 
  398:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           {
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  334 0092 002B     		cmp	r3, #0
  335 0094 64D0     		beq	.L40
  432:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 15
+ARM GAS  /tmp/ccnYd9kL.s 			page 15
 
 
  433:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         /* Enable the Internal High Speed oscillator (HSI). */
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  375              	.LVL34:
  376 00ce 401B     		subs	r0, r0, r5
  377 00d0 6428     		cmp	r0, #100
-ARM GAS  /tmp/cc5WOdXJ.s 			page 16
+ARM GAS  /tmp/ccnYd9kL.s 			page 16
 
 
  378 00d2 F5D9     		bls	.L34
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   15:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   16:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
   17:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  *
-ARM GAS  /tmp/cc5WOdXJ.s 			page 17
+ARM GAS  /tmp/ccnYd9kL.s 			page 17
 
 
   18:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
   72:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   73:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   74:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
-ARM GAS  /tmp/cc5WOdXJ.s 			page 18
+ARM GAS  /tmp/ccnYd9kL.s 			page 18
 
 
   75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  129:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
  130:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  131:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
-ARM GAS  /tmp/cc5WOdXJ.s 			page 19
+ARM GAS  /tmp/ccnYd9kL.s 			page 19
 
 
  132:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  186:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  187:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  188:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/cc5WOdXJ.s 			page 20
+ARM GAS  /tmp/ccnYd9kL.s 			page 20
 
 
  189:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  243:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer
  244:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
  245:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
-ARM GAS  /tmp/cc5WOdXJ.s 			page 21
+ARM GAS  /tmp/ccnYd9kL.s 			page 21
 
 
  246:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  300:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  301:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
  302:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 22
+ARM GAS  /tmp/ccnYd9kL.s 			page 22
 
 
  303:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  357:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  358:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  359:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/cc5WOdXJ.s 			page 23
+ARM GAS  /tmp/ccnYd9kL.s 			page 23
 
 
  360:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  414:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
  415:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  416:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/cc5WOdXJ.s 			page 24
+ARM GAS  /tmp/ccnYd9kL.s 			page 24
 
 
  417:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  471:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  472:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority (non-secure)
  473:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Base Priority register when in secure state.
-ARM GAS  /tmp/cc5WOdXJ.s 			page 25
+ARM GAS  /tmp/ccnYd9kL.s 			page 25
 
 
  474:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  528:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** {
  529:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  530:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/cc5WOdXJ.s 			page 26
+ARM GAS  /tmp/ccnYd9kL.s 			page 26
 
 
  531:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  585:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
  586:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always in non-secure
  587:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   mode.
-ARM GAS  /tmp/cc5WOdXJ.s 			page 27
+ARM GAS  /tmp/ccnYd9kL.s 			page 27
 
 
  588:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  642:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)ProcStackPtrLimit;
  643:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  644:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psplim, %0" : : "r" (ProcStackPtrLimit));
-ARM GAS  /tmp/cc5WOdXJ.s 			page 28
+ARM GAS  /tmp/ccnYd9kL.s 			page 28
 
 
  645:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  699:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer Limit(MSPLIM) when in sec
  700:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSPLIM Register value
  701:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/cc5WOdXJ.s 			page 29
+ARM GAS  /tmp/ccnYd9kL.s 			page 29
 
 
  702:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSPLIM_NS(void)
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  756:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  757:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif /* ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
  758:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    ) */
-ARM GAS  /tmp/cc5WOdXJ.s 			page 30
+ARM GAS  /tmp/ccnYd9kL.s 			page 30
 
 
  759:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  813:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /* ##########################  Core Instruction Access  ######################### */
  814:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
  815:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   Access to dedicated instructions
-ARM GAS  /tmp/cc5WOdXJ.s 			page 31
+ARM GAS  /tmp/ccnYd9kL.s 			page 31
 
 
  816:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  870:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  871:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  872:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /tmp/cc5WOdXJ.s 			page 32
+ARM GAS  /tmp/ccnYd9kL.s 			page 32
 
 
  873:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Synchronization Barrier
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  927:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  928:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  929:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (16 bit)
-ARM GAS  /tmp/cc5WOdXJ.s 			page 33
+ARM GAS  /tmp/ccnYd9kL.s 			page 33
 
 
  930:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in a 16-bit value and returns the signed 16-bit result. For exam
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  984:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  985:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
  986:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
-ARM GAS  /tmp/cc5WOdXJ.s 			page 34
+ARM GAS  /tmp/ccnYd9kL.s 			page 34
 
 
  987:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    )
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  475:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
  476:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     /* Check the LSI State */
  477:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     if((RCC_OscInitStruct->LSIState)!= RCC_LSI_OFF)
-ARM GAS  /tmp/cc5WOdXJ.s 			page 35
+ARM GAS  /tmp/ccnYd9kL.s 			page 35
 
 
  433              		.loc 1 477 0
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  473 014e 92FAA2F2 		rbit r2, r2
  474              	@ 0 "" 2
  475              	.LVL42:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 36
+ARM GAS  /tmp/ccnYd9kL.s 			page 36
 
 
  476              		.thumb
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  517 0188 1A60     		str	r2, [r3]
  498:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
  499:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       /* Get Start Tick */
-ARM GAS  /tmp/cc5WOdXJ.s 			page 37
+ARM GAS  /tmp/ccnYd9kL.s 			page 37
 
 
  500:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       tickstart = HAL_GetTick();
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  549 01b4 13F0805F 		tst	r3, #268435456
  550 01b8 2BD1     		bne	.L79
  551              	.LBB34:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 38
+ARM GAS  /tmp/ccnYd9kL.s 			page 38
 
 
  523:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     {
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  579              		.loc 1 549 0
  580 01e6 227A     		ldrb	r2, [r4, #8]	@ zero_extendqisi2
  581 01e8 354B     		ldr	r3, .L111+20
-ARM GAS  /tmp/cc5WOdXJ.s 			page 39
+ARM GAS  /tmp/ccnYd9kL.s 			page 39
 
 
  582 01ea 1A70     		strb	r2, [r3]
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  621              	.LVL60:
  622 0224 0646     		mov	r6, r0
  623              	.LVL61:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 40
+ARM GAS  /tmp/ccnYd9kL.s 			page 40
 
 
  624              	.L54:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  661 025e ABE0     		b	.L27
  662              	.L59:
  576:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         }
-ARM GAS  /tmp/cc5WOdXJ.s 			page 41
+ARM GAS  /tmp/ccnYd9kL.s 			page 41
 
 
  577:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       }
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  613:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           {
  614:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****             return HAL_TIMEOUT;
  615:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           }
-ARM GAS  /tmp/cc5WOdXJ.s 			page 42
+ARM GAS  /tmp/ccnYd9kL.s 			page 42
 
 
  616:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         }
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  700 0296 6428     		cmp	r0, #100
  701 0298 F5D9     		bls	.L68
  651:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****           {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 43
+ARM GAS  /tmp/ccnYd9kL.s 			page 43
 
 
  652:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****             return HAL_TIMEOUT;
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  749 02e8 0320     		movs	r0, #3
  750 02ea 65E0     		b	.L27
  751              	.L105:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 44
+ARM GAS  /tmp/ccnYd9kL.s 			page 44
 
 
  619:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****                                 RCC_OscInitStruct->PLL.PLLM                                        
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  803              	@ 988 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/cmsis_gcc.h" 1
  804 0322 92FAA2F2 		rbit r2, r2
  805              	@ 0 "" 2
-ARM GAS  /tmp/cc5WOdXJ.s 			page 45
+ARM GAS  /tmp/ccnYd9kL.s 			page 45
 
 
  806              	.LVL81:
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  665:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       {
  666:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         /* Do not return HAL_ERROR if request repeats the current configuration */
  667:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         uint32_t pllcfgr = RCC->PLLCFGR;
-ARM GAS  /tmp/cc5WOdXJ.s 			page 46
+ARM GAS  /tmp/ccnYd9kL.s 			page 46
 
 
  668:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  876              	.L108:
  671:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****            (READ_BIT(pllcfgr, RCC_PLLCFGR_PLLP) != RCC_OscInitStruct->PLL.PLLP) ||
  877              		.loc 1 671 0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 47
+ARM GAS  /tmp/ccnYd9kL.s 			page 47
 
 
  878 0384 C3F38812 		ubfx	r2, r3, #6, #9
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  922              	.L98:
  923              	.LCFI4:
  924              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/cc5WOdXJ.s 			page 48
+ARM GAS  /tmp/ccnYd9kL.s 			page 48
 
 
  925              		.cfi_offset 4, -16
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  685:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   *         parameters in the RCC_ClkInitStruct.
  686:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   * @param  RCC_ClkInitStruct pointer to an RCC_OscInitTypeDef structure that
  687:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   *         contains the configuration information for the RCC peripheral.
-ARM GAS  /tmp/cc5WOdXJ.s 			page 49
+ARM GAS  /tmp/ccnYd9kL.s 			page 49
 
 
  688:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   * @param  FLatency FLASH Latency, this parameter depend on device selected
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  742:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
  743:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     /* Set the highest APBx dividers in order to ensure that we do not go through
  744:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****        a non-spec phase whatever we decrease or increase HCLK. */
-ARM GAS  /tmp/cc5WOdXJ.s 			page 50
+ARM GAS  /tmp/ccnYd9kL.s 			page 50
 
 
  745:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     if(((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK1) == RCC_CLOCKTYPE_PCLK1)
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  799:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     {
  800:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       if ((HAL_GetTick() - tickstart) > CLOCKSWITCH_TIMEOUT_VALUE)
  801:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 51
+ARM GAS  /tmp/ccnYd9kL.s 			page 51
 
 
  802:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         return HAL_TIMEOUT;
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  856:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     This subsection provides a set of functions allowing to control the RCC Clocks
  857:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     frequencies.
  858:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc5WOdXJ.s 			page 52
+ARM GAS  /tmp/ccnYd9kL.s 			page 52
 
 
  859:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** @endverbatim
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  896:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   if(RCC_MCOx == RCC_MCO1)
  991              		.loc 1 896 0
  992 0008 08B3     		cbz	r0, .L119
-ARM GAS  /tmp/cc5WOdXJ.s 			page 53
+ARM GAS  /tmp/ccnYd9kL.s 			page 53
 
 
  993              	.LBB43:
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  926:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     GPIO_InitStruct.Alternate = GPIO_AF0_MCO;
  1018              		.loc 1 926 0
  1019 0032 0793     		str	r3, [sp, #28]
-ARM GAS  /tmp/cc5WOdXJ.s 			page 54
+ARM GAS  /tmp/ccnYd9kL.s 			page 54
 
 
  927:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     HAL_GPIO_Init(MCO2_GPIO_PORT, &GPIO_InitStruct);
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1065 006e 0492     		str	r2, [sp, #16]
  906:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  1066              		.loc 1 906 0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 55
+ARM GAS  /tmp/ccnYd9kL.s 			page 55
 
 
  1067 0070 0322     		movs	r2, #3
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1107              		.loc 1 944 0
  1108              		.cfi_startproc
  1109              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 56
+ARM GAS  /tmp/ccnYd9kL.s 			page 56
 
 
  1110              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1156              		.global	HAL_RCC_GetSysClockFreq
  1157              		.syntax unified
  1158              		.thumb
-ARM GAS  /tmp/cc5WOdXJ.s 			page 57
+ARM GAS  /tmp/ccnYd9kL.s 			page 57
 
 
  1159              		.thumb_func
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1176 000e 01D0     		beq	.L131
  994:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
  995:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     case RCC_CFGR_SWS_HSI:  /* HSI used as system clock source */
-ARM GAS  /tmp/cc5WOdXJ.s 			page 58
+ARM GAS  /tmp/ccnYd9kL.s 			page 58
 
 
  996:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****     {
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
 1014:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       }
 1015:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       else
 1016:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       {
-ARM GAS  /tmp/cc5WOdXJ.s 			page 59
+ARM GAS  /tmp/ccnYd9kL.s 			page 59
 
 
 1017:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****         /* HSI used as PLL clock source */
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1249 008a 2046     		mov	r0, r4
  1250 008c 1946     		mov	r1, r3
  1251 008e 0023     		movs	r3, #0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 60
+ARM GAS  /tmp/ccnYd9kL.s 			page 60
 
 
  1252 0090 FFF7FEFF 		bl	__aeabi_uldivmod
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1304              		.cfi_offset 5, -12
  1305              		.cfi_offset 6, -8
  1306              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc5WOdXJ.s 			page 61
+ARM GAS  /tmp/ccnYd9kL.s 			page 61
 
 
  1307 0008 0446     		mov	r4, r0
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1351 004e 43F46043 		orr	r3, r3, #57344
  1352 0052 9360     		str	r3, [r2, #8]
  1353              	.L145:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 62
+ARM GAS  /tmp/ccnYd9kL.s 			page 62
 
 
  757:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   }
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1400 00a0 16D0     		beq	.L146
  800:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****       {
  1401              		.loc 1 800 0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 63
+ARM GAS  /tmp/ccnYd9kL.s 			page 63
 
 
  1402 00a2 FFF7FEFF 		bl	HAL_GetTick
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1447              		.loc 1 817 0
  1448 00ec 0120     		movs	r0, #1
  1449 00ee 9BE7     		b	.L141
-ARM GAS  /tmp/cc5WOdXJ.s 			page 64
+ARM GAS  /tmp/ccnYd9kL.s 			page 64
 
 
  1450              	.L152:
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1498 0136 094A     		ldr	r2, .L168+8
  1499 0138 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
  1500 013a D840     		lsrs	r0, r0, r3
-ARM GAS  /tmp/cc5WOdXJ.s 			page 65
+ARM GAS  /tmp/ccnYd9kL.s 			page 65
 
 
  1501 013c 084B     		ldr	r3, .L168+12
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1551              		.thumb_func
  1552              		.fpu softvfp
  1554              	HAL_RCC_GetHCLKFreq:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 66
+ARM GAS  /tmp/ccnYd9kL.s 			page 66
 
 
  1555              	.LFB79:
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1588              		.cfi_def_cfa_offset 8
  1589              		.cfi_offset 3, -8
  1590              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc5WOdXJ.s 			page 67
+ARM GAS  /tmp/ccnYd9kL.s 			page 67
 
 
 1056:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   /* Get HCLK source and Compute PCLK1 frequency ---------------------------*/
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
 1066:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** uint32_t HAL_RCC_GetPCLK2Freq(void)
 1067:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** {
  1637              		.loc 1 1067 0
-ARM GAS  /tmp/cc5WOdXJ.s 			page 68
+ARM GAS  /tmp/ccnYd9kL.s 			page 68
 
 
  1638              		.cfi_startproc
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1691              	.LFB82:
 1071:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
 1072:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** /**
-ARM GAS  /tmp/cc5WOdXJ.s 			page 69
+ARM GAS  /tmp/ccnYd9kL.s 			page 69
 
 
 1073:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   * @brief  Configures the RCC_OscInitStruct according to the internal
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1717 001e C360     		str	r3, [r0, #12]
  1718              	.L186:
 1102:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   }
-ARM GAS  /tmp/cc5WOdXJ.s 			page 70
+ARM GAS  /tmp/ccnYd9kL.s 			page 70
 
 
 1103:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   else
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1750 0042 2D4B     		ldr	r3, .L195
  1751 0044 5B6F     		ldr	r3, [r3, #116]
  1752 0046 13F0010F 		tst	r3, #1
-ARM GAS  /tmp/cc5WOdXJ.s 			page 71
+ARM GAS  /tmp/ccnYd9kL.s 			page 71
 
 
  1753 004a 4FD0     		beq	.L190
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1787              	@ 0 "" 2
  1788              	.LVL142:
  1789              		.thumb
-ARM GAS  /tmp/cc5WOdXJ.s 			page 72
+ARM GAS  /tmp/ccnYd9kL.s 			page 72
 
 
  1790              		.syntax unified
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1841              		.loc 1 1148 0
  1842 00b8 7047     		bx	lr
  1843              	.L182:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 73
+ARM GAS  /tmp/ccnYd9kL.s 			page 73
 
 
 1089:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   {
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1889              		.align	2
  1890              	.L195:
  1891 00f8 00380240 		.word	1073887232
-ARM GAS  /tmp/cc5WOdXJ.s 			page 74
+ARM GAS  /tmp/ccnYd9kL.s 			page 74
 
 
  1892              		.cfi_endproc
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  1926 001c C260     		str	r2, [r0, #12]
 1171:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** 
 1172:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   /* Get the APB2 configuration ----------------------------------------------*/
-ARM GAS  /tmp/cc5WOdXJ.s 			page 75
+ARM GAS  /tmp/ccnYd9kL.s 			page 75
 
 
 1173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   RCC_ClkInitStruct->APB2CLKDivider = (uint32_t)((RCC->CFGR & RCC_CFGR_PPRE2) >> 3U);
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
 1199:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   * @retval None
 1200:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c ****   */
 1201:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** __weak void HAL_RCC_CSSCallback(void)
-ARM GAS  /tmp/cc5WOdXJ.s 			page 76
+ARM GAS  /tmp/ccnYd9kL.s 			page 76
 
 
 1202:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c **** {
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  2002              		.loc 1 1195 0
  2003 0018 F8E7     		b	.L201
  2004              	.L206:
-ARM GAS  /tmp/cc5WOdXJ.s 			page 77
+ARM GAS  /tmp/ccnYd9kL.s 			page 77
 
 
  2005 001a 00BF     		.align	2
@@ -4579,54 +4579,54 @@ ARM GAS  /tmp/cc5WOdXJ.s 			page 1
  2021              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
  2022              		.file 11 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
  2023              		.file 12 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
-ARM GAS  /tmp/cc5WOdXJ.s 			page 78
+ARM GAS  /tmp/ccnYd9kL.s 			page 78
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f2xx_hal_rcc.c
-     /tmp/cc5WOdXJ.s:16     .text.HAL_RCC_DeInit:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:23     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-     /tmp/cc5WOdXJ.s:211    .text.HAL_RCC_DeInit:0000000000000104 $d
-     /tmp/cc5WOdXJ.s:221    .text.HAL_RCC_OscConfig:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:228    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-     /tmp/cc5WOdXJ.s:717    .text.HAL_RCC_OscConfig:00000000000002ac $d
-     /tmp/cc5WOdXJ.s:728    .text.HAL_RCC_OscConfig:00000000000002c8 $t
-     /tmp/cc5WOdXJ.s:959    .text.HAL_RCC_OscConfig:00000000000003c4 $d
-     /tmp/cc5WOdXJ.s:965    .text.HAL_RCC_MCOConfig:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:972    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-     /tmp/cc5WOdXJ.s:1091   .text.HAL_RCC_MCOConfig:0000000000000090 $d
-     /tmp/cc5WOdXJ.s:1098   .text.HAL_RCC_EnableCSS:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1105   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
-     /tmp/cc5WOdXJ.s:1121   .text.HAL_RCC_EnableCSS:0000000000000008 $d
-     /tmp/cc5WOdXJ.s:1126   .text.HAL_RCC_DisableCSS:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1133   .text.HAL_RCC_DisableCSS:0000000000000000 HAL_RCC_DisableCSS
-     /tmp/cc5WOdXJ.s:1149   .text.HAL_RCC_DisableCSS:0000000000000008 $d
-     /tmp/cc5WOdXJ.s:1155   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1162   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-     /tmp/cc5WOdXJ.s:1275   .text.HAL_RCC_GetSysClockFreq:000000000000009c $d
-     /tmp/cc5WOdXJ.s:1282   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1289   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-     /tmp/cc5WOdXJ.s:1538   .text.HAL_RCC_ClockConfig:0000000000000154 $d
-     /tmp/cc5WOdXJ.s:1547   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1554   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-     /tmp/cc5WOdXJ.s:1568   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
-     /tmp/cc5WOdXJ.s:1573   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1580   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-     /tmp/cc5WOdXJ.s:1622   .text.HAL_RCC_GetPCLK1Freq:0000000000000024 $d
-     /tmp/cc5WOdXJ.s:1628   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1635   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-     /tmp/cc5WOdXJ.s:1677   .text.HAL_RCC_GetPCLK2Freq:0000000000000024 $d
-     /tmp/cc5WOdXJ.s:1683   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1690   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-     /tmp/cc5WOdXJ.s:1891   .text.HAL_RCC_GetOscConfig:00000000000000f8 $d
-     /tmp/cc5WOdXJ.s:1896   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1903   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-     /tmp/cc5WOdXJ.s:1942   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
-     /tmp/cc5WOdXJ.s:1948   .text.HAL_RCC_CSSCallback:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1955   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
-     /tmp/cc5WOdXJ.s:1968   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
-     /tmp/cc5WOdXJ.s:1975   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
-     /tmp/cc5WOdXJ.s:2007   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
+     /tmp/ccnYd9kL.s:16     .text.HAL_RCC_DeInit:0000000000000000 $t
+     /tmp/ccnYd9kL.s:23     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+     /tmp/ccnYd9kL.s:211    .text.HAL_RCC_DeInit:0000000000000104 $d
+     /tmp/ccnYd9kL.s:221    .text.HAL_RCC_OscConfig:0000000000000000 $t
+     /tmp/ccnYd9kL.s:228    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+     /tmp/ccnYd9kL.s:717    .text.HAL_RCC_OscConfig:00000000000002ac $d
+     /tmp/ccnYd9kL.s:728    .text.HAL_RCC_OscConfig:00000000000002c8 $t
+     /tmp/ccnYd9kL.s:959    .text.HAL_RCC_OscConfig:00000000000003c4 $d
+     /tmp/ccnYd9kL.s:965    .text.HAL_RCC_MCOConfig:0000000000000000 $t
+     /tmp/ccnYd9kL.s:972    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
+     /tmp/ccnYd9kL.s:1091   .text.HAL_RCC_MCOConfig:0000000000000090 $d
+     /tmp/ccnYd9kL.s:1098   .text.HAL_RCC_EnableCSS:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1105   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
+     /tmp/ccnYd9kL.s:1121   .text.HAL_RCC_EnableCSS:0000000000000008 $d
+     /tmp/ccnYd9kL.s:1126   .text.HAL_RCC_DisableCSS:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1133   .text.HAL_RCC_DisableCSS:0000000000000000 HAL_RCC_DisableCSS
+     /tmp/ccnYd9kL.s:1149   .text.HAL_RCC_DisableCSS:0000000000000008 $d
+     /tmp/ccnYd9kL.s:1155   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1162   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+     /tmp/ccnYd9kL.s:1275   .text.HAL_RCC_GetSysClockFreq:000000000000009c $d
+     /tmp/ccnYd9kL.s:1282   .text.HAL_RCC_ClockConfig:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1289   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
+     /tmp/ccnYd9kL.s:1538   .text.HAL_RCC_ClockConfig:0000000000000154 $d
+     /tmp/ccnYd9kL.s:1547   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1554   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
+     /tmp/ccnYd9kL.s:1568   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
+     /tmp/ccnYd9kL.s:1573   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1580   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
+     /tmp/ccnYd9kL.s:1622   .text.HAL_RCC_GetPCLK1Freq:0000000000000024 $d
+     /tmp/ccnYd9kL.s:1628   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1635   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
+     /tmp/ccnYd9kL.s:1677   .text.HAL_RCC_GetPCLK2Freq:0000000000000024 $d
+     /tmp/ccnYd9kL.s:1683   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1690   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+     /tmp/ccnYd9kL.s:1891   .text.HAL_RCC_GetOscConfig:00000000000000f8 $d
+     /tmp/ccnYd9kL.s:1896   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1903   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
+     /tmp/ccnYd9kL.s:1942   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
+     /tmp/ccnYd9kL.s:1948   .text.HAL_RCC_CSSCallback:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1955   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
+     /tmp/ccnYd9kL.s:1968   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
+     /tmp/ccnYd9kL.s:1975   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
+     /tmp/ccnYd9kL.s:2007   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
