@@ -218,22 +218,16 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
-  int count = 0;
+  
   for(;;)
   {
-    HAL_GPIO_WritePin(ledG_GPIO_Port, ledG_Pin, SET);
-    count++;
-    if((count % 10) == 0)
+    
+    while(blink())
     {
-      HAL_GPIO_WritePin(ledB_GPIO_Port, ledB_Pin, SET);
-      if ((count % 100) == 0)
-      {
-        HAL_GPIO_WritePin(ledR_GPIO_Port, ledR_Pin, SET);
-      }
+      osDelay(10);
     }
-    osDelay(100);
-    led_resetLeds();
-    osDelay(100);
+    
+    osThreadTerminate(defaultTaskHandle);
   }
   /* USER CODE END 5 */ 
 }
@@ -250,7 +244,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
   if (htim->Instance == TIM1) {
-    //button_updateButton();
+    button_updateButton();
   }
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM1) {

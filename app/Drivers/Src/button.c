@@ -46,9 +46,8 @@ static  Button_t buttonArray[NUM_BUTTONS] = {
         .debounceThreshold = DEBOUNCE_THRESHOLD,
         .holdCount = 0,
         .holdThreshold = HOLD_THRESHOLD,
-        .pressedCb = &led_activateGreenLed,
-        .longPressCb = &led_activateBlueLed,
-
+        .pressedCb = &speedUp,
+        .longPressCb = &led_test2
     }
 };
 
