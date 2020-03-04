@@ -349,6 +349,9 @@
           <state>$PROJ_DIR$/../Drivers/STM32F2xx_HAL_Driver/Inc/Legacy</state>
           <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32F2xx/Include</state>
           <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
+          <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/include</state>
+          <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</state>
+          <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -610,7 +613,7 @@
         </option>
         <option>
           <name>AUserIncludes</name>
-          <state></state>
+          <state>$PROJ_DIR$\..\\Inc</state>
         </option>
         <option>
           <name>AExtraOptionsCheckV2</name>
@@ -1037,10 +1040,16 @@
         <name>$PROJ_DIR$/../Src/main.c</name>
       </file>
       <file>
+        <name>$PROJ_DIR$/../Src/freertos.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$/../Src/stm32f2xx_it.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$/../Src/stm32f2xx_hal_msp.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Src/stm32f2xx_hal_timebase_tim.c</name>
       </file>
     </group>
   </group>
@@ -1095,6 +1104,45 @@
       <name>CMSIS</name>
       <file>
         <name>$PROJ_DIR$/../Src/system_stm32f2xx.c</name>
+      </file>
+    </group>
+  </group>
+  <group>
+    <name>Middlewares</name>
+    <group>
+      <name>FreeRTOS</name>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/croutine.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/list.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/queue.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/tasks.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/timers.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s</name>
       </file>
     </group>
   </group>

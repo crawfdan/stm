@@ -1,0 +1,432 @@
+ARM GAS  /tmp/ccIpl669.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"button.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.button_updateButton,"ax",%progbits
+  16              		.align	1
+  17              		.global	button_updateButton
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	button_updateButton:
+  24              	.LFB72:
+  25              		.file 1 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c"
+   1:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #include "button.h"
+   2:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #include "led.h"
+   3:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #include "stm32f207xx.h"
+   4:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #include "main.h"
+   5:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #include <stdint.h>
+   6:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+   7:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #define NUM_BUTTONS 1
+   8:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #define DEBOUNCE_THRESHOLD 10
+   9:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** #define HOLD_THRESHOLD 200
+  10:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  11:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** typedef enum {
+  12:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     invalidState = -1,
+  13:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     unpressed,
+  14:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     pressed,
+  15:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     longPress
+  16:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** } buttonState_t;
+  17:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  18:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** typedef enum {
+  19:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     invalidButton = -1,
+  20:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     button0,
+  21:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** } buttonNames_t;
+  22:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  23:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  24:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** typedef struct button {
+  25:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     uint16_t pin; //GPIO Pin
+  26:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     GPIO_TypeDef *port; //GPIO port
+  27:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     buttonState_t prevButtonState; //previous button state
+  28:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     buttonState_t currButtonState; //current button state
+  29:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     int debounceCount; //number of current debounces
+  30:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     int debounceThreshold; //debounce trigger
+  31:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     int holdCount; //number of held cycles
+  32:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     int holdThreshold; //button held trigger
+  33:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     void (*pressedCb)(); //callback for unpressed state
+ARM GAS  /tmp/ccIpl669.s 			page 2
+
+
+  34:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     void (*longPressCb)(); //callback for long press state
+  35:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** } Button_t;
+  36:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  37:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  38:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** static  Button_t buttonArray[NUM_BUTTONS] = {
+  39:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     [button0] = 
+  40:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     {
+  41:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .pin = pushButton_Pin,
+  42:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .port = pushButton_GPIO_Port,
+  43:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .prevButtonState = invalidState,
+  44:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .currButtonState = invalidState,
+  45:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .debounceCount = 0,
+  46:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .debounceThreshold = DEBOUNCE_THRESHOLD,
+  47:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .holdCount = 0,
+  48:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .holdThreshold = HOLD_THRESHOLD,
+  49:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .pressedCb = &speedUp,
+  50:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         .longPressCb = &led_test2
+  51:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     }
+  52:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** };
+  53:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  54:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** void button_updateButton(void)
+  55:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** {
+  26              		.loc 1 55 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 10B5     		push	{r4, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 4, -8
+  34              		.cfi_offset 14, -4
+  35              	.LVL0:
+  56:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     int i;
+  57:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  58:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     for(i = 0; i < NUM_BUTTONS; i++)
+  36              		.loc 1 58 0
+  37 0002 0024     		movs	r4, #0
+  38              	.LVL1:
+  39              	.L2:
+  40              		.loc 1 58 0 is_stmt 0 discriminator 1
+  41 0004 002C     		cmp	r4, #0
+  42 0006 00DD     		ble	.L10
+  59:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     {
+  60:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //if dbc < threshold and pin set
+  61:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
+  62:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         {
+  63:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].debounceCount < buttonArray[i].debounceThreshold)
+  64:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             {
+  65:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].debounceCount++;
+  66:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             }
+  67:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         }
+  68:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //if dbc > 0 and pin is not set
+  69:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         else if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_RESET)
+  70:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         {
+  71:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].debounceCount > 0)
+  72:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             {
+  73:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].debounceCount--;
+ARM GAS  /tmp/ccIpl669.s 			page 3
+
+
+  74:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].holdCount = 0;
+  75:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             }
+  76:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         }
+  77:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+  78:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //change states
+  79:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (buttonArray[i].debounceCount == 0)
+  80:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         {
+  81:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+  82:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             buttonArray[i].currButtonState = unpressed;
+  83:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         }
+  84:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             //state is either pressed or long press
+  85:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         else if (buttonArray[i].debounceCount == buttonArray[i].debounceThreshold)
+  86:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         {
+  87:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             //change to long press state
+  88:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].holdCount == buttonArray[i].holdThreshold)
+  89:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             {
+  90:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+  91:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].currButtonState = longPress;
+  92:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             }
+  93:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             //stay in pressed state, increment hold count
+  94:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             else
+  95:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             {
+  96:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+  97:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].currButtonState = pressed;
+  98:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].holdCount++;
+  99:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             }
+ 100:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         }
+ 101:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //no valid state
+ 102:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+ 103:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //***not necessary, since we want to stay in the current state even if 0 < dbc < 10
+ 104:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         // else
+ 105:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         // {
+ 106:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //     buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+ 107:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //     buttonArray[i].currButtonState = invalidState;
+ 108:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //     break;
+ 109:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         // }
+ 110:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         
+ 111:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         //callbacks
+ 112:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (buttonArray[i].prevButtonState != buttonArray[i].currButtonState)
+ 113:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         {
+ 114:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].prevButtonState == pressed &&
+ 115:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].currButtonState == longPress)
+ 116:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 {
+ 117:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                     buttonArray[i].longPressCb();
+ 118:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 }
+ 119:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             else if (buttonArray[i].prevButtonState == pressed &&
+ 120:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                     buttonArray[i].currButtonState == unpressed)
+ 121:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 {
+ 122:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                     buttonArray[i].pressedCb();
+ 123:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 }
+ 124:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         }
+ 125:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** 
+ 126:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     }
+ 127:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         
+ 128:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     return;
+ 129:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c **** }...
+  43              		.loc 1 129 0 is_stmt 1
+ARM GAS  /tmp/ccIpl669.s 			page 4
+
+
+  44 0008 10BD     		pop	{r4, pc}
+  45              	.LVL2:
+  46              	.L10:
+  61:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_SET)
+  47              		.loc 1 61 0
+  48 000a 4549     		ldr	r1, .L15
+  49 000c E300     		lsls	r3, r4, #3
+  50 000e 2344     		add	r3, r3, r4
+  51 0010 9A00     		lsls	r2, r3, #2
+  52 0012 8B18     		adds	r3, r1, r2
+  53 0014 895A     		ldrh	r1, [r1, r2]
+  54 0016 5868     		ldr	r0, [r3, #4]
+  55 0018 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  56              	.LVL3:
+  57 001c 0128     		cmp	r0, #1
+  58 001e 2FD1     		bne	.L3
+  63:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].debounceCount < buttonArray[i].debounceThreshold)
+  59              		.loc 1 63 0
+  60 0020 E200     		lsls	r2, r4, #3
+  61 0022 2244     		add	r2, r2, r4
+  62 0024 9100     		lsls	r1, r2, #2
+  63 0026 3E4B     		ldr	r3, .L15
+  64 0028 0B44     		add	r3, r3, r1
+  65 002a DA68     		ldr	r2, [r3, #12]
+  66 002c 1B69     		ldr	r3, [r3, #16]
+  67 002e 9A42     		cmp	r2, r3
+  68 0030 03DA     		bge	.L4
+  65:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].debounceCount++;
+  69              		.loc 1 65 0
+  70 0032 3B4B     		ldr	r3, .L15
+  71 0034 0B44     		add	r3, r3, r1
+  72 0036 0132     		adds	r2, r2, #1
+  73 0038 DA60     		str	r2, [r3, #12]
+  74              	.L4:
+  79:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (buttonArray[i].debounceCount == 0)
+  75              		.loc 1 79 0
+  76 003a 04EBC403 		add	r3, r4, r4, lsl #3
+  77 003e 9A00     		lsls	r2, r3, #2
+  78 0040 374B     		ldr	r3, .L15
+  79 0042 1344     		add	r3, r3, r2
+  80 0044 DB68     		ldr	r3, [r3, #12]
+  81 0046 002B     		cmp	r3, #0
+  82 0048 35D1     		bne	.L5
+  81:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+  83              		.loc 1 81 0
+  84 004a E200     		lsls	r2, r4, #3
+  85 004c 2244     		add	r2, r2, r4
+  86 004e 9100     		lsls	r1, r2, #2
+  87 0050 334B     		ldr	r3, .L15
+  88 0052 0B44     		add	r3, r3, r1
+  89 0054 93F90920 		ldrsb	r2, [r3, #9]
+  90 0058 1A72     		strb	r2, [r3, #8]
+  82:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             buttonArray[i].currButtonState = unpressed;
+  91              		.loc 1 82 0
+  92 005a 0022     		movs	r2, #0
+  93 005c 5A72     		strb	r2, [r3, #9]
+  94              	.L6:
+ARM GAS  /tmp/ccIpl669.s 			page 5
+
+
+ 112:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         if (buttonArray[i].prevButtonState != buttonArray[i].currButtonState)
+  95              		.loc 1 112 0
+  96 005e E200     		lsls	r2, r4, #3
+  97 0060 2244     		add	r2, r2, r4
+  98 0062 9100     		lsls	r1, r2, #2
+  99 0064 2E4B     		ldr	r3, .L15
+ 100 0066 0B44     		add	r3, r3, r1
+ 101 0068 93F90820 		ldrsb	r2, [r3, #8]
+ 102 006c 93F90930 		ldrsb	r3, [r3, #9]
+ 103 0070 9A42     		cmp	r2, r3
+ 104 0072 03D0     		beq	.L8
+ 114:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].prevButtonState == pressed &&
+ 105              		.loc 1 114 0
+ 106 0074 012A     		cmp	r2, #1
+ 107 0076 41D0     		beq	.L12
+ 108              	.L9:
+ 119:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             else if (buttonArray[i].prevButtonState == pressed &&
+ 109              		.loc 1 119 0
+ 110 0078 012A     		cmp	r2, #1
+ 111 007a 46D0     		beq	.L13
+ 112              	.L8:
+  58:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****     for(i = 0; i < NUM_BUTTONS; i++)
+ 113              		.loc 1 58 0 discriminator 2
+ 114 007c 0134     		adds	r4, r4, #1
+ 115              	.LVL4:
+ 116 007e C1E7     		b	.L2
+ 117              	.L3:
+  69:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         else if (HAL_GPIO_ReadPin(buttonArray[i].port, buttonArray[i].pin) == GPIO_PIN_RESET)
+ 118              		.loc 1 69 0
+ 119 0080 2749     		ldr	r1, .L15
+ 120 0082 E300     		lsls	r3, r4, #3
+ 121 0084 2344     		add	r3, r3, r4
+ 122 0086 9A00     		lsls	r2, r3, #2
+ 123 0088 8B18     		adds	r3, r1, r2
+ 124 008a 895A     		ldrh	r1, [r1, r2]
+ 125 008c 5868     		ldr	r0, [r3, #4]
+ 126 008e FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 127              	.LVL5:
+ 128 0092 0028     		cmp	r0, #0
+ 129 0094 D1D1     		bne	.L4
+  71:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].debounceCount > 0)
+ 130              		.loc 1 71 0
+ 131 0096 04EBC403 		add	r3, r4, r4, lsl #3
+ 132 009a 9A00     		lsls	r2, r3, #2
+ 133 009c 204B     		ldr	r3, .L15
+ 134 009e 1344     		add	r3, r3, r2
+ 135 00a0 DB68     		ldr	r3, [r3, #12]
+ 136 00a2 002B     		cmp	r3, #0
+ 137 00a4 C9DD     		ble	.L4
+  73:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].debounceCount--;
+ 138              		.loc 1 73 0
+ 139 00a6 1046     		mov	r0, r2
+ 140 00a8 1D4A     		ldr	r2, .L15
+ 141 00aa 0244     		add	r2, r2, r0
+ 142 00ac 013B     		subs	r3, r3, #1
+ 143 00ae D360     		str	r3, [r2, #12]
+  74:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].holdCount = 0;
+ARM GAS  /tmp/ccIpl669.s 			page 6
+
+
+ 144              		.loc 1 74 0
+ 145 00b0 0023     		movs	r3, #0
+ 146 00b2 5361     		str	r3, [r2, #20]
+ 147 00b4 C1E7     		b	.L4
+ 148              	.L5:
+  85:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****         else if (buttonArray[i].debounceCount == buttonArray[i].debounceThreshold)
+ 149              		.loc 1 85 0
+ 150 00b6 04EBC402 		add	r2, r4, r4, lsl #3
+ 151 00ba 9100     		lsls	r1, r2, #2
+ 152 00bc 184A     		ldr	r2, .L15
+ 153 00be 0A44     		add	r2, r2, r1
+ 154 00c0 1269     		ldr	r2, [r2, #16]
+ 155 00c2 9342     		cmp	r3, r2
+ 156 00c4 CBD1     		bne	.L6
+  88:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].holdCount == buttonArray[i].holdThreshold)
+ 157              		.loc 1 88 0
+ 158 00c6 164B     		ldr	r3, .L15
+ 159 00c8 0B44     		add	r3, r3, r1
+ 160 00ca 5A69     		ldr	r2, [r3, #20]
+ 161 00cc 9B69     		ldr	r3, [r3, #24]
+ 162 00ce 9A42     		cmp	r2, r3
+ 163 00d0 0CD0     		beq	.L14
+  96:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+ 164              		.loc 1 96 0
+ 165 00d2 E100     		lsls	r1, r4, #3
+ 166 00d4 2144     		add	r1, r1, r4
+ 167 00d6 8800     		lsls	r0, r1, #2
+ 168 00d8 114B     		ldr	r3, .L15
+ 169 00da 0344     		add	r3, r3, r0
+ 170 00dc 93F90910 		ldrsb	r1, [r3, #9]
+ 171 00e0 1972     		strb	r1, [r3, #8]
+  97:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].currButtonState = pressed;
+ 172              		.loc 1 97 0
+ 173 00e2 0121     		movs	r1, #1
+ 174 00e4 5972     		strb	r1, [r3, #9]
+  98:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].holdCount++;
+ 175              		.loc 1 98 0
+ 176 00e6 0A44     		add	r2, r2, r1
+ 177 00e8 5A61     		str	r2, [r3, #20]
+ 178 00ea B8E7     		b	.L6
+ 179              	.L14:
+  90:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].prevButtonState = buttonArray[i].currButtonState;
+ 180              		.loc 1 90 0
+ 181 00ec 0C4B     		ldr	r3, .L15
+ 182 00ee 0B44     		add	r3, r3, r1
+ 183 00f0 93F90920 		ldrsb	r2, [r3, #9]
+ 184 00f4 1A72     		strb	r2, [r3, #8]
+  91:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                 buttonArray[i].currButtonState = longPress;
+ 185              		.loc 1 91 0
+ 186 00f6 0222     		movs	r2, #2
+ 187 00f8 5A72     		strb	r2, [r3, #9]
+ 188 00fa B0E7     		b	.L6
+ 189              	.L12:
+ 114:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             if (buttonArray[i].prevButtonState == pressed &&
+ 190              		.loc 1 114 0 discriminator 1
+ 191 00fc 022B     		cmp	r3, #2
+ 192 00fe BBD1     		bne	.L9
+ARM GAS  /tmp/ccIpl669.s 			page 7
+
+
+ 117:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                     buttonArray[i].longPressCb();
+ 193              		.loc 1 117 0
+ 194 0100 074B     		ldr	r3, .L15
+ 195 0102 0B44     		add	r3, r3, r1
+ 196 0104 1B6A     		ldr	r3, [r3, #32]
+ 197 0106 9847     		blx	r3
+ 198              	.LVL6:
+ 199 0108 B8E7     		b	.L8
+ 200              	.L13:
+ 119:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****             else if (buttonArray[i].prevButtonState == pressed &&
+ 201              		.loc 1 119 0 discriminator 1
+ 202 010a 002B     		cmp	r3, #0
+ 203 010c B6D1     		bne	.L8
+ 122:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/button.c ****                     buttonArray[i].pressedCb();
+ 204              		.loc 1 122 0
+ 205 010e 04EBC403 		add	r3, r4, r4, lsl #3
+ 206 0112 9A00     		lsls	r2, r3, #2
+ 207 0114 024B     		ldr	r3, .L15
+ 208 0116 1344     		add	r3, r3, r2
+ 209 0118 DB69     		ldr	r3, [r3, #28]
+ 210 011a 9847     		blx	r3
+ 211              	.LVL7:
+ 212 011c AEE7     		b	.L8
+ 213              	.L16:
+ 214 011e 00BF     		.align	2
+ 215              	.L15:
+ 216 0120 00000000 		.word	.LANCHOR0
+ 217              		.cfi_endproc
+ 218              	.LFE72:
+ 220              		.section	.data.buttonArray,"aw",%progbits
+ 221              		.align	2
+ 222              		.set	.LANCHOR0,. + 0
+ 225              	buttonArray:
+ 226 0000 0020     		.short	8192
+ 227 0002 0000     		.space	2
+ 228 0004 00080240 		.word	1073874944
+ 229 0008 FF       		.byte	-1
+ 230 0009 FF       		.byte	-1
+ 231 000a 0000     		.space	2
+ 232 000c 00000000 		.word	0
+ 233 0010 0A000000 		.word	10
+ 234 0014 00000000 		.word	0
+ 235 0018 C8000000 		.word	200
+ 236 001c 00000000 		.word	speedUp
+ 237 0020 00000000 		.word	led_test2
+ 238              		.text
+ 239              	.Letext0:
+ 240              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+ 241              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+ 242              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+ 243              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 244              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 245              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 246              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ARM GAS  /tmp/ccIpl669.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 button.c
+     /tmp/ccIpl669.s:16     .text.button_updateButton:0000000000000000 $t
+     /tmp/ccIpl669.s:23     .text.button_updateButton:0000000000000000 button_updateButton
+     /tmp/ccIpl669.s:216    .text.button_updateButton:0000000000000120 $d
+     /tmp/ccIpl669.s:221    .data.buttonArray:0000000000000000 $d
+     /tmp/ccIpl669.s:225    .data.buttonArray:0000000000000000 buttonArray
+
+UNDEFINED SYMBOLS
+HAL_GPIO_ReadPin
+speedUp
+led_test2

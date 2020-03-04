@@ -23,7 +23,9 @@
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_flash.h \
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_flash_ex.h \
  /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr.h \
- /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h
+ /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h \
+ /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim.h \
+ /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim_ex.h
 
 /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/Include/stm32f2xx.h:
 
@@ -72,3 +74,7 @@
 /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr.h:
 
 /mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_pwr_ex.h:
+
+/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim.h:
+
+/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/stm32f2xx_hal_tim_ex.h:

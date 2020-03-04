@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stm32f207xx.h": "c",
+        "led.h": "c",
+        "button.h": "c",
+        "freertos.h": "c"
+    }
+}

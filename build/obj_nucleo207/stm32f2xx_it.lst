@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc0EpWJt.s 			page 1
+ARM GAS  /tmp/cclKavzL.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -23,7 +23,7 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   20              		.thumb_func
   21              		.fpu softvfp
   23              	NMI_Handler:
-  24              	.LFB72:
+  24              	.LFB77:
   25              		.file 1 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c"
    1:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN Header */
    2:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
@@ -48,92 +48,95 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   21:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Includes ------------------------------------------------------------------*/
   22:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** #include "main.h"
   23:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** #include "stm32f2xx_it.h"
-  24:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private includes ----------------------------------------------------------*/
-  25:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN Includes */
-  26:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END Includes */
-  27:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  28:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private typedef -----------------------------------------------------------*/
-  29:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN TD */
-  30:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  31:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END TD */
+  24:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** #include "FreeRTOS.h"
+  25:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** #include "task.h"
+  26:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private includes ----------------------------------------------------------*/
+  27:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN Includes */
+  28:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END Includes */
+  29:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  30:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private typedef -----------------------------------------------------------*/
+  31:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN TD */
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  /tmp/cc0EpWJt.s 			page 2
+  33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END TD */
+ARM GAS  /tmp/cclKavzL.s 			page 2
 
 
-  34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PD */
-  35:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****  
-  36:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PD */
-  37:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  38:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private macro -------------------------------------------------------------*/
-  39:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PM */
-  40:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  41:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PM */
+  34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  35:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private define ------------------------------------------------------------*/
+  36:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PD */
+  37:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****  
+  38:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PD */
+  39:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  40:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private macro -------------------------------------------------------------*/
+  41:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PM */
   42:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  43:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private variables ---------------------------------------------------------*/
-  44:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PV */
-  45:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  46:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PV */
+  43:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PM */
+  44:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  45:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private variables ---------------------------------------------------------*/
+  46:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PV */
   47:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  48:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private function prototypes -----------------------------------------------*/
-  49:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PFP */
-  50:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  51:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PFP */
+  48:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PV */
+  49:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  50:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private function prototypes -----------------------------------------------*/
+  51:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN PFP */
   52:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  53:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private user code ---------------------------------------------------------*/
-  54:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN 0 */
-  55:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  56:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END 0 */
+  53:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END PFP */
+  54:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  55:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Private user code ---------------------------------------------------------*/
+  56:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN 0 */
   57:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  58:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* External variables --------------------------------------------------------*/
+  58:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END 0 */
   59:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  60:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN EV */
-  61:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  62:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END EV */
-  63:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  64:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
-  65:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /*           Cortex-M3 Processor Interruption and Exception Handlers          */ 
-  66:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
-  67:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
-  68:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Non maskable interrupt.
-  69:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
-  70:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void NMI_Handler(void)
-  71:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
-  26              		.loc 1 71 0
+  60:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* External variables --------------------------------------------------------*/
+  61:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** extern TIM_HandleTypeDef htim1;
+  62:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  63:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE BEGIN EV */
+  64:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  65:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* USER CODE END EV */
+  66:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  67:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
+  68:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /*           Cortex-M3 Processor Interruption and Exception Handlers          */ 
+  69:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
+  70:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+  71:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Non maskable interrupt.
+  72:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+  73:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void NMI_Handler(void)
+  74:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+  26              		.loc 1 74 0
   27              		.cfi_startproc
   28              		@ args = 0, pretend = 0, frame = 0
   29              		@ frame_needed = 0, uses_anonymous_args = 0
   30              		@ link register save eliminated.
-  72:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
-  73:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  74:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
-  75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+  75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
   76:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  77:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
-  78:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
-  31              		.loc 1 78 0
+  77:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
+  78:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+  79:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  80:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
+  81:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+  31              		.loc 1 81 0
   32 0000 7047     		bx	lr
   33              		.cfi_endproc
-  34              	.LFE72:
+  34              	.LFE77:
+ARM GAS  /tmp/cclKavzL.s 			page 3
+
+
   36              		.section	.text.HardFault_Handler,"ax",%progbits
   37              		.align	1
   38              		.global	HardFault_Handler
-ARM GAS  /tmp/cc0EpWJt.s 			page 3
-
-
   39              		.syntax unified
   40              		.thumb
   41              		.thumb_func
   42              		.fpu softvfp
   44              	HardFault_Handler:
-  45              	.LFB73:
-  79:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  80:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
-  81:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Hard fault interrupt.
-  82:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
-  83:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void HardFault_Handler(void)
-  84:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
-  46              		.loc 1 84 0
+  45              	.LFB78:
+  82:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  83:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+  84:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Hard fault interrupt.
+  85:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+  86:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void HardFault_Handler(void)
+  87:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+  46              		.loc 1 87 0
   47              		.cfi_startproc
   48              		@ Volatile: function does not return.
   49              		@ args = 0, pretend = 0, frame = 0
@@ -142,7 +145,7 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   52              	.L3:
   53 0000 FEE7     		b	.L3
   54              		.cfi_endproc
-  55              	.LFE73:
+  55              	.LFE78:
   57              		.section	.text.MemManage_Handler,"ax",%progbits
   58              		.align	1
   59              		.global	MemManage_Handler
@@ -151,23 +154,23 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   62              		.thumb_func
   63              		.fpu softvfp
   65              	MemManage_Handler:
-  66              	.LFB74:
-  85:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
-  86:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  87:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
-  88:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
-  89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
-  90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-  91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
-  92:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
-  93:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
-  94:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
-  95:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
-  96:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Memory management fault.
-  97:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
-  98:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void MemManage_Handler(void)
-  99:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
-  67              		.loc 1 99 0
+  66              	.LFB79:
+  88:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
+  89:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  90:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
+  91:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
+  92:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
+  93:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+  94:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
+  95:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
+  96:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+  97:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+  98:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+  99:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Memory management fault.
+ 100:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+ 101:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void MemManage_Handler(void)
+ 102:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+  67              		.loc 1 102 0
   68              		.cfi_startproc
   69              		@ Volatile: function does not return.
   70              		@ args = 0, pretend = 0, frame = 0
@@ -175,12 +178,12 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   72              		@ link register save eliminated.
   73              	.L5:
   74 0000 FEE7     		b	.L5
+ARM GAS  /tmp/cclKavzL.s 			page 4
+
+
   75              		.cfi_endproc
-  76              	.LFE74:
+  76              	.LFE79:
   78              		.section	.text.BusFault_Handler,"ax",%progbits
-ARM GAS  /tmp/cc0EpWJt.s 			page 4
-
-
   79              		.align	1
   80              		.global	BusFault_Handler
   81              		.syntax unified
@@ -188,23 +191,23 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   83              		.thumb_func
   84              		.fpu softvfp
   86              	BusFault_Handler:
-  87              	.LFB75:
- 100:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
- 101:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 102:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
- 103:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
- 104:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
- 105:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
- 106:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
- 107:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
- 108:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 109:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 110:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 111:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Pre-fetch fault, memory access fault.
- 112:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 113:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void BusFault_Handler(void)
- 114:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
-  88              		.loc 1 114 0
+  87              	.LFB80:
+ 103:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
+ 104:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 105:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
+ 106:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
+ 107:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
+ 108:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
+ 109:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
+ 110:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
+ 111:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+ 112:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 113:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+ 114:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Pre-fetch fault, memory access fault.
+ 115:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+ 116:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void BusFault_Handler(void)
+ 117:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+  88              		.loc 1 117 0
   89              		.cfi_startproc
   90              		@ Volatile: function does not return.
   91              		@ args = 0, pretend = 0, frame = 0
@@ -213,7 +216,7 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
   94              	.L7:
   95 0000 FEE7     		b	.L7
   96              		.cfi_endproc
-  97              	.LFE75:
+  97              	.LFE80:
   99              		.section	.text.UsageFault_Handler,"ax",%progbits
  100              		.align	1
  101              		.global	UsageFault_Handler
@@ -222,26 +225,26 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
  104              		.thumb_func
  105              		.fpu softvfp
  107              	UsageFault_Handler:
- 108              	.LFB76:
- 115:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN BusFault_IRQn 0 */
- 116:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 117:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
- 118:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
- 119:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
- 120:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
- 121:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
- 122:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
- 123:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 124:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 125:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 126:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Undefined instruction or illegal state.
- 127:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 128:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void UsageFault_Handler(void)
- 129:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
-ARM GAS  /tmp/cc0EpWJt.s 			page 5
+ 108              	.LFB81:
+ 118:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN BusFault_IRQn 0 */
+ 119:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 120:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
+ 121:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
+ 122:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
+ 123:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
+ 124:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
+ 125:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
+ 126:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+ 127:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 128:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+ 129:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Undefined instruction or illegal state.
+ARM GAS  /tmp/cclKavzL.s 			page 5
 
 
- 109              		.loc 1 129 0
+ 130:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+ 131:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void UsageFault_Handler(void)
+ 132:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+ 109              		.loc 1 132 0
  110              		.cfi_startproc
  111              		@ Volatile: function does not return.
  112              		@ args = 0, pretend = 0, frame = 0
@@ -250,184 +253,136 @@ ARM GAS  /tmp/cc0EpWJt.s 			page 1
  115              	.L9:
  116 0000 FEE7     		b	.L9
  117              		.cfi_endproc
- 118              	.LFE76:
- 120              		.section	.text.SVC_Handler,"ax",%progbits
+ 118              	.LFE81:
+ 120              		.section	.text.DebugMon_Handler,"ax",%progbits
  121              		.align	1
- 122              		.global	SVC_Handler
+ 122              		.global	DebugMon_Handler
  123              		.syntax unified
  124              		.thumb
  125              		.thumb_func
  126              		.fpu softvfp
- 128              	SVC_Handler:
- 129              	.LFB77:
- 130:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
- 131:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 132:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
- 133:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
- 134:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
- 135:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
- 136:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
- 137:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
- 138:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 139:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 140:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 141:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles System service call via SWI instruction.
- 142:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 143:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void SVC_Handler(void)
- 144:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
- 130              		.loc 1 144 0
+ 128              	DebugMon_Handler:
+ 129              	.LFB82:
+ 133:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
+ 134:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 135:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
+ 136:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   while (1)
+ 137:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   {
+ 138:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
+ 139:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
+ 140:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   }
+ 141:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+ 142:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 143:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+ 144:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Debug monitor.
+ 145:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+ 146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void DebugMon_Handler(void)
+ 147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+ 130              		.loc 1 147 0
  131              		.cfi_startproc
  132              		@ args = 0, pretend = 0, frame = 0
  133              		@ frame_needed = 0, uses_anonymous_args = 0
  134              		@ link register save eliminated.
- 145:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
- 146:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 147:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END SVCall_IRQn 0 */
- 148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 1 */
+ 148:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
  149:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 150:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END SVCall_IRQn 1 */
- 151:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 135              		.loc 1 151 0
+ 150:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 0 */
+ 151:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 1 */
+ 152:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 153:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 1 */
+ 154:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+ 135              		.loc 1 154 0
  136 0000 7047     		bx	lr
  137              		.cfi_endproc
- 138              	.LFE77:
- 140              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 138              	.LFE82:
+ 140              		.section	.text.TIM1_UP_TIM10_IRQHandler,"ax",%progbits
  141              		.align	1
- 142              		.global	DebugMon_Handler
+ 142              		.global	TIM1_UP_TIM10_IRQHandler
  143              		.syntax unified
+ARM GAS  /tmp/cclKavzL.s 			page 6
+
+
  144              		.thumb
  145              		.thumb_func
  146              		.fpu softvfp
-ARM GAS  /tmp/cc0EpWJt.s 			page 6
-
-
- 148              	DebugMon_Handler:
- 149              	.LFB78:
- 152:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 153:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 154:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Debug monitor.
- 155:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 156:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void DebugMon_Handler(void)
- 157:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
- 150              		.loc 1 157 0
+ 148              	TIM1_UP_TIM10_IRQHandler:
+ 149              	.LFB83:
+ 155:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 156:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
+ 157:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* STM32F2xx Peripheral Interrupt Handlers                                    */
+ 158:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
+ 159:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* For the available peripheral interrupt handler names,                      */
+ 160:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /* please refer to the startup file (startup_stm32f2xx.s).                    */
+ 161:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /******************************************************************************/
+ 162:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 163:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
+ 164:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.
+ 165:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
+ 166:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void TIM1_UP_TIM10_IRQHandler(void)
+ 167:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
+ 150              		.loc 1 167 0
  151              		.cfi_startproc
  152              		@ args = 0, pretend = 0, frame = 0
  153              		@ frame_needed = 0, uses_anonymous_args = 0
- 154              		@ link register save eliminated.
- 158:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
- 159:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 160:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 0 */
- 161:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 1 */
- 162:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 163:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 1 */
- 164:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 155              		.loc 1 164 0
- 156 0000 7047     		bx	lr
- 157              		.cfi_endproc
- 158              	.LFE78:
- 160              		.section	.text.PendSV_Handler,"ax",%progbits
- 161              		.align	1
- 162              		.global	PendSV_Handler
- 163              		.syntax unified
- 164              		.thumb
- 165              		.thumb_func
- 166              		.fpu softvfp
- 168              	PendSV_Handler:
- 169              	.LFB79:
- 165:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 166:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 167:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles Pendable request for system service.
- 168:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 169:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void PendSV_Handler(void)
- 170:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
- 170              		.loc 1 170 0
- 171              		.cfi_startproc
- 172              		@ args = 0, pretend = 0, frame = 0
- 173              		@ frame_needed = 0, uses_anonymous_args = 0
- 174              		@ link register save eliminated.
- 171:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 0 */
- 172:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END PendSV_IRQn 0 */
- 174:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 1 */
- 175:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 176:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END PendSV_IRQn 1 */
- 177:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 175              		.loc 1 177 0
- 176 0000 7047     		bx	lr
- 177              		.cfi_endproc
- 178              	.LFE79:
- 180              		.section	.text.SysTick_Handler,"ax",%progbits
- 181              		.align	1
-ARM GAS  /tmp/cc0EpWJt.s 			page 7
+ 154 0000 08B5     		push	{r3, lr}
+ 155              	.LCFI0:
+ 156              		.cfi_def_cfa_offset 8
+ 157              		.cfi_offset 3, -8
+ 158              		.cfi_offset 14, -4
+ 168:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
+ 169:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 170:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END TIM1_UP_TIM10_IRQn 0 */
+ 171:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   HAL_TIM_IRQHandler(&htim1);
+ 159              		.loc 1 171 0
+ 160 0002 0248     		ldr	r0, .L13
+ 161 0004 FFF7FEFF 		bl	HAL_TIM_IRQHandler
+ 162              	.LVL0:
+ 172:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
+ 173:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
+ 174:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+ 175:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
+ 163              		.loc 1 175 0
+ 164 0008 08BD     		pop	{r3, pc}
+ 165              	.L14:
+ 166 000a 00BF     		.align	2
+ 167              	.L13:
+ 168 000c 00000000 		.word	htim1
+ 169              		.cfi_endproc
+ 170              	.LFE83:
+ 172              		.text
+ 173              	.Letext0:
+ 174              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+ 175              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+ 176              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+ 177              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 178              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 179              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 180              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 181              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ARM GAS  /tmp/cclKavzL.s 			page 7
 
 
- 182              		.global	SysTick_Handler
- 183              		.syntax unified
- 184              		.thumb
- 185              		.thumb_func
- 186              		.fpu softvfp
- 188              	SysTick_Handler:
- 189              	.LFB80:
- 178:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 179:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** /**
- 180:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   * @brief This function handles System tick timer.
- 181:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   */
- 182:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** void SysTick_Handler(void)
- 183:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** {
- 190              		.loc 1 183 0
- 191              		.cfi_startproc
- 192              		@ args = 0, pretend = 0, frame = 0
- 193              		@ frame_needed = 0, uses_anonymous_args = 0
- 194 0000 08B5     		push	{r3, lr}
- 195              	.LCFI0:
- 196              		.cfi_def_cfa_offset 8
- 197              		.cfi_offset 3, -8
- 198              		.cfi_offset 14, -4
- 184:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
- 185:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 186:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
- 187:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   HAL_IncTick();
- 199              		.loc 1 187 0
- 200 0002 FFF7FEFF 		bl	HAL_IncTick
- 201              	.LVL0:
- 188:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
- 189:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** 
- 190:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
- 191:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_it.c **** }
- 202              		.loc 1 191 0
- 203 0006 08BD     		pop	{r3, pc}
- 204              		.cfi_endproc
- 205              	.LFE80:
- 207              		.text
- 208              	.Letext0:
- 209              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
- 210              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
- 211              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
- 212              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
- 213              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
-ARM GAS  /tmp/cc0EpWJt.s 			page 8
+ 182              		.file 10 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
+ARM GAS  /tmp/cclKavzL.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f2xx_it.c
-     /tmp/cc0EpWJt.s:16     .text.NMI_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
-     /tmp/cc0EpWJt.s:37     .text.HardFault_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:44     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-     /tmp/cc0EpWJt.s:58     .text.MemManage_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:65     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-     /tmp/cc0EpWJt.s:79     .text.BusFault_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:86     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-     /tmp/cc0EpWJt.s:100    .text.UsageFault_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:107    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-     /tmp/cc0EpWJt.s:121    .text.SVC_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:128    .text.SVC_Handler:0000000000000000 SVC_Handler
-     /tmp/cc0EpWJt.s:141    .text.DebugMon_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:148    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-     /tmp/cc0EpWJt.s:161    .text.PendSV_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:168    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-     /tmp/cc0EpWJt.s:181    .text.SysTick_Handler:0000000000000000 $t
-     /tmp/cc0EpWJt.s:188    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/cclKavzL.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/cclKavzL.s:37     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:44     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/cclKavzL.s:58     .text.MemManage_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:65     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/cclKavzL.s:79     .text.BusFault_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:86     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/cclKavzL.s:100    .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:107    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/cclKavzL.s:121    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/cclKavzL.s:128    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/cclKavzL.s:141    .text.TIM1_UP_TIM10_IRQHandler:0000000000000000 $t
+     /tmp/cclKavzL.s:148    .text.TIM1_UP_TIM10_IRQHandler:0000000000000000 TIM1_UP_TIM10_IRQHandler
+     /tmp/cclKavzL.s:168    .text.TIM1_UP_TIM10_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
-HAL_IncTick
+HAL_TIM_IRQHandler
+htim1

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7PgrdF.s 			page 1
+ARM GAS  /tmp/ccmhVaTV.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7PgrdF.s 			page 1
   31:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** /* USER CODE END TD */
   32:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
   33:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  /tmp/cc7PgrdF.s 			page 2
+ARM GAS  /tmp/ccmhVaTV.s 			page 2
 
 
   34:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** /* USER CODE BEGIN Define */
@@ -97,77 +97,89 @@ ARM GAS  /tmp/cc7PgrdF.s 			page 1
   27              		.cfi_startproc
   28              		@ args = 0, pretend = 0, frame = 8
   29              		@ frame_needed = 0, uses_anonymous_args = 0
-  30              		@ link register save eliminated.
-  31 0000 82B0     		sub	sp, sp, #8
-  32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 8
-  34              	.LBB2:
+  30 0000 00B5     		push	{lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 4
+  33              		.cfi_offset 14, -4
+  34 0002 83B0     		sub	sp, sp, #12
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_offset 16
+  37              	.LBB2:
   66:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
   67:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
   68:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
   69:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
   70:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
-  35              		.loc 1 70 0
-  36 0002 0021     		movs	r1, #0
-  37 0004 0091     		str	r1, [sp]
-  38 0006 0B4B     		ldr	r3, .L3
-  39 0008 5A6C     		ldr	r2, [r3, #68]
-  40 000a 42F48042 		orr	r2, r2, #16384
-  41 000e 5A64     		str	r2, [r3, #68]
-  42 0010 5A6C     		ldr	r2, [r3, #68]
-  43 0012 02F48042 		and	r2, r2, #16384
-  44 0016 0092     		str	r2, [sp]
-  45 0018 009A     		ldr	r2, [sp]
-ARM GAS  /tmp/cc7PgrdF.s 			page 3
+  38              		.loc 1 70 0
+  39 0004 0022     		movs	r2, #0
+  40 0006 0092     		str	r2, [sp]
+  41 0008 0D4B     		ldr	r3, .L3
+  42 000a 596C     		ldr	r1, [r3, #68]
+  43 000c 41F48041 		orr	r1, r1, #16384
+  44 0010 5964     		str	r1, [r3, #68]
+  45 0012 596C     		ldr	r1, [r3, #68]
+ARM GAS  /tmp/ccmhVaTV.s 			page 3
 
 
-  46              	.LBE2:
-  47              	.LBB3:
+  46 0014 01F48041 		and	r1, r1, #16384
+  47 0018 0091     		str	r1, [sp]
+  48 001a 0099     		ldr	r1, [sp]
+  49              	.LBE2:
+  50              	.LBB3:
   71:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
-  48              		.loc 1 71 0
-  49 001a 0191     		str	r1, [sp, #4]
-  50 001c 1A6C     		ldr	r2, [r3, #64]
-  51 001e 42F08052 		orr	r2, r2, #268435456
-  52 0022 1A64     		str	r2, [r3, #64]
-  53 0024 1B6C     		ldr	r3, [r3, #64]
-  54 0026 03F08053 		and	r3, r3, #268435456
-  55 002a 0193     		str	r3, [sp, #4]
-  56 002c 019B     		ldr	r3, [sp, #4]
-  57              	.LBE3:
+  51              		.loc 1 71 0
+  52 001c 0192     		str	r2, [sp, #4]
+  53 001e 196C     		ldr	r1, [r3, #64]
+  54 0020 41F08051 		orr	r1, r1, #268435456
+  55 0024 1964     		str	r1, [r3, #64]
+  56 0026 1B6C     		ldr	r3, [r3, #64]
+  57 0028 03F08053 		and	r3, r3, #268435456
+  58 002c 0193     		str	r3, [sp, #4]
+  59 002e 019B     		ldr	r3, [sp, #4]
+  60              	.LBE3:
   72:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
   73:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* System interrupt init*/
-  74:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
-  75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
+  74:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* PendSV_IRQn interrupt configuration */
+  75:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   HAL_NVIC_SetPriority(PendSV_IRQn, 15, 0);
+  61              		.loc 1 75 0
+  62 0030 0F21     		movs	r1, #15
+  63 0032 6FF00100 		mvn	r0, #1
+  64 0036 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  65              	.LVL0:
   76:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
-  77:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
-  78:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** }
-  58              		.loc 1 78 0
-  59 002e 02B0     		add	sp, sp, #8
-  60              	.LCFI1:
-  61              		.cfi_def_cfa_offset 0
-  62              		@ sp needed
-  63 0030 7047     		bx	lr
-  64              	.L4:
-  65 0032 00BF     		.align	2
-  66              	.L3:
-  67 0034 00380240 		.word	1073887232
-  68              		.cfi_endproc
-  69              	.LFE72:
-  71              		.text
-  72              	.Letext0:
-  73              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
-  74              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
-  75              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
-  76              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
-  77              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
-  78              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
-ARM GAS  /tmp/cc7PgrdF.s 			page 4
+  77:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
+  78:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** 
+  79:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
+  80:/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Src/stm32f2xx_hal_msp.c **** }
+  66              		.loc 1 80 0
+  67 003a 03B0     		add	sp, sp, #12
+  68              	.LCFI2:
+  69              		.cfi_def_cfa_offset 4
+  70              		@ sp needed
+  71 003c 5DF804FB 		ldr	pc, [sp], #4
+  72              	.L4:
+  73              		.align	2
+  74              	.L3:
+  75 0040 00380240 		.word	1073887232
+  76              		.cfi_endproc
+  77              	.LFE72:
+  79              		.text
+  80              	.Letext0:
+  81              		.file 2 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+  82              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+  83              		.file 4 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+  84              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+  85              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+  86              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+  87              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ARM GAS  /tmp/ccmhVaTV.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f2xx_hal_msp.c
-     /tmp/cc7PgrdF.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/cc7PgrdF.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/cc7PgrdF.s:67     .text.HAL_MspInit:0000000000000034 $d
+     /tmp/ccmhVaTV.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccmhVaTV.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccmhVaTV.s:75     .text.HAL_MspInit:0000000000000040 $d
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriority

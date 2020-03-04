@@ -1,0 +1,1051 @@
+ARM GAS  /tmp/ccukppHn.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"led.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.led_On,"ax",%progbits
+  16              		.align	1
+  17              		.global	led_On
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	led_On:
+  24              	.LFB72:
+  25              		.file 1 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c"
+   1:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "led.h"
+   2:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "main.h"
+   3:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include <stdint.h>
+   4:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include <string.h>
+   5:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include <assert.h>
+   6:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #include "stm32f207xx.h"
+   7:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+   8:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+   9:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #define NUM_LEDS 3
+  10:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #define NUM_COLLS 1
+  11:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** #define BLINK_THRESHOLD 100
+  12:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  13:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef enum {
+  14:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledRGB_Red = 0,
+  15:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledRGB_Green,
+  16:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledRGB_Blue,
+  17:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } ledRGB_t;
+  18:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  19:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  20:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //current given behavior for led collection
+  21:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef enum {
+  22:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledBehavior_Drive = 0x0,
+  23:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledBehavior_Blinking 
+  24:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } ledBehavior_t;
+  25:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  26:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //current state of the led collection
+  27:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef enum {
+  28:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledCollectionState_Off = 0x0,
+  29:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledCollectionState_On
+  30:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } ledCollectionState_t;
+  31:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  32:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //single led structure
+  33:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef struct led {
+ARM GAS  /tmp/ccukppHn.s 			page 2
+
+
+  34:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     uint16_t pin; //GPIO Pin of led
+  35:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     GPIO_TypeDef *port; //GPIO port of led
+  36:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } led_t;
+  37:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  38:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //data stored for blinking led collection
+  39:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** typedef struct blinkInfo {
+  40:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     long blinkCount; //current number of cycles to blink (duration)
+  41:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     long blinkThreshold; //max number of cycles to blink
+  42:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     int numBlinks; //how many times the led will blink
+  43:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** } blinkInfo_t;
+  44:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  45:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //struct for collection of rgb leds
+  46:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** struct collection {
+  47:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_t leds[NUM_LEDS]; //leds in the collection
+  48:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledColors_t color; //current color of collection
+  49:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     blinkInfo_t blink; //blink info for collection
+  50:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledCollectionState_t state; //current on/off state of collection
+  51:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     ledBehavior_t behavior; //driving or blinking
+  52:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** };
+  53:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  54:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  55:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** static Collection_t collArray[NUM_COLLS] = {
+  56:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     [ledCollections_1] =
+  57:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  58:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .leds = {
+  59:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     [ledRGB_Red] = 
+  60:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     {
+  61:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .pin = ledR_Pin,
+  62:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .port = ledR_GPIO_Port
+  63:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     },
+  64:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  65:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     [ledRGB_Green] = 
+  66:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     {
+  67:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .pin = ledG_Pin,
+  68:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .port = ledG_GPIO_Port
+  69:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     },
+  70:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  71:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     [ledRGB_Blue] = 
+  72:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     {
+  73:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .pin = ledB_Pin,
+  74:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                         .port = ledB_GPIO_Port
+  75:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                     }
+  76:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****                 },
+  77:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .color = ledColors_Blue,
+  78:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .blink = {.blinkCount = 0, .blinkThreshold = BLINK_THRESHOLD, .numBlinks = 10},
+  79:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .state = ledCollectionState_Off,
+  80:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         .behavior = ledBehavior_Drive
+  81:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+  82:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** };
+  83:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  84:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //test variable
+  85:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** static ledColors_t test = ledColors_Red;
+  86:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  87:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+  88:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //turn on the led indefinitely
+  89:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_On(ledCollections_t index)
+  90:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ARM GAS  /tmp/ccukppHn.s 			page 3
+
+
+  26              		.loc 1 90 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              	.LVL0:
+  31 0000 70B5     		push	{r4, r5, r6, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 4, -16
+  35              		.cfi_offset 5, -12
+  36              		.cfi_offset 6, -8
+  37              		.cfi_offset 14, -4
+  38 0002 0646     		mov	r6, r0
+  39              	.LVL1:
+  91:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     Collection_t *coll = &collArray[index];
+  92:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     int i;
+  93:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     unsigned mask = 0x1;
+  40              		.loc 1 93 0
+  41 0004 0125     		movs	r5, #1
+  94:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     for(i = 0; i < NUM_LEDS; i++)
+  42              		.loc 1 94 0
+  43 0006 0024     		movs	r4, #0
+  44 0008 01E0     		b	.L2
+  45              	.LVL2:
+  46              	.L3:
+  95:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+  96:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         //if there is a 1 in the bit position of the color, turn on that pin
+  97:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         if ((coll->color & mask) > 0)
+  98:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+  99:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             HAL_GPIO_WritePin(coll->leds[i].port, coll->leds[i].pin, SET);
+ 100:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+ 101:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 102:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         //shift mask for next bit in color
+ 103:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         mask <<= 1;
+  47              		.loc 1 103 0 discriminator 2
+  48 000a 6D00     		lsls	r5, r5, #1
+  49              	.LVL3:
+  94:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     for(i = 0; i < NUM_LEDS; i++)
+  50              		.loc 1 94 0 discriminator 2
+  51 000c 0134     		adds	r4, r4, #1
+  52              	.LVL4:
+  53              	.L2:
+  94:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     for(i = 0; i < NUM_LEDS; i++)
+  54              		.loc 1 94 0 is_stmt 0 discriminator 1
+  55 000e 022C     		cmp	r4, #2
+  56 0010 13DC     		bgt	.L6
+  97:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+  57              		.loc 1 97 0 is_stmt 1
+  58 0012 0E4A     		ldr	r2, .L7
+  59 0014 2C23     		movs	r3, #44
+  60 0016 03FB0623 		mla	r3, r3, r6, r2
+  61 001a 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+  62 001c 2B42     		tst	r3, r5
+  63 001e F4D0     		beq	.L3
+  99:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+  64              		.loc 1 99 0
+  65 0020 1146     		mov	r1, r2
+ARM GAS  /tmp/ccukppHn.s 			page 4
+
+
+  66 0022 2C23     		movs	r3, #44
+  67 0024 03FB06F3 		mul	r3, r3, r6
+  68 0028 03EBC403 		add	r3, r3, r4, lsl #3
+  69 002c D018     		adds	r0, r2, r3
+  70 002e 0122     		movs	r2, #1
+  71 0030 C95A     		ldrh	r1, [r1, r3]
+  72 0032 4068     		ldr	r0, [r0, #4]
+  73 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  74              	.LVL5:
+  75 0038 E7E7     		b	.L3
+  76              	.L6:
+ 104:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 105:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     coll->state = ledCollectionState_On;
+  77              		.loc 1 105 0
+  78 003a 044B     		ldr	r3, .L7
+  79 003c 2C22     		movs	r2, #44
+  80 003e 02FB0636 		mla	r6, r2, r6, r3
+  81              	.LVL6:
+  82 0042 0123     		movs	r3, #1
+  83 0044 86F82830 		strb	r3, [r6, #40]
+ 106:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 107:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+  84              		.loc 1 107 0
+  85 0048 70BD     		pop	{r4, r5, r6, pc}
+  86              	.LVL7:
+  87              	.L8:
+  88 004a 00BF     		.align	2
+  89              	.L7:
+  90 004c 00000000 		.word	.LANCHOR0
+  91              		.cfi_endproc
+  92              	.LFE72:
+  94              		.section	.text.led_Off,"ax",%progbits
+  95              		.align	1
+  96              		.global	led_Off
+  97              		.syntax unified
+  98              		.thumb
+  99              		.thumb_func
+ 100              		.fpu softvfp
+ 102              	led_Off:
+ 103              	.LFB73:
+ 108:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 109:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //turns off leds in a collection indefinitely
+ 110:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_Off (ledCollections_t index)
+ 111:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 104              		.loc 1 111 0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108              	.LVL8:
+ 109 0000 38B5     		push	{r3, r4, r5, lr}
+ 110              	.LCFI1:
+ 111              		.cfi_def_cfa_offset 16
+ 112              		.cfi_offset 3, -16
+ 113              		.cfi_offset 4, -12
+ 114              		.cfi_offset 5, -8
+ 115              		.cfi_offset 14, -4
+ 116 0002 0546     		mov	r5, r0
+ARM GAS  /tmp/ccukppHn.s 			page 5
+
+
+ 117              	.LVL9:
+ 112:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     Collection_t *coll = &collArray[index];
+ 113:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     int i;
+ 114:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //set all leds to off state
+ 115:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     for(i = 0; i < NUM_LEDS; i++)
+ 118              		.loc 1 115 0
+ 119 0004 0024     		movs	r4, #0
+ 120 0006 0CE0     		b	.L10
+ 121              	.LVL10:
+ 122              	.L11:
+ 116:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 117:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         HAL_GPIO_WritePin(coll->leds[i].port, coll->leds[i].pin, RESET);
+ 123              		.loc 1 117 0 discriminator 3
+ 124 0008 0B49     		ldr	r1, .L13
+ 125 000a 2C23     		movs	r3, #44
+ 126 000c 03FB05F3 		mul	r3, r3, r5
+ 127 0010 03EBC403 		add	r3, r3, r4, lsl #3
+ 128 0014 C818     		adds	r0, r1, r3
+ 129 0016 0022     		movs	r2, #0
+ 130 0018 C95A     		ldrh	r1, [r1, r3]
+ 131 001a 4068     		ldr	r0, [r0, #4]
+ 132 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 133              	.LVL11:
+ 115:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 134              		.loc 1 115 0 discriminator 3
+ 135 0020 0134     		adds	r4, r4, #1
+ 136              	.LVL12:
+ 137              	.L10:
+ 115:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 138              		.loc 1 115 0 is_stmt 0 discriminator 1
+ 139 0022 022C     		cmp	r4, #2
+ 140 0024 F0DD     		ble	.L11
+ 118:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 119:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //update states
+ 120:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     coll->state = ledCollectionState_Off;
+ 141              		.loc 1 120 0 is_stmt 1
+ 142 0026 044B     		ldr	r3, .L13
+ 143 0028 2C22     		movs	r2, #44
+ 144 002a 02FB0535 		mla	r5, r2, r5, r3
+ 145              	.LVL13:
+ 146 002e 0023     		movs	r3, #0
+ 147 0030 85F82830 		strb	r3, [r5, #40]
+ 121:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 122:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 148              		.loc 1 122 0
+ 149 0034 38BD     		pop	{r3, r4, r5, pc}
+ 150              	.LVL14:
+ 151              	.L14:
+ 152 0036 00BF     		.align	2
+ 153              	.L13:
+ 154 0038 00000000 		.word	.LANCHOR0
+ 155              		.cfi_endproc
+ 156              	.LFE73:
+ 158              		.section	.text.led_ColorChange,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	led_ColorChange
+ 161              		.syntax unified
+ARM GAS  /tmp/ccukppHn.s 			page 6
+
+
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.fpu softvfp
+ 166              	led_ColorChange:
+ 167              	.LFB74:
+ 123:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 124:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_ColorChange (ledCollections_t index, ledColors_t newColor)
+ 125:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 168              		.loc 1 125 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              	.LVL15:
+ 173 0000 08B5     		push	{r3, lr}
+ 174              	.LCFI2:
+ 175              		.cfi_def_cfa_offset 8
+ 176              		.cfi_offset 3, -8
+ 177              		.cfi_offset 14, -4
+ 126:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     assert(newColor >= ledColors_Red);
+ 178              		.loc 1 126 0
+ 179 0002 31B1     		cbz	r1, .L18
+ 180 0004 0B46     		mov	r3, r1
+ 181              	.LVL16:
+ 127:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 128:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     Collection_t *coll = &collArray[index];
+ 129:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     coll->color = newColor;
+ 182              		.loc 1 129 0
+ 183 0006 064A     		ldr	r2, .L19
+ 184 0008 2C21     		movs	r1, #44
+ 185              	.LVL17:
+ 186 000a 01FB0020 		mla	r0, r1, r0, r2
+ 187              	.LVL18:
+ 188 000e 0376     		strb	r3, [r0, #24]
+ 130:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 131:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 189              		.loc 1 131 0
+ 190 0010 08BD     		pop	{r3, pc}
+ 191              	.LVL19:
+ 192              	.L18:
+ 126:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 193              		.loc 1 126 0 discriminator 1
+ 194 0012 044B     		ldr	r3, .L19+4
+ 195 0014 044A     		ldr	r2, .L19+8
+ 196 0016 7E21     		movs	r1, #126
+ 197              	.LVL20:
+ 198 0018 0448     		ldr	r0, .L19+12
+ 199              	.LVL21:
+ 200 001a FFF7FEFF 		bl	__assert_func
+ 201              	.LVL22:
+ 202              	.L20:
+ 203 001e 00BF     		.align	2
+ 204              	.L19:
+ 205 0020 00000000 		.word	.LANCHOR0
+ 206 0024 00000000 		.word	.LC0
+ 207 0028 00000000 		.word	.LANCHOR1
+ 208 002c 1C000000 		.word	.LC1
+ 209              		.cfi_endproc
+ARM GAS  /tmp/ccukppHn.s 			page 7
+
+
+ 210              	.LFE74:
+ 212              		.section	.text.led_StopBlink,"ax",%progbits
+ 213              		.align	1
+ 214              		.global	led_StopBlink
+ 215              		.syntax unified
+ 216              		.thumb
+ 217              		.thumb_func
+ 218              		.fpu softvfp
+ 220              	led_StopBlink:
+ 221              	.LFB76:
+ 132:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 133:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //toggle led state or increase blink counter
+ 134:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** bool led_Blink (ledCollections_t index)
+ 135:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 136:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //asserts
+ 137:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     // assert(coll.blink.numBlinks >= 0);
+ 138:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     // assert(coll.behavior == ledBehavior_Blinking);--
+ 139:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 140:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     Collection_t *coll = &collArray[index];
+ 141:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //if number of blinks satisfied, return to task
+ 142:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     if (coll->blink.numBlinks == 0)
+ 143:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 144:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         led_StopBlink(index);
+ 145:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         return false;
+ 146:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 147:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //if we meet the threshold, toggle the pin
+ 148:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     else if (coll->blink.blinkCount == coll->blink.blinkThreshold)
+ 149:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 150:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         if (coll->state == ledCollectionState_Off)
+ 151:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+ 152:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             led_On(index);
+ 153:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             //coll->blink.numBlinks--;
+ 154:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+ 155:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 156:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         else
+ 157:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+ 158:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             led_Off(index);
+ 159:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+ 160:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         coll->blink.blinkCount = 0;
+ 161:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 162:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 163:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     else
+ 164:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 165:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         coll->blink.blinkCount++;
+ 166:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 167:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 168:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return true;
+ 169:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 170:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 171:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //stop led from blinking and update behavior
+ 172:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_StopBlink (ledCollections_t index)
+ 173:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 222              		.loc 1 173 0
+ 223              		.cfi_startproc
+ 224              		@ args = 0, pretend = 0, frame = 0
+ 225              		@ frame_needed = 0, uses_anonymous_args = 0
+ 226              	.LVL23:
+ARM GAS  /tmp/ccukppHn.s 			page 8
+
+
+ 227 0000 10B5     		push	{r4, lr}
+ 228              	.LCFI3:
+ 229              		.cfi_def_cfa_offset 8
+ 230              		.cfi_offset 4, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 0446     		mov	r4, r0
+ 233              	.LVL24:
+ 174:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     Collection_t *coll = &collArray[index];
+ 175:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_Off(index);
+ 234              		.loc 1 175 0
+ 235 0004 FFF7FEFF 		bl	led_Off
+ 236              	.LVL25:
+ 176:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     coll->behavior = ledBehavior_Drive;
+ 237              		.loc 1 176 0
+ 238 0008 034B     		ldr	r3, .L23
+ 239 000a 2C22     		movs	r2, #44
+ 240 000c 02FB0434 		mla	r4, r2, r4, r3
+ 241              	.LVL26:
+ 242 0010 0023     		movs	r3, #0
+ 243 0012 84F82930 		strb	r3, [r4, #41]
+ 177:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 178:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 244              		.loc 1 178 0
+ 245 0016 10BD     		pop	{r4, pc}
+ 246              	.L24:
+ 247              		.align	2
+ 248              	.L23:
+ 249 0018 00000000 		.word	.LANCHOR0
+ 250              		.cfi_endproc
+ 251              	.LFE76:
+ 253              		.section	.text.led_Blink,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	led_Blink
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ 259              		.fpu softvfp
+ 261              	led_Blink:
+ 262              	.LFB75:
+ 135:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //asserts
+ 263              		.loc 1 135 0
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 0
+ 266              		@ frame_needed = 0, uses_anonymous_args = 0
+ 267              	.LVL27:
+ 268 0000 10B5     		push	{r4, lr}
+ 269              	.LCFI4:
+ 270              		.cfi_def_cfa_offset 8
+ 271              		.cfi_offset 4, -8
+ 272              		.cfi_offset 14, -4
+ 273 0002 0446     		mov	r4, r0
+ 274              	.LVL28:
+ 142:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 275              		.loc 1 142 0
+ 276 0004 164A     		ldr	r2, .L34
+ 277 0006 2C23     		movs	r3, #44
+ 278 0008 03FB0023 		mla	r3, r3, r0, r2
+ARM GAS  /tmp/ccukppHn.s 			page 9
+
+
+ 279 000c 5B6A     		ldr	r3, [r3, #36]
+ 280 000e 7BB1     		cbz	r3, .L32
+ 148:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 281              		.loc 1 148 0
+ 282 0010 134A     		ldr	r2, .L34
+ 283 0012 2C23     		movs	r3, #44
+ 284 0014 03FB0023 		mla	r3, r3, r0, r2
+ 285 0018 DA69     		ldr	r2, [r3, #28]
+ 286 001a 1B6A     		ldr	r3, [r3, #32]
+ 287 001c 9A42     		cmp	r2, r3
+ 288 001e 0BD0     		beq	.L33
+ 165:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 289              		.loc 1 165 0
+ 290 0020 0F4B     		ldr	r3, .L34
+ 291 0022 2C21     		movs	r1, #44
+ 292 0024 01FB0034 		mla	r4, r1, r0, r3
+ 293 0028 0132     		adds	r2, r2, #1
+ 294 002a E261     		str	r2, [r4, #28]
+ 168:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 295              		.loc 1 168 0
+ 296 002c 0120     		movs	r0, #1
+ 297              	.LVL29:
+ 298              	.L27:
+ 169:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 299              		.loc 1 169 0
+ 300 002e 10BD     		pop	{r4, pc}
+ 301              	.LVL30:
+ 302              	.L32:
+ 144:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         return false;
+ 303              		.loc 1 144 0
+ 304 0030 FFF7FEFF 		bl	led_StopBlink
+ 305              	.LVL31:
+ 145:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 306              		.loc 1 145 0
+ 307 0034 0020     		movs	r0, #0
+ 308 0036 FAE7     		b	.L27
+ 309              	.LVL32:
+ 310              	.L33:
+ 150:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         {
+ 311              		.loc 1 150 0
+ 312 0038 094A     		ldr	r2, .L34
+ 313 003a 2C23     		movs	r3, #44
+ 314 003c 03FB0023 		mla	r3, r3, r0, r2
+ 315 0040 93F82830 		ldrb	r3, [r3, #40]	@ zero_extendqisi2
+ 316 0044 4BB9     		cbnz	r3, .L29
+ 152:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****             //coll->blink.numBlinks--;
+ 317              		.loc 1 152 0
+ 318 0046 FFF7FEFF 		bl	led_On
+ 319              	.LVL33:
+ 320              	.L30:
+ 160:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 321              		.loc 1 160 0
+ 322 004a 054A     		ldr	r2, .L34
+ 323 004c 2C23     		movs	r3, #44
+ 324 004e 03FB0424 		mla	r4, r3, r4, r2
+ 325              	.LVL34:
+ 326 0052 0023     		movs	r3, #0
+ARM GAS  /tmp/ccukppHn.s 			page 10
+
+
+ 327 0054 E361     		str	r3, [r4, #28]
+ 168:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 328              		.loc 1 168 0
+ 329 0056 0120     		movs	r0, #1
+ 330 0058 E9E7     		b	.L27
+ 331              	.LVL35:
+ 332              	.L29:
+ 158:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         }
+ 333              		.loc 1 158 0
+ 334 005a FFF7FEFF 		bl	led_Off
+ 335              	.LVL36:
+ 336 005e F4E7     		b	.L30
+ 337              	.L35:
+ 338              		.align	2
+ 339              	.L34:
+ 340 0060 00000000 		.word	.LANCHOR0
+ 341              		.cfi_endproc
+ 342              	.LFE75:
+ 344              		.section	.text.led_taskCreate,"ax",%progbits
+ 345              		.align	1
+ 346              		.global	led_taskCreate
+ 347              		.syntax unified
+ 348              		.thumb
+ 349              		.thumb_func
+ 350              		.fpu softvfp
+ 352              	led_taskCreate:
+ 353              	.LFB77:
+ 179:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 180:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //create a task for led handling
+ 181:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_taskCreate()
+ 182:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 354              		.loc 1 182 0
+ 355              		.cfi_startproc
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358              		@ link register save eliminated.
+ 183:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 184:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 359              		.loc 1 184 0
+ 360 0000 7047     		bx	lr
+ 361              		.cfi_endproc
+ 362              	.LFE77:
+ 364              		.section	.text.led_activateRedLed,"ax",%progbits
+ 365              		.align	1
+ 366              		.global	led_activateRedLed
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ 370              		.fpu softvfp
+ 372              	led_activateRedLed:
+ 373              	.LFB78:
+ 185:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 186:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //change color to red and turn on leds
+ 187:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateRedLed()
+ 188:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 374              		.loc 1 188 0
+ 375              		.cfi_startproc
+ARM GAS  /tmp/ccukppHn.s 			page 11
+
+
+ 376              		@ args = 0, pretend = 0, frame = 0
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378 0000 08B5     		push	{r3, lr}
+ 379              	.LCFI5:
+ 380              		.cfi_def_cfa_offset 8
+ 381              		.cfi_offset 3, -8
+ 382              		.cfi_offset 14, -4
+ 189:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_ColorChange(ledCollections_1, ledColors_Red);
+ 383              		.loc 1 189 0
+ 384 0002 0121     		movs	r1, #1
+ 385 0004 0020     		movs	r0, #0
+ 386 0006 FFF7FEFF 		bl	led_ColorChange
+ 387              	.LVL37:
+ 190:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_On(ledCollections_1);
+ 388              		.loc 1 190 0
+ 389 000a 0020     		movs	r0, #0
+ 390 000c FFF7FEFF 		bl	led_On
+ 391              	.LVL38:
+ 191:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 192:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 392              		.loc 1 192 0
+ 393 0010 08BD     		pop	{r3, pc}
+ 394              		.cfi_endproc
+ 395              	.LFE78:
+ 397              		.section	.text.led_activateBlueLed,"ax",%progbits
+ 398              		.align	1
+ 399              		.global	led_activateBlueLed
+ 400              		.syntax unified
+ 401              		.thumb
+ 402              		.thumb_func
+ 403              		.fpu softvfp
+ 405              	led_activateBlueLed:
+ 406              	.LFB79:
+ 193:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 194:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //change color to blue and turn on leds
+ 195:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateBlueLed()
+ 196:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 407              		.loc 1 196 0
+ 408              		.cfi_startproc
+ 409              		@ args = 0, pretend = 0, frame = 0
+ 410              		@ frame_needed = 0, uses_anonymous_args = 0
+ 411 0000 08B5     		push	{r3, lr}
+ 412              	.LCFI6:
+ 413              		.cfi_def_cfa_offset 8
+ 414              		.cfi_offset 3, -8
+ 415              		.cfi_offset 14, -4
+ 197:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //collArray[ledCollections_1].color = ledColors_Blue;
+ 198:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_ColorChange(ledCollections_1, ledColors_Blue);
+ 416              		.loc 1 198 0
+ 417 0002 0421     		movs	r1, #4
+ 418 0004 0020     		movs	r0, #0
+ 419 0006 FFF7FEFF 		bl	led_ColorChange
+ 420              	.LVL39:
+ 199:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_On(ledCollections_1);
+ 421              		.loc 1 199 0
+ 422 000a 0020     		movs	r0, #0
+ 423 000c FFF7FEFF 		bl	led_On
+ARM GAS  /tmp/ccukppHn.s 			page 12
+
+
+ 424              	.LVL40:
+ 200:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 201:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 425              		.loc 1 201 0
+ 426 0010 08BD     		pop	{r3, pc}
+ 427              		.cfi_endproc
+ 428              	.LFE79:
+ 430              		.section	.text.led_activateGreenLed,"ax",%progbits
+ 431              		.align	1
+ 432              		.global	led_activateGreenLed
+ 433              		.syntax unified
+ 434              		.thumb
+ 435              		.thumb_func
+ 436              		.fpu softvfp
+ 438              	led_activateGreenLed:
+ 439              	.LFB80:
+ 202:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 203:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** //change color to green and turn on leds
+ 204:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_activateGreenLed()
+ 205:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 440              		.loc 1 205 0
+ 441              		.cfi_startproc
+ 442              		@ args = 0, pretend = 0, frame = 0
+ 443              		@ frame_needed = 0, uses_anonymous_args = 0
+ 444 0000 08B5     		push	{r3, lr}
+ 445              	.LCFI7:
+ 446              		.cfi_def_cfa_offset 8
+ 447              		.cfi_offset 3, -8
+ 448              		.cfi_offset 14, -4
+ 206:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_ColorChange(ledCollections_1, ledColors_Green);
+ 449              		.loc 1 206 0
+ 450 0002 0221     		movs	r1, #2
+ 451 0004 0020     		movs	r0, #0
+ 452 0006 FFF7FEFF 		bl	led_ColorChange
+ 453              	.LVL41:
+ 207:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_On(ledCollections_1);
+ 454              		.loc 1 207 0
+ 455 000a 0020     		movs	r0, #0
+ 456 000c FFF7FEFF 		bl	led_On
+ 457              	.LVL42:
+ 208:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 209:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 458              		.loc 1 209 0
+ 459 0010 08BD     		pop	{r3, pc}
+ 460              		.cfi_endproc
+ 461              	.LFE80:
+ 463              		.section	.text.led_test,"ax",%progbits
+ 464              		.align	1
+ 465              		.global	led_test
+ 466              		.syntax unified
+ 467              		.thumb
+ 468              		.thumb_func
+ 469              		.fpu softvfp
+ 471              	led_test:
+ 472              	.LFB81:
+ 210:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 211:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_test()
+ARM GAS  /tmp/ccukppHn.s 			page 13
+
+
+ 212:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 473              		.loc 1 212 0
+ 474              		.cfi_startproc
+ 475              		@ args = 0, pretend = 0, frame = 0
+ 476              		@ frame_needed = 0, uses_anonymous_args = 0
+ 477 0000 08B5     		push	{r3, lr}
+ 478              	.LCFI8:
+ 479              		.cfi_def_cfa_offset 8
+ 480              		.cfi_offset 3, -8
+ 481              		.cfi_offset 14, -4
+ 213:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_On(ledCollections_1);
+ 482              		.loc 1 213 0
+ 483 0002 0020     		movs	r0, #0
+ 484 0004 FFF7FEFF 		bl	led_On
+ 485              	.LVL43:
+ 214:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 215:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 486              		.loc 1 215 0
+ 487 0008 08BD     		pop	{r3, pc}
+ 488              		.cfi_endproc
+ 489              	.LFE81:
+ 491              		.section	.text.blink,"ax",%progbits
+ 492              		.align	1
+ 493              		.global	blink
+ 494              		.syntax unified
+ 495              		.thumb
+ 496              		.thumb_func
+ 497              		.fpu softvfp
+ 499              	blink:
+ 500              	.LFB83:
+ 216:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void led_test2()
+ 217:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 218:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //led_Off(ledCollections_1);
+ 219:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     // collArray[ledCollections_1].color = ledColors_Red;
+ 220:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     led_ColorChange(ledCollections_1, nextColor());
+ 221:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 222:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 223:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 224:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** bool blink()
+ 225:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 501              		.loc 1 225 0
+ 502              		.cfi_startproc
+ 503              		@ args = 0, pretend = 0, frame = 0
+ 504              		@ frame_needed = 0, uses_anonymous_args = 0
+ 505 0000 08B5     		push	{r3, lr}
+ 506              	.LCFI9:
+ 507              		.cfi_def_cfa_offset 8
+ 508              		.cfi_offset 3, -8
+ 509              		.cfi_offset 14, -4
+ 510              	.LVL44:
+ 226:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     bool blinking = true;
+ 227:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     collArray[ledCollections_1].behavior = ledBehavior_Blinking;
+ 511              		.loc 1 227 0
+ 512 0002 044B     		ldr	r3, .L47
+ 513 0004 0122     		movs	r2, #1
+ 514 0006 83F82920 		strb	r2, [r3, #41]
+ 228:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     blinking = led_Blink(ledCollections_1);
+ARM GAS  /tmp/ccukppHn.s 			page 14
+
+
+ 515              		.loc 1 228 0
+ 516 000a 0020     		movs	r0, #0
+ 517 000c FFF7FEFF 		bl	led_Blink
+ 518              	.LVL45:
+ 229:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return blinking;
+ 230:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 519              		.loc 1 230 0
+ 520 0010 08BD     		pop	{r3, pc}
+ 521              	.L48:
+ 522 0012 00BF     		.align	2
+ 523              	.L47:
+ 524 0014 00000000 		.word	.LANCHOR0
+ 525              		.cfi_endproc
+ 526              	.LFE83:
+ 528              		.section	.text.nextColor,"ax",%progbits
+ 529              		.align	1
+ 530              		.global	nextColor
+ 531              		.syntax unified
+ 532              		.thumb
+ 533              		.thumb_func
+ 534              		.fpu softvfp
+ 536              	nextColor:
+ 537              	.LFB84:
+ 231:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 232:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** ledColors_t nextColor()
+ 233:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 538              		.loc 1 233 0
+ 539              		.cfi_startproc
+ 540              		@ args = 0, pretend = 0, frame = 0
+ 541              		@ frame_needed = 0, uses_anonymous_args = 0
+ 542              		@ link register save eliminated.
+ 234:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     if (test == ledColors_White)
+ 543              		.loc 1 234 0
+ 544 0000 054B     		ldr	r3, .L53
+ 545 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 546 0004 0728     		cmp	r0, #7
+ 547 0006 03D0     		beq	.L52
+ 235:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 236:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         test = ledColors_Red;
+ 237:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         return ledColors_White;
+ 238:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 239:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 240:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     else
+ 241:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 242:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         return test++;
+ 548              		.loc 1 242 0
+ 549 0008 431C     		adds	r3, r0, #1
+ 550 000a 034A     		ldr	r2, .L53
+ 551 000c 1370     		strb	r3, [r2]
+ 243:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 244:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     
+ 245:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 552              		.loc 1 245 0
+ 553 000e 7047     		bx	lr
+ 554              	.L52:
+ 236:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         return ledColors_White;
+ 555              		.loc 1 236 0
+ARM GAS  /tmp/ccukppHn.s 			page 15
+
+
+ 556 0010 0122     		movs	r2, #1
+ 557 0012 1A70     		strb	r2, [r3]
+ 237:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 558              		.loc 1 237 0
+ 559 0014 7047     		bx	lr
+ 560              	.L54:
+ 561 0016 00BF     		.align	2
+ 562              	.L53:
+ 563 0018 00000000 		.word	.LANCHOR2
+ 564              		.cfi_endproc
+ 565              	.LFE84:
+ 567              		.section	.text.led_test2,"ax",%progbits
+ 568              		.align	1
+ 569              		.global	led_test2
+ 570              		.syntax unified
+ 571              		.thumb
+ 572              		.thumb_func
+ 573              		.fpu softvfp
+ 575              	led_test2:
+ 576              	.LFB82:
+ 217:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     //led_Off(ledCollections_1);
+ 577              		.loc 1 217 0
+ 578              		.cfi_startproc
+ 579              		@ args = 0, pretend = 0, frame = 0
+ 580              		@ frame_needed = 0, uses_anonymous_args = 0
+ 581 0000 08B5     		push	{r3, lr}
+ 582              	.LCFI10:
+ 583              		.cfi_def_cfa_offset 8
+ 584              		.cfi_offset 3, -8
+ 585              		.cfi_offset 14, -4
+ 220:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 586              		.loc 1 220 0
+ 587 0002 FFF7FEFF 		bl	nextColor
+ 588              	.LVL46:
+ 589 0006 0146     		mov	r1, r0
+ 590 0008 0020     		movs	r0, #0
+ 591 000a FFF7FEFF 		bl	led_ColorChange
+ 592              	.LVL47:
+ 222:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 593              		.loc 1 222 0
+ 594 000e 08BD     		pop	{r3, pc}
+ 595              		.cfi_endproc
+ 596              	.LFE82:
+ 598              		.section	.text.speedUp,"ax",%progbits
+ 599              		.align	1
+ 600              		.global	speedUp
+ 601              		.syntax unified
+ 602              		.thumb
+ 603              		.thumb_func
+ 604              		.fpu softvfp
+ 606              	speedUp:
+ 607              	.LFB85:
+ 246:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** 
+ 247:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** void speedUp()
+ 248:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** {
+ 608              		.loc 1 248 0
+ 609              		.cfi_startproc
+ARM GAS  /tmp/ccukppHn.s 			page 16
+
+
+ 610              		@ args = 0, pretend = 0, frame = 0
+ 611              		@ frame_needed = 0, uses_anonymous_args = 0
+ 612              		@ link register save eliminated.
+ 249:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     if(collArray[ledCollections_1].blink.blinkThreshold > 10)
+ 613              		.loc 1 249 0
+ 614 0000 034B     		ldr	r3, .L59
+ 615 0002 1B6A     		ldr	r3, [r3, #32]
+ 616 0004 0A2B     		cmp	r3, #10
+ 617 0006 02DD     		ble	.L57
+ 250:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     {
+ 251:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****         collArray[ledCollections_1].blink.blinkThreshold -= 10;
+ 618              		.loc 1 251 0
+ 619 0008 0A3B     		subs	r3, r3, #10
+ 620 000a 014A     		ldr	r2, .L59
+ 621 000c 1362     		str	r3, [r2, #32]
+ 622              	.L57:
+ 252:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     }
+ 253:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     
+ 254:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c ****     return;
+ 255:/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/led.c **** }
+ 623              		.loc 1 255 0
+ 624 000e 7047     		bx	lr
+ 625              	.L60:
+ 626              		.align	2
+ 627              	.L59:
+ 628 0010 00000000 		.word	.LANCHOR0
+ 629              		.cfi_endproc
+ 630              	.LFE85:
+ 632              		.section	.data.collArray,"aw",%progbits
+ 633              		.align	2
+ 634              		.set	.LANCHOR0,. + 0
+ 637              	collArray:
+ 638 0000 0040     		.short	16384
+ 639 0002 0000     		.space	2
+ 640 0004 00040240 		.word	1073873920
+ 641 0008 0100     		.short	1
+ 642 000a 0000     		.space	2
+ 643 000c 00040240 		.word	1073873920
+ 644 0010 8000     		.short	128
+ 645 0012 0000     		.space	2
+ 646 0014 00040240 		.word	1073873920
+ 647 0018 04       		.byte	4
+ 648 0019 000000   		.space	3
+ 649 001c 00000000 		.word	0
+ 650 0020 64000000 		.word	100
+ 651 0024 0A000000 		.word	10
+ 652 0028 00       		.byte	0
+ 653 0029 00       		.byte	0
+ 654 002a 0000     		.space	2
+ 655              		.section	.data.test,"aw",%progbits
+ 656              		.set	.LANCHOR2,. + 0
+ 659              	test:
+ 660 0000 01       		.byte	1
+ 661              		.section	.rodata.__func__.6759,"a",%progbits
+ 662              		.align	2
+ 663              		.set	.LANCHOR1,. + 0
+ 666              	__func__.6759:
+ARM GAS  /tmp/ccukppHn.s 			page 17
+
+
+ 667 0000 6C65645F 		.ascii	"led_ColorChange\000"
+ 667      436F6C6F 
+ 667      72436861 
+ 667      6E676500 
+ 668              		.section	.rodata.led_ColorChange.str1.4,"aMS",%progbits,1
+ 669              		.align	2
+ 670              	.LC0:
+ 671 0000 6E657743 		.ascii	"newColor >= ledColors_Red\000"
+ 671      6F6C6F72 
+ 671      203E3D20 
+ 671      6C656443 
+ 671      6F6C6F72 
+ 672 001a 0000     		.space	2
+ 673              	.LC1:
+ 674 001c 2F6D6E74 		.ascii	"/mnt/c/Users/Daniel/Documents/stm/app/Drivers/Src/l"
+ 674      2F632F55 
+ 674      73657273 
+ 674      2F44616E 
+ 674      69656C2F 
+ 675 004f 65642E63 		.ascii	"ed.c\000"
+ 675      00
+ 676              		.text
+ 677              	.Letext0:
+ 678              		.file 2 "/mnt/c/Users/Daniel/Documents/stm/app/Drivers/inc/led.h"
+ 679              		.file 3 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h"
+ 680              		.file 4 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h"
+ 681              		.file 5 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Include/core_cm3.h"
+ 682              		.file 6 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 683              		.file 7 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 684              		.file 8 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/CMSIS/Device/ST/STM32F2xx/
+ 685              		.file 9 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/s
+ 686              		.file 10 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/lock.h"
+ 687              		.file 11 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_types.h"
+ 688              		.file 12 "/opt/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 689              		.file 13 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/reent.h"
+ 690              		.file 14 "/opt/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/assert.h"
+ 691              		.file 15 "/mnt/c/Users/Daniel/Documents/stm/ThirdParty/nucleo207/Drivers/STM32F2xx_HAL_Driver/Inc/
+ARM GAS  /tmp/ccukppHn.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 led.c
+     /tmp/ccukppHn.s:16     .text.led_On:0000000000000000 $t
+     /tmp/ccukppHn.s:23     .text.led_On:0000000000000000 led_On
+     /tmp/ccukppHn.s:90     .text.led_On:000000000000004c $d
+     /tmp/ccukppHn.s:95     .text.led_Off:0000000000000000 $t
+     /tmp/ccukppHn.s:102    .text.led_Off:0000000000000000 led_Off
+     /tmp/ccukppHn.s:154    .text.led_Off:0000000000000038 $d
+     /tmp/ccukppHn.s:159    .text.led_ColorChange:0000000000000000 $t
+     /tmp/ccukppHn.s:166    .text.led_ColorChange:0000000000000000 led_ColorChange
+     /tmp/ccukppHn.s:205    .text.led_ColorChange:0000000000000020 $d
+     /tmp/ccukppHn.s:213    .text.led_StopBlink:0000000000000000 $t
+     /tmp/ccukppHn.s:220    .text.led_StopBlink:0000000000000000 led_StopBlink
+     /tmp/ccukppHn.s:249    .text.led_StopBlink:0000000000000018 $d
+     /tmp/ccukppHn.s:254    .text.led_Blink:0000000000000000 $t
+     /tmp/ccukppHn.s:261    .text.led_Blink:0000000000000000 led_Blink
+     /tmp/ccukppHn.s:340    .text.led_Blink:0000000000000060 $d
+     /tmp/ccukppHn.s:345    .text.led_taskCreate:0000000000000000 $t
+     /tmp/ccukppHn.s:352    .text.led_taskCreate:0000000000000000 led_taskCreate
+     /tmp/ccukppHn.s:365    .text.led_activateRedLed:0000000000000000 $t
+     /tmp/ccukppHn.s:372    .text.led_activateRedLed:0000000000000000 led_activateRedLed
+     /tmp/ccukppHn.s:398    .text.led_activateBlueLed:0000000000000000 $t
+     /tmp/ccukppHn.s:405    .text.led_activateBlueLed:0000000000000000 led_activateBlueLed
+     /tmp/ccukppHn.s:431    .text.led_activateGreenLed:0000000000000000 $t
+     /tmp/ccukppHn.s:438    .text.led_activateGreenLed:0000000000000000 led_activateGreenLed
+     /tmp/ccukppHn.s:464    .text.led_test:0000000000000000 $t
+     /tmp/ccukppHn.s:471    .text.led_test:0000000000000000 led_test
+     /tmp/ccukppHn.s:492    .text.blink:0000000000000000 $t
+     /tmp/ccukppHn.s:499    .text.blink:0000000000000000 blink
+     /tmp/ccukppHn.s:524    .text.blink:0000000000000014 $d
+     /tmp/ccukppHn.s:529    .text.nextColor:0000000000000000 $t
+     /tmp/ccukppHn.s:536    .text.nextColor:0000000000000000 nextColor
+     /tmp/ccukppHn.s:563    .text.nextColor:0000000000000018 $d
+     /tmp/ccukppHn.s:568    .text.led_test2:0000000000000000 $t
+     /tmp/ccukppHn.s:575    .text.led_test2:0000000000000000 led_test2
+     /tmp/ccukppHn.s:599    .text.speedUp:0000000000000000 $t
+     /tmp/ccukppHn.s:606    .text.speedUp:0000000000000000 speedUp
+     /tmp/ccukppHn.s:628    .text.speedUp:0000000000000010 $d
+     /tmp/ccukppHn.s:633    .data.collArray:0000000000000000 $d
+     /tmp/ccukppHn.s:637    .data.collArray:0000000000000000 collArray
+     /tmp/ccukppHn.s:659    .data.test:0000000000000000 test
+     /tmp/ccukppHn.s:662    .rodata.__func__.6759:0000000000000000 $d
+     /tmp/ccukppHn.s:666    .rodata.__func__.6759:0000000000000000 __func__.6759
+     /tmp/ccukppHn.s:669    .rodata.led_ColorChange.str1.4:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+__assert_func
