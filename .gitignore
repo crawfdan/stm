@@ -2,7 +2,7 @@
 *.so
 
 # Build OBJ Directory
-/obj_nucleo207
+build/obj_nucleo207
 
 # Object files
 *.o

@@ -36,6 +36,7 @@ ST_FAMILY_UC = STM32F2XX
 
 LINT_PATH := /usr/local/FlexeLint
 BUILD_DIR = $(GIT_ROOT_DIR)/build/obj_$(TARGET)
+DOXYGEN_DIR = $(GIT_ROOT_DIR)/build/doxygen
 APP_SRC_DIR = $(GIT_ROOT_DIR)/app/src
 APP_INC_DIR = $(GIT_ROOT_DIR)/app/inc
 
@@ -239,7 +240,7 @@ $(BUILD_DIR):
 #######################################
 clean:
 	-rm -fR $(BUILD_DIR)
-
+	-rm -fR $(DOXYGEN_DIR)
 help:
 	@echo "C_SOURCES= $(C_SOURCES)"
 	@echo "C_INCLUDES = $(C_INCLUDES)"
