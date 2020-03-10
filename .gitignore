@@ -1,14 +1,6 @@
 # C extensions
 *.so
 
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-
 # Build OBJ Directory
 /obj_nucleo207
 
@@ -47,6 +39,12 @@
 .cproject
 .project
 .settings/
+
+# metatdata
+.metadata
+
+# vscode
+.vscode
 
 # Vagrant directory
 .vagrant/
